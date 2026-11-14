@@ -1,0 +1,16 @@
+---
+description: PROJECT TRANS core constraints for ABOOD TOEFL Companion
+alwaysApply: true
+---
+
+# PROJECT TRANS — Core Rules
+
+- Preserve all existing vocabulary in `src/data/`. Never delete words or wipe user progress without migration.
+- Existing word bank = **General Vocabulary**. New curated set = **TOEFL Vocabulary**. Do not auto-tag every old word as TOEFL.
+- Offline-first: no backend, no cloud auth, no remote APIs for core learning.
+- Do **not** run `npm run dev` (memory constraint). Verify with `npm run build` and Vitest.
+- Do not migrate to Next.js. Stay on Vite + React + JavaScript.
+- Never invent fake analytics, fake ETS predictions, or copied dictionary definitions.
+- Do not remove working features (Guide, Study Plan, Topics, Affixes, Academic Topics, PDF tips) — re-skin into the new shell.
+- Prefer improving the foundation over rewriting from scratch.
+- After each phase: summarize changes, list deps, run relevant tests/build; do not claim unfinished work is done.

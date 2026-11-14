@@ -1,0 +1,14 @@
+---
+description: Arabic/English localization and RTL layout rules
+globs: src/i18n/**/*,src/locales/**/*,src/components/**/*.{jsx,js},src/pages/**/*.{jsx,js}
+alwaysApply: false
+---
+
+# i18n & RTL
+
+- No hardcoded UI chrome strings in components — use translation keys from `src/i18n`.
+- `LanguageProvider` must set `document.documentElement.lang` and `dir`.
+- Use logical CSS (`ms`/`me`/`ps`/`pe`, `start`/`end`) for RTL/LTR.
+- Distinguish Arabic translation vs contextual meaning vs English explanation on vocab cards.
+- Fuse search must include Arabic fields. Icons stay Lucide (no emoji icons).
+- Audit both languages before calling localization complete.

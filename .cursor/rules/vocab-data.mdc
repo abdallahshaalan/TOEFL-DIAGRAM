@@ -1,0 +1,20 @@
+---
+description: Vocabulary schema, dual libraries, and content quality
+globs: src/data/**/*.{js,jsx},src/lib/**/*.{js,jsx},src/pages/**/*vocab*
+alwaysApply: false
+---
+
+# Vocabulary Data Rules
+
+- Dual libraries: `library: "toefl" | "general"` with separate filters, stats, and progress.
+- Normalize via adapters; keep original general fields; fill missing with null/defaults.
+- Stable unique `id` per entry. Difficulty (CEFR) ≠ personal mastery (1–4).
+- Write original definitions/examples. Cite provenance lightly (e.g. `awl-inspired`); never claim guaranteed TOEFL appearance.
+- Prefer curated high-value academic words over bulk random advanced lists.
+- Search must cover English, Arabic, definitions, synonyms, categories (Fuse.js).
+---
+
+# Mastery & SRS
+
+- Ratings: Again / Hard / Good / Easy stored per word per library in IndexedDB.
+- Schedule with transparent SM-2-style intervals; prioritize struggling words.

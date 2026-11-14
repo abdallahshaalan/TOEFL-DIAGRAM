@@ -1,0 +1,193 @@
+@import "@fontsource/schibsted-grotesk/400.css";
+@import "@fontsource/schibsted-grotesk/500.css";
+@import "@fontsource/schibsted-grotesk/600.css";
+@import "@fontsource/schibsted-grotesk/700.css";
+@import "@fontsource/noto-sans-arabic/400.css";
+@import "@fontsource/noto-sans-arabic/500.css";
+@import "@fontsource/noto-sans-arabic/600.css";
+@import "@fontsource/noto-sans-arabic/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand (COLOR_TOKENS / ibrahimalghoul.com) as HSL channels */
+    --brand-primary: 217 91% 60%;
+    --brand-primary-hover: 224 76% 48%;
+    --brand-primary-active: 226 71% 40%;
+    --brand-primary-foreground: 0 0% 100%;
+    --brand-accent: 214 100% 97%;
+    --brand-accent-foreground: 217 91% 60%;
+    --brand-secondary: 258 90% 58%;
+    --brand-tertiary: 189 94% 43%;
+
+    --background: 0 0% 98%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: var(--brand-primary);
+    --primary-foreground: var(--brand-primary-foreground);
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --accent: var(--brand-accent);
+    --accent-foreground: var(--brand-accent-foreground);
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 40%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 240 5% 90%;
+    --input: 240 5% 84%;
+    --ring: var(--brand-primary);
+    --radius: 0.875rem;
+    --sidebar-width: 16rem;
+
+    --navbar-bg: 0 0% 100% / 0.82;
+    --navbar-border: 0 0% 0% / 0.08;
+
+    --chart-1: var(--brand-primary);
+    --chart-2: var(--brand-tertiary);
+    --chart-3: var(--brand-secondary);
+    --chart-4: 142 71% 36%;
+    --chart-5: 32 95% 44%;
+
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    --toast-blur: 24px;
+    --toast-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88));
+    --toast-border: rgba(255, 255, 255, 0.96);
+    --toast-shadow: inset 0 1px 0 #fff, 0 16px 42px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Wired for a future dark toggle — not activated this pass */
+  .dark {
+    --background: 240 6% 10%;
+    --foreground: 0 0% 98%;
+    --card: 240 5% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 5% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 217 40% 16%;
+    --accent-foreground: 217 91% 70%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 20%;
+    --input: 240 4% 24%;
+    --ring: 217 91% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #2563eb #f4f4f5;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f4f4f5;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 999px;
+    border: 2px solid #f4f4f5;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  html[lang="ar"] body,
+  html[dir="rtl"] body {
+    font-family: "Noto Sans Arabic", "Schibsted Grotesk", system-ui, sans-serif;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .text-page-title {
+    @apply text-2xl font-semibold tracking-tight text-foreground md:text-[1.75rem];
+    letter-spacing: -0.03em;
+  }
+
+  .text-section {
+    @apply text-base font-semibold text-foreground;
+  }
+
+  .text-meta {
+    @apply text-xs font-medium uppercase tracking-wide text-muted-foreground;
+  }
+
+  .word-headword {
+    @apply font-display text-2xl font-normal tracking-tight text-foreground md:text-3xl;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+
+  .page-container {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .surface-card {
+    @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+  }
+
+  .legacy-tool-root {
+    isolation: isolate;
+    contain: content;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

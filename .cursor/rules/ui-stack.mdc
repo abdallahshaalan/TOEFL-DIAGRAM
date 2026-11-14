@@ -1,0 +1,13 @@
+---
+description: UI stack — Tailwind, shadcn, Lucide, Motion, Sonner
+globs: src/components/**/*.{jsx,js,css},src/pages/**/*.{jsx,js},src/index.css
+alwaysApply: false
+---
+
+# UI Stack
+
+- Tailwind + shadcn/ui for primitives; Lucide for icons; Sonner for toasts; Motion for subtle motion.
+- Respect `prefers-reduced-motion`. Animations must be fast and purposeful.
+- Premium educational SaaS feel: clean hierarchy, consistent spacing, no emoji UI, no nested card clutter.
+- Self-host fonts; do not rely on Google Fonts / Font Awesome CDN for essential UI.
+- Recharts via shadcn chart patterns; charts must show real IndexedDB data or empty states.
