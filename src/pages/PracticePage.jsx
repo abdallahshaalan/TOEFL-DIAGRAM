@@ -1,10 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import {
   Layers,
   ListChecks,
+  Mail,
   PenLine,
   ScanSearch,
+  SpellCheck,
   TextCursorInput,
 } from "lucide-react";
 import { useI18n } from "@/i18n";
@@ -27,10 +30,19 @@ import Flashcard from "@/components/practice/Flashcard";
 import {
   ensureLibrary,
   getCategoriesSync,
+  getCategoryMetaSync,
   getLibraryWordsSync,
 } from "@/lib/vocabCatalog";
-import { bumpActivity, rateWord } from "@/lib/db";
-import { RATING } from "@/lib/srs";
+import {
+  bumpActivity,
+  getAllBookmarks,
+  getAllProgress,
+  maybeCelebrateBusinessGoal,
+  rateWord,
+} from "@/lib/db";
+import { isDue, RATING } from "@/lib/srs";
+import { normalizeHeadword, parsePracticeSearch } from "@/lib/practiceUrl";
+import businessExamPacks from "@/data/businessExamPacks";
 import { cn } from "@/lib/cn";
 
 function shuffle(arr) {
@@ -46,9 +58,54 @@ function getPool(library) {
   return getLibraryWordsSync(library) || [];
 }
 
-function pickPool(library, category, count) {
+function blankExample(word) {
+  const ex = word.exampleEn || "";
+  if (!ex) return null;
+  try {
+    return ex.replace(new RegExp(word.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"), "_____");
+  } catch {
+    return null;
+  }
+}
+
+async function pickPool(library, category, count, { focus, difficulties, mode } = {}) {
   let pool = getPool(library);
   if (category) pool = pool.filter((w) => (w.categories || []).includes(category));
+  if (difficulties?.length) {
+    pool = pool.filter((w) => difficulties.includes(w.difficulty));
+  }
+
+  if (focus === "bookmarked") {
+    const bms = await getAllBookmarks(library);
+    const ids = new Set(bms.map((b) => b.wordId));
+    pool = pool.filter((w) => ids.has(w.id));
+  } else if (focus === "struggling" || focus === "due") {
+    const progress = await getAllProgress(library);
+    const map = new Map(progress.map((p) => [p.wordId, p]));
+    if (focus === "struggling") {
+      pool = pool.filter((w) => {
+        const p = map.get(w.id);
+        return p && (p.mastery || 0) > 0 && (p.mastery || 0) <= 2;
+      });
+    } else {
+      pool = pool.filter((w) => {
+        const p = map.get(w.id);
+        return p && isDue(p);
+      });
+    }
+  }
+
+  if (mode === "cloze" || mode === "scenario") {
+    pool = pool.filter((w) => blankExample(w));
+  }
+  if (mode === "spelling") {
+    const hard = pool.filter(
+      (w) =>
+        ["B2", "C1"].includes(w.difficulty) || String(w.word || "").includes(" ")
+    );
+    if (hard.length >= Math.min(count, 5)) pool = hard;
+  }
+
   return shuffle(pool).slice(0, count);
 }
 
@@ -64,23 +121,66 @@ function distractors(pool, correct, n = 3) {
   return shuffle([correct, ...others]);
 }
 
+function arabicExplainScore(typed, word) {
+  const source = `${word.explanationAr || ""} ${word.translationAr || ""}`.trim();
+  if (!typed.trim() || !source) return null;
+  const tokens = typed
+    .trim()
+    .split(/\s+/)
+    .filter((t) => t.length >= 2);
+  if (!tokens.length) return 0;
+  const hits = tokens.filter((t) => source.includes(t)).length;
+  return hits / tokens.length;
+}
+
 const MODES = [
   { id: "flashcards", titleKey: "flashcards", descKey: "flashcardsDesc", icon: Layers },
   { id: "quiz", titleKey: "quiz", descKey: "quizDesc", icon: ListChecks },
   { id: "cloze", titleKey: "cloze", descKey: "clozeDesc", icon: TextCursorInput },
   { id: "recognition", titleKey: "recognition", descKey: "recognitionDesc", icon: ScanSearch },
   { id: "writing", titleKey: "writing", descKey: "writingDesc", icon: PenLine },
+  { id: "scenario", titleKey: "scenario", descKey: "scenarioDesc", icon: Mail },
+  { id: "spelling", titleKey: "spelling", descKey: "spellingDesc", icon: SpellCheck },
 ];
 
 export default function PracticePage() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const [searchParams] = useSearchParams();
   const [mode, setMode] = useState("flashcards");
   const [library, setLibrary] = useState("toefl");
   const [count, setCount] = useState("10");
   const [category, setCategory] = useState("");
+  const [focus, setFocus] = useState("");
+  const [difficulties, setDifficulties] = useState([]);
   const [session, setSession] = useState(null);
   const [ready, setReady] = useState(false);
   const [catalogTick, setCatalogTick] = useState(0);
+  const [queryHydrated, setQueryHydrated] = useState(false);
+  const autostartDone = useRef(false);
+
+  useEffect(() => {
+    const parsed = parsePracticeSearch(searchParams);
+    if (parsed.pack) {
+      const pack = businessExamPacks.find((p) => p.id === parsed.pack);
+      if (pack) {
+        setLibrary("business");
+        setMode(pack.mode || "flashcards");
+        setCategory(pack.category || "");
+        setCount(String(pack.count || 12));
+        setDifficulties(pack.difficulties || []);
+        setFocus("");
+        setQueryHydrated(true);
+        return;
+      }
+    }
+    if (parsed.library) setLibrary(parsed.library);
+    if (parsed.mode) setMode(parsed.mode);
+    if (parsed.category) setCategory(parsed.category);
+    if (parsed.count) setCount(parsed.count);
+    if (parsed.focus) setFocus(parsed.focus);
+    if (parsed.difficulties?.length) setDifficulties(parsed.difficulties);
+    setQueryHydrated(true);
+  }, [searchParams]);
 
   useEffect(() => {
     let cancelled = false;
@@ -101,16 +201,25 @@ export default function PracticePage() {
     return getCategoriesSync(library).slice(0, 40);
   }, [library, catalogTick]);
 
-  const start = () => {
+  const categoryMeta = useMemo(() => {
+    void catalogTick;
+    return getCategoryMetaSync(library);
+  }, [library, catalogTick]);
+
+  const labelCategory = (id) => {
+    const meta = categoryMeta.find((x) => x.id === id);
+    if (!meta) return id;
+    return lang === "ar" ? meta.labelAr : meta.labelEn;
+  };
+
+  const start = async () => {
     if (!ready) return;
-    let words = pickPool(library, category, Number(count) || 10);
-    if (mode === "cloze") {
-      words = words.filter((w) => w.exampleEn && new RegExp(w.word, "i").test(w.exampleEn));
-      if (!words.length) {
-        toast.error(t("common.empty"));
-        return;
-      }
-    }
+    const n = Number(count) || 10;
+    const words = await pickPool(library, category, n, {
+      focus,
+      difficulties,
+      mode,
+    });
     if (!words.length) {
       toast.error(t("common.empty"));
       return;
@@ -125,10 +234,21 @@ export default function PracticePage() {
       choice: null,
       typed: "",
       writing: "",
+      arabicExplain: "",
+      showArabicCheck: false,
       done: false,
       rated: 0,
     });
   };
+
+  useEffect(() => {
+    if (!queryHydrated || !ready || autostartDone.current) return;
+    const parsed = parsePracticeSearch(searchParams);
+    if (!parsed.autostart && !parsed.pack) return;
+    autostartDone.current = true;
+    start();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [queryHydrated, ready, searchParams, library, mode, category, count, focus]);
 
   const advance = async (nextScore = session.score) => {
     if (session.index >= session.words.length - 1) {
@@ -136,6 +256,13 @@ export default function PracticePage() {
         practiced: session.words.length,
         quizzes: session.mode !== "flashcards" ? 1 : 0,
       });
+      if (session.library === "business") {
+        const { getActivityRange } = await import("@/lib/db");
+        const days = await getActivityRange(1);
+        const today = days[days.length - 1];
+        const celebrated = await maybeCelebrateBusinessGoal(today?.businessPracticed || 0);
+        if (celebrated) toast.success(t("vocab.goalComplete"));
+      }
       toast.success(t("practice.sessionComplete"));
       setSession({ ...session, score: nextScore, done: true });
       return;
@@ -147,6 +274,8 @@ export default function PracticePage() {
       choice: null,
       typed: "",
       writing: "",
+      arabicExplain: "",
+      showArabicCheck: false,
       score: nextScore,
     });
   };
@@ -154,7 +283,13 @@ export default function PracticePage() {
   const handleRate = async (rating) => {
     const word = session.words[session.index];
     await rateWord(session.library, word.id, rating);
-    await bumpActivity({ practiced: 1, reviews: 1 });
+    if (session.library === "business") {
+      const { getActivityRange } = await import("@/lib/db");
+      const days = await getActivityRange(1);
+      const today = days[days.length - 1];
+      const celebrated = await maybeCelebrateBusinessGoal(today?.businessPracticed || 0);
+      if (celebrated) toast.success(t("vocab.goalComplete"));
+    }
     await advance(session.score + (rating >= 3 ? 1 : 0));
   };
 
@@ -209,8 +344,9 @@ export default function PracticePage() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="toefl">TOEFL</SelectItem>
-                  <SelectItem value="general">General</SelectItem>
+                  <SelectItem value="toefl">{t("vocab.libraryToefl")}</SelectItem>
+                  <SelectItem value="business">{t("vocab.libraryBusiness")}</SelectItem>
+                  <SelectItem value="general">{t("vocab.libraryGeneral")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -228,7 +364,7 @@ export default function PracticePage() {
                   <SelectItem value="__all__">{t("common.all")}</SelectItem>
                   {categories.map((c) => (
                     <SelectItem key={c} value={c}>
-                      {c}
+                      {labelCategory(c)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -245,8 +381,27 @@ export default function PracticePage() {
                 onChange={(e) => setCount(e.target.value)}
               />
             </div>
+            {library === "business" && (
+              <div className="space-y-1.5 sm:col-span-3">
+                <Label>{t("practice.focus")}</Label>
+                <Select
+                  value={focus || "__none__"}
+                  onValueChange={(v) => setFocus(v === "__none__" ? "" : v)}
+                >
+                  <SelectTrigger className="h-10">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="__none__">{t("common.all")}</SelectItem>
+                    <SelectItem value="struggling">{t("common.struggling")}</SelectItem>
+                    <SelectItem value="due">{t("common.due")}</SelectItem>
+                    <SelectItem value="bookmarked">{t("common.bookmarks")}</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
             <div className="sm:col-span-3">
-              <Button onClick={start} disabled={!ready}>
+              <Button onClick={start} disabled={!ready} className="min-h-11">
                 {ready ? t("common.start") : t("common.loading")}
               </Button>
             </div>
@@ -273,7 +428,9 @@ export default function PracticePage() {
   }
 
   const word = session.words[session.index];
-  const modeTitle = t(`practice.${MODES.find((m) => m.id === session.mode)?.titleKey || "flashcards"}`);
+  const modeTitle = t(
+    `practice.${MODES.find((m) => m.id === session.mode)?.titleKey || "flashcards"}`
+  );
   const pool = getPool(session.library);
 
   return (
@@ -329,12 +486,41 @@ export default function PracticePage() {
         />
       )}
 
-      {session.mode === "cloze" && (
+      {session.mode === "scenario" && (
+        <ChoiceBlock
+          key={word.id}
+          prompt={
+            <div className="space-y-2">
+              <p className="text-meta">{t("practice.scenarioHint")}</p>
+              <p className="text-base leading-relaxed">{blankExample(word)}</p>
+            </div>
+          }
+          options={distractors(pool, word).map((o) => ({
+            id: o.id,
+            label: o.word,
+          }))}
+          correctId={word.id}
+          onAnswer={async (ok) => {
+            await rateWord(session.library, word.id, ok ? RATING.GOOD : RATING.AGAIN);
+            setTimeout(() => advance(session.score + (ok ? 1 : 0)), 400);
+          }}
+        />
+      )}
+
+      {(session.mode === "cloze" || session.mode === "spelling") && (
         <Card>
           <CardContent className="space-y-4 pt-6">
-            <p className="text-base leading-relaxed">
-              {(word.exampleEn || "").replace(new RegExp(word.word, "i"), "_____")}
-            </p>
+            {session.mode === "cloze" ? (
+              <p className="text-base leading-relaxed">{blankExample(word)}</p>
+            ) : (
+              <div className="space-y-2">
+                <p dir="rtl" className="text-base font-medium">
+                  {word.translationAr}
+                </p>
+                <p className="text-sm text-muted-foreground">{word.definitionEn}</p>
+                <p className="text-meta">{t("practice.spellingHint")}</p>
+              </div>
+            )}
             <Input
               value={session.typed}
               onChange={(e) => setSession({ ...session, typed: e.target.value })}
@@ -342,17 +528,53 @@ export default function PracticePage() {
               autoFocus
             />
             <Button
+              className="min-h-11"
               onClick={async () => {
-                const ok = session.typed.trim().toLowerCase() === word.word.toLowerCase();
+                const ok =
+                  normalizeHeadword(session.typed) === normalizeHeadword(word.word);
                 toast[ok ? "success" : "error"](
                   ok ? t("common.correct") : `${t("common.incorrect")}: ${word.word}`
                 );
                 await rateWord(session.library, word.id, ok ? RATING.GOOD : RATING.AGAIN);
-                advance(session.score + (ok ? 1 : 0));
+                if (session.mode === "spelling" && word.explanationAr) {
+                  setSession({ ...session, showArabicCheck: true, revealed: true });
+                } else {
+                  advance(session.score + (ok ? 1 : 0));
+                }
               }}
             >
               {t("common.submit")}
             </Button>
+            {session.showArabicCheck && (
+              <div className="space-y-2 rounded-lg border bg-muted/40 p-3">
+                <p className="text-sm font-medium">{t("practice.arabicExplainPrompt")}</p>
+                <Textarea
+                  dir="rtl"
+                  rows={3}
+                  value={session.arabicExplain}
+                  onChange={(e) => setSession({ ...session, arabicExplain: e.target.value })}
+                />
+                <Button
+                  variant="outline"
+                  className="min-h-11"
+                  onClick={() => {
+                    const score = arabicExplainScore(session.arabicExplain, word);
+                    if (score == null) {
+                      advance(session.score + 1);
+                      return;
+                    }
+                    toast.message(
+                      score >= 0.4
+                        ? t("practice.arabicExplainOk")
+                        : t("practice.arabicExplainWeak")
+                    );
+                    advance(session.score + 1);
+                  }}
+                >
+                  {t("common.next")}
+                </Button>
+              </div>
+            )}
           </CardContent>
         </Card>
       )}
@@ -373,10 +595,14 @@ export default function PracticePage() {
             <p className="text-sm font-medium">{t("practice.selfCheck")}</p>
             <div className="flex flex-wrap gap-2">
               <Button
+                className="min-h-11"
                 disabled={!session.writing.trim()}
                 onClick={async () => {
                   await rateWord(session.library, word.id, RATING.GOOD);
-                  await bumpActivity({ practiced: 1 });
+                  await bumpActivity({
+                    practiced: 1,
+                    ...(session.library === "business" ? { businessPracticed: 1 } : {}),
+                  });
                   advance(session.score + 1);
                 }}
               >
@@ -384,10 +610,14 @@ export default function PracticePage() {
               </Button>
               <Button
                 variant="outline"
+                className="min-h-11"
                 disabled={!session.writing.trim()}
                 onClick={async () => {
                   await rateWord(session.library, word.id, RATING.HARD);
-                  await bumpActivity({ practiced: 1 });
+                  await bumpActivity({
+                    practiced: 1,
+                    ...(session.library === "business" ? { businessPracticed: 1 } : {}),
+                  });
                   advance(session.score);
                 }}
               >

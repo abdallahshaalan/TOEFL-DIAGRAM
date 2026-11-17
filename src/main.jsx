@@ -5,12 +5,14 @@ import { HelmetProvider } from "react-helmet-async";
 import { registerSW } from "virtual:pwa-register";
 import App from "./App";
 import { LanguageProvider } from "./i18n";
-import { migrateLegacyLocalStorage } from "./lib/db";
+import { migrateBusinessProgressV1, migrateLegacyLocalStorage } from "./lib/db";
 import { Toaster } from "./components/ui/sonner";
 import "./index.css";
 import "./styles/toast.css";
 
-migrateLegacyLocalStorage().catch(() => {});
+migrateLegacyLocalStorage()
+  .then(() => migrateBusinessProgressV1())
+  .catch(() => {});
 
 // #region agent log
 fetch("http://127.0.0.1:7332/ingest/168006ff-69ef-4bfe-b2b4-8a904b363cc9", {

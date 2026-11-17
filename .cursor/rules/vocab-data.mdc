@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Vocabulary Data Rules
 
-- Dual libraries: `library: "toefl" | "general"` with separate filters, stats, and progress.
+- Libraries: `library: "toefl" | "business" | "general"` with separate filters, stats, and progress.
 - Normalize via adapters; keep original general fields; fill missing with null/defaults.
 - Stable unique `id` per entry. Difficulty (CEFR) ≠ personal mastery (1–4).
 - Write original definitions/examples. Cite provenance lightly (e.g. `awl-inspired`); never claim guaranteed TOEFL appearance.

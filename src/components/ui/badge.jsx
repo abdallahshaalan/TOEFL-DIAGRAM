@@ -13,6 +13,7 @@ const badgeVariants = cva(
         warning: "border-transparent bg-warning/15 text-warning",
         danger: "border-transparent bg-destructive/15 text-destructive",
         toefl: "border-transparent bg-accent text-accent-foreground",
+        business: "border-transparent bg-primary/10 text-primary",
         general: "border-transparent bg-muted text-muted-foreground",
       },
     },

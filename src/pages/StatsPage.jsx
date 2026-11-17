@@ -75,6 +75,11 @@ export default function StatsPage() {
       [t("stats.total")]: stats.toeflTotal,
     },
     {
+      name: t("vocab.libraryBusiness"),
+      [t("stats.practiced")]: stats.businessPracticed,
+      [t("stats.total")]: stats.businessTotal,
+    },
+    {
       name: t("vocab.libraryGeneral"),
       [t("stats.practiced")]: stats.generalPracticed,
       [t("stats.total")]: stats.generalTotal,

@@ -38,6 +38,7 @@ export default function App() {
           <Route element={<AppShell />}>
             <Route index element={<DashboardPage />} />
             <Route path="vocab/toefl" element={<VocabLibraryPage library="toefl" />} />
+            <Route path="vocab/business" element={<VocabLibraryPage library="business" />} />
             <Route path="vocab/general" element={<VocabLibraryPage library="general" />} />
             <Route path="practice" element={<PracticePage />} />
             <Route path="review" element={<ReviewPage />} />

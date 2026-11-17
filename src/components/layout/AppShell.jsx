@@ -3,6 +3,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   BookOpen,
   Brain,
+  Briefcase,
   ChartNoAxesCombined,
   ChevronDown,
   Clock,
@@ -27,6 +28,7 @@ import { cn } from "@/lib/cn";
 const mainNav = [
   { to: "/", icon: LayoutDashboard, key: "dashboard", end: true },
   { to: "/vocab/toefl", icon: GraduationCap, key: "toeflVocab" },
+  { to: "/vocab/business", icon: Briefcase, key: "businessVocab" },
   { to: "/vocab/general", icon: BookOpen, key: "generalVocab" },
   { to: "/practice", icon: Brain, key: "practice" },
   { to: "/review", icon: Clock, key: "review" },

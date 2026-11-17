@@ -17,6 +17,9 @@ export default function PageHeader({
           {library === "toefl" && (
             <Badge variant="toefl">{libraryLabel || "TOEFL"}</Badge>
           )}
+          {library === "business" && (
+            <Badge variant="business">{libraryLabel || "Business"}</Badge>
+          )}
           {library === "general" && (
             <Badge variant="general">{libraryLabel || "General"}</Badge>
           )}

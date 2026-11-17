@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 import {
   Bar,
   BarChart,
@@ -8,7 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { BookOpen, ChevronRight, Clock, Flame, GraduationCap } from "lucide-react";
+import { BookOpen, Briefcase, ChevronRight, Clock, Flame, GraduationCap } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { useLearningStats } from "@/hooks/useLearningStats";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,11 +21,24 @@ import PageHeader from "@/components/shared/PageHeader";
 import IconTile from "@/components/shared/IconTile";
 import { TOOLS_CATALOG } from "@/lib/toolsCatalog";
 import { CHART_COLORS, formatChartDate } from "@/lib/charts";
+import { getMeta, setMeta } from "@/lib/db";
 import { cn } from "@/lib/cn";
 
 export default function DashboardPage() {
   const { t, lang } = useI18n();
   const { loading, stats } = useLearningStats();
+
+  useEffect(() => {
+    if (!stats?.businessMilestoneToasts?.length) return;
+    (async () => {
+      const prev = (await getMeta("businessMilestoneToastIds", [])) || [];
+      const next = [...new Set([...prev, ...stats.businessMilestoneToasts])];
+      await setMeta("businessMilestoneToastIds", next);
+      for (const m of stats.businessMilestoneToasts) {
+        toast.success(`${t("vocab.milestoneUnlocked")}: ${m}`);
+      }
+    })();
+  }, [stats?.businessMilestoneToasts, t]);
 
   if (loading || !stats) {
     return (
@@ -77,16 +92,29 @@ export default function DashboardPage() {
           <Button asChild variant="outline" className="min-h-11">
             <Link to="/vocab/toefl">{t("dashboard.startToefl")}</Link>
           </Button>
+          <Button asChild variant="outline" className="min-h-11">
+            <Link to="/vocab/business">{t("dashboard.startBusiness")}</Link>
+          </Button>
         </CardContent>
       </Card>
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
         <MetricCard
           label={t("dashboard.toeflLearned")}
           value={`${stats.toeflPracticed}/${stats.toeflTotal}`}
           icon={GraduationCap}
           progress={stats.toeflTotal ? (stats.toeflPracticed / stats.toeflTotal) * 100 : 0}
           showProgress
+        />
+        <MetricCard
+          label={t("dashboard.businessLearned")}
+          value={`${stats.businessPracticed}/${stats.businessTotal}`}
+          icon={Briefcase}
+          progress={
+            stats.businessTotal ? (stats.businessPracticed / stats.businessTotal) * 100 : 0
+          }
+          showProgress
+          hint={`${t("dashboard.businessToday")}: ${stats.businessToday}/${stats.businessGoal} · ${t("dashboard.businessStreak")}: ${stats.businessStreak}`}
         />
         <MetricCard
           label={t("dashboard.generalLearned")}
@@ -200,7 +228,7 @@ export default function DashboardPage() {
   );
 }
 
-function MetricCard({ label, value, icon: Icon, progress = 0, showProgress = false }) {
+function MetricCard({ label, value, icon: Icon, progress = 0, showProgress = false, hint }) {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
@@ -209,6 +237,7 @@ function MetricCard({ label, value, icon: Icon, progress = 0, showProgress = fal
       </CardHeader>
       <CardContent className="px-4 pb-4">
         <div className="text-2xl font-semibold tabular-nums tracking-tight">{value}</div>
+        {hint && <p className="mt-1 text-xs text-muted-foreground">{hint}</p>}
         {showProgress && <Progress value={progress} className="mt-3" />}
       </CardContent>
     </Card>

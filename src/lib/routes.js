@@ -1,6 +1,7 @@
 export const ROUTE_META = [
   { path: "/", end: true, titleKey: "nav.dashboard" },
   { path: "/vocab/toefl", titleKey: "nav.toeflVocab" },
+  { path: "/vocab/business", titleKey: "nav.businessVocab" },
   { path: "/vocab/general", titleKey: "nav.generalVocab" },
   { path: "/practice", titleKey: "nav.practice" },
   { path: "/review", titleKey: "nav.review" },

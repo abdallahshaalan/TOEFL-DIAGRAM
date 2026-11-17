@@ -23,8 +23,16 @@ export default function PracticeSessionLayout({
           <div className="flex flex-wrap items-center gap-2">
             <h1 className="text-section">{title}</h1>
             {library && (
-              <Badge variant={library === "toefl" ? "toefl" : "general"}>
-                {library === "toefl" ? t("vocab.libraryToefl") : t("vocab.libraryGeneral")}
+              <Badge
+                variant={
+                  library === "toefl" ? "toefl" : library === "business" ? "business" : "general"
+                }
+              >
+                {library === "toefl"
+                  ? t("vocab.libraryToefl")
+                  : library === "business"
+                    ? t("vocab.libraryBusiness")
+                    : t("vocab.libraryGeneral")}
               </Badge>
             )}
           </div>

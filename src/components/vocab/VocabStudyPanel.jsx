@@ -32,11 +32,19 @@ export default function VocabStudyPanel({
   mastery,
   onToggleBookmark,
   onRate,
+  onOpenRelated,
+  categoryMeta = [],
   showRating = true,
   className,
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   if (!word) return null;
+
+  const labelCategory = (id) => {
+    const meta = (categoryMeta || []).find((x) => x.id === id);
+    if (!meta) return id;
+    return lang === "ar" ? meta.labelAr : meta.labelEn;
+  };
 
   return (
     <div className={cn("space-y-5", className)}>
@@ -48,10 +56,15 @@ export default function VocabStudyPanel({
             {word.difficulty && <Badge variant="outline">{word.difficulty}</Badge>}
             {(word.categories || []).slice(0, 3).map((c) => (
               <Badge key={c} variant="outline">
-                {c}
+                {labelCategory(c)}
               </Badge>
             ))}
           </div>
+          {word.phonetic && (
+            <p className="text-sm text-muted-foreground">
+              {t("vocab.phonetic")}: {word.phonetic}
+            </p>
+          )}
         </div>
         <div className="flex gap-1">
           <Button
@@ -84,6 +97,9 @@ export default function VocabStudyPanel({
       <Field label={t("vocab.explanation")}>
         <span className="text-muted-foreground">{word.explanationEn}</span>
       </Field>
+      <Field label={t("vocab.arabicExplanation")} rtl>
+        {word.explanationAr}
+      </Field>
 
       {word.exampleEn && (
         <div className="rounded-md border bg-muted/40 p-3">
@@ -99,6 +115,26 @@ export default function VocabStudyPanel({
 
       {(word.synonyms || []).length > 0 && (
         <Field label={t("vocab.synonyms")}>{word.synonyms.join(", ")}</Field>
+      )}
+      {(word.relatedTerms || []).length > 0 && (
+        <Field label={t("vocab.relatedTerms")}>
+          <div className="flex flex-wrap gap-1.5">
+            {word.relatedTerms.map((term) =>
+              onOpenRelated ? (
+                <button
+                  key={term}
+                  type="button"
+                  className="rounded-md border px-2 py-1 text-sm text-primary transition-colors hover:bg-primary/10"
+                  onClick={() => onOpenRelated(term)}
+                >
+                  {term}
+                </button>
+              ) : (
+                <span key={term}>{term}</span>
+              )
+            )}
+          </div>
+        </Field>
       )}
       {(word.antonyms || []).length > 0 && (
         <Field label={t("vocab.antonyms")}>{word.antonyms.join(", ")}</Field>

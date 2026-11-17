@@ -1,0 +1,3341 @@
+{
+  "generatedAt": "2026-11-17T11:56:59.112Z",
+  "count": 300,
+  "items": [
+    {
+      "word": "A/B testing",
+      "arabic": "اختبار أ/ب",
+      "english": "A/B testing compares two versions of something to determine which performs better.",
+      "level": "C1",
+      "arabic_example": "أجرينا اختبار أ/ب لمعرفة أي تصميم يحقق تحويلات أعلى.",
+      "sources": [
+        "batch39:43"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "AARRR framework",
+      "arabic": "إطار AARRR",
+      "english": "AARRR is a growth model: Acquisition, Activation, Retention, Revenue, Referral.",
+      "level": "C1",
+      "arabic_example": "نستخدم إطار AARRR لتحليل نمو التطبيق.",
+      "sources": [
+        "batch39:117"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "accessibility",
+      "arabic": "إمكانية الوصول",
+      "english": "Accessibility ensures that a product can be used by people with disabilities or limitations.",
+      "level": "C1",
+      "arabic_example": "تحسين إمكانية الوصول يجعل التطبيق مناسبًا للجميع.",
+      "sources": [
+        "batch39:107"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "account management",
+      "arabic": "إدارة الحسابات",
+      "english": "Account management involves maintaining relationships with existing customers.",
+      "level": "C1",
+      "arabic_example": "إدارة الحسابات القوية تزيد من الاحتفاظ بالعملاء.",
+      "sources": [
+        "batch39:154"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "accountability",
+      "arabic": "المساءلة",
+      "english": "Accountability is being responsible for actions, decisions, and results.",
+      "level": "C1",
+      "arabic_example": "تعزز المساءلة من أداء الفرق الناجحة.",
+      "sources": [
+        "batch39:166"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "accounts payable",
+      "arabic": "الذمم الدائنة",
+      "english": "Accounts payable is money a business owes to suppliers or vendors.",
+      "level": "C1",
+      "arabic_example": "تم سداد جميع الذمم الدائنة في نهاية الشهر.",
+      "sources": [
+        "batch39:201"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "accounts receivable",
+      "arabic": "الذمم المدينة",
+      "english": "Accounts receivable is money owed to a business by its customers.",
+      "level": "C1",
+      "arabic_example": "تعمل الشركة على تحصيل الذمم المدينة بسرعة.",
+      "sources": [
+        "batch39:200"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "acquisition",
+      "arabic": "استحواذ / حصول",
+      "english": "The company announced the acquisition of a smaller firm.",
+      "level": "C1",
+      "arabic_example": "تمت عملية الاستحواذ بنجاح.",
+      "sources": [
+        "batch9:29"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "activation",
+      "arabic": "التفعيل",
+      "english": "Activation is when a user experiences the first real value of a product.",
+      "level": "C1",
+      "arabic_example": "التفعيل يحدث عندما يستخدم المستخدم الميزة الأساسية لأول مرة.",
+      "sources": [
+        "batch39:109"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "activation rate",
+      "arabic": "معدل التفعيل",
+      "english": "Activation rate measures how many users reach the first valuable action.",
+      "level": "C1",
+      "arabic_example": "معدل التفعيل يساعدنا على فهم نجاح تجربة المستخدم.",
+      "sources": [
+        "batch39:118"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "alignment",
+      "arabic": "المواءمة",
+      "english": "Alignment means ensuring everyone is working toward the same objectives.",
+      "level": "C1",
+      "arabic_example": "تحقيق المواءمة بين الفرق يزيد من الكفاءة.",
+      "sources": [
+        "batch39:181"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "allocate",
+      "arabic": "يوزع / يخصص",
+      "english": "The government will allocate funds for education.",
+      "level": "C1",
+      "arabic_example": "خصصت الشركة ميزانية للمشاريع الجديدة.",
+      "sources": [
+        "batch1:14",
+        "batch10:10"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "analytics",
+      "arabic": "تحليلات البيانات",
+      "english": "Analytics refers to collecting and studying data to improve business decisions.",
+      "level": "C1",
+      "arabic_example": "تحليلات البيانات كشفت سلوك المستخدمين داخل التطبيق.",
+      "sources": [
+        "batch39:42"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "analytics dashboard",
+      "arabic": "لوحة التحليلات",
+      "english": "An analytics dashboard displays important business metrics visually.",
+      "level": "C1",
+      "arabic_example": "لوحة التحليلات تساعد في متابعة أداء المنصة.",
+      "sources": [
+        "batch39:94"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "angel investor",
+      "arabic": "مستثمر ملاك",
+      "english": "An angel investor is an individual who invests personal money into early-stage startups.",
+      "level": "C1",
+      "arabic_example": "تواصلنا مع مستثمر ملاك لدعم المرحلة الأولى من المشروع.",
+      "sources": [
+        "batch39:68"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "annual recurring revenue",
+      "arabic": "الإيرادات السنوية المتكررة",
+      "english": "ARR measures yearly recurring subscription revenue.",
+      "level": "C1",
+      "arabic_example": "تركز شركات SaaS على زيادة الإيرادات السنوية المتكررة.",
+      "sources": [
+        "batch39:151"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "API",
+      "arabic": "واجهة برمجة التطبيقات",
+      "english": "An API allows different software systems to communicate with each other.",
+      "level": "C1",
+      "arabic_example": "استخدمنا واجهة برمجة التطبيقات لربط الخدمات.",
+      "sources": [
+        "batch39:92"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "asset",
+      "arabic": "أصل / ميزة",
+      "english": "An asset is something valuable that a company owns.",
+      "level": "B2",
+      "arabic_example": "مهاراتها تُعد أصلًا مهمًا للفريق.",
+      "sources": [
+        "batch39:214",
+        "batch11:3"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "audit",
+      "arabic": "تدقيق / مراجعة",
+      "english": "An audit is a formal examination of financial records, processes, or compliance.",
+      "level": "C2",
+      "arabic_example": "أجرت الشركة تدقيقًا سنويًا.",
+      "sources": [
+        "batch39:247",
+        "batch11:19"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "authority",
+      "arabic": "السلطة / الموثوقية",
+      "english": "Authority in business means being recognized as a trusted expert in a field.",
+      "level": "C1",
+      "arabic_example": "بناء الموثوقية يحتاج إلى محتوى وخبرة مستمرة.",
+      "sources": [
+        "batch39:25"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "automation",
+      "arabic": "الأتمتة",
+      "english": "Automation means using technology to perform tasks automatically with minimal human involvement.",
+      "level": "C1",
+      "arabic_example": "الأتمتة ساعدت الشركة على تقليل التكاليف.",
+      "sources": [
+        "batch39:89"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "awareness",
+      "arabic": "الوعي بالعلامة",
+      "english": "Awareness is the stage where people first discover your product or brand.",
+      "level": "B2",
+      "arabic_example": "الحملة الإعلانية ساعدت في زيادة الوعي بالعلامة التجارية.",
+      "sources": [
+        "batch39:30"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "balance sheet",
+      "arabic": "الميزانية العمومية",
+      "english": "A balance sheet shows a company's assets, liabilities, and owner's equity at a specific point in time.",
+      "level": "C1",
+      "arabic_example": "تعكس الميزانية العمومية الوضع المالي للشركة.",
+      "sources": [
+        "batch39:211"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "BATNA",
+      "arabic": "أفضل بديل للاتفاق",
+      "english": "BATNA stands for Best Alternative To a Negotiated Agreement.",
+      "level": "C1",
+      "arabic_example": "معرفة أفضل بديل للاتفاق تعطي قوة أثناء التفاوض.",
+      "sources": [
+        "batch39:143"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "benchmark",
+      "arabic": "معيار / مقياس",
+      "english": "This test serves as a benchmark for students' performance.",
+      "level": "C1",
+      "arabic_example": "يُعد هذا الاختبار معيارًا لقياس أداء الطلاب.",
+      "sources": [
+        "batch11:56"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "blue ocean strategy",
+      "arabic": "استراتيجية المحيط الأزرق",
+      "english": "Blue ocean strategy means creating a new uncontested market instead of competing directly.",
+      "level": "C1",
+      "arabic_example": "نسعى لبناء سوق جديد بدل الدخول في منافسة مباشرة.",
+      "sources": [
+        "batch39:98"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "board of directors",
+      "arabic": "مجلس الإدارة",
+      "english": "The board of directors oversees the company's strategy and major decisions.",
+      "level": "C1",
+      "arabic_example": "وافق مجلس الإدارة على خطة التوسع.",
+      "sources": [
+        "batch39:225"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "book value",
+      "arabic": "القيمة الدفترية",
+      "english": "Book value is the value of an asset according to accounting records.",
+      "level": "C1",
+      "arabic_example": "القيمة الدفترية تختلف عن القيمة السوقية.",
+      "sources": [
+        "batch39:217"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "bootstrapping",
+      "arabic": "التمويل الذاتي",
+      "english": "Bootstrapping means building a business using your own money and revenue instead of external investment.",
+      "level": "C1",
+      "arabic_example": "بدأ المؤسس مشروعه عبر التمويل الذاتي دون مستثمرين.",
+      "sources": [
+        "batch39:66"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "brand loyalty",
+      "arabic": "ولاء العلامة التجارية",
+      "english": "Brand loyalty means customers repeatedly choose the same brand over competitors.",
+      "level": "C1",
+      "arabic_example": "ولاء العلامة التجارية يقلل من فقدان العملاء.",
+      "sources": [
+        "batch39:85"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "brand positioning",
+      "arabic": "تموضع العلامة التجارية",
+      "english": "Brand positioning defines how a company wants customers to perceive it compared to competitors.",
+      "level": "C1",
+      "arabic_example": "تموضع العلامة التجارية يؤثر على قرارات الشراء.",
+      "sources": [
+        "batch39:60"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "break-even point",
+      "arabic": "نقطة التعادل",
+      "english": "The break-even point is when total revenue equals total costs, resulting in no profit or loss.",
+      "level": "C1",
+      "arabic_example": "وصلت الشركة إلى نقطة التعادل بعد عشرة أشهر.",
+      "sources": [
+        "batch39:197"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "budget",
+      "arabic": "ميزانية",
+      "english": "A budget is a financial plan that estimates income and expenses over a period.",
+      "level": "B2",
+      "arabic_example": "راجعنا الميزانية قبل بدء المشروع.",
+      "sources": [
+        "batch39:204"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "burn rate",
+      "arabic": "معدل استهلاك المال",
+      "english": "Burn rate is how fast a startup spends its cash before becoming profitable.",
+      "level": "C1",
+      "arabic_example": "معدل استهلاك المال مرتفع في المراحل الأولى من الشركة.",
+      "sources": [
+        "batch39:19"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "business continuity",
+      "arabic": "استمرارية الأعمال",
+      "english": "Business continuity is the ability to continue operating during disruptions.",
+      "level": "C1",
+      "arabic_example": "وضعت الشركة خطة لاستمرارية الأعمال في حالات الطوارئ.",
+      "sources": [
+        "batch39:245"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "business development",
+      "arabic": "تطوير الأعمال",
+      "english": "Business development focuses on creating growth opportunities through partnerships, markets, and relationships.",
+      "level": "C1",
+      "arabic_example": "يعمل فريق تطوير الأعمال على إيجاد فرص نمو جديدة للشركة.",
+      "sources": [
+        "batch39:131"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "bylaws",
+      "arabic": "النظام الداخلي",
+      "english": "Bylaws are the internal rules that govern how a company operates.",
+      "level": "C1",
+      "arabic_example": "تنظم اللوائح الداخلية آلية اتخاذ القرارات.",
+      "sources": [
+        "batch39:226"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "CAC",
+      "arabic": "تكلفة اكتساب العميل",
+      "english": "CAC stands for Customer Acquisition Cost, which measures how much it costs to gain one customer.",
+      "level": "C1",
+      "arabic_example": "تكلفة اكتساب العميل مرتفعة مقارنة بالإيرادات الحالية.",
+      "sources": [
+        "batch39:45"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "candidate",
+      "arabic": "مرشح وظيفي",
+      "english": "A candidate is a person being considered for a job position.",
+      "level": "B2",
+      "arabic_example": "أجرينا مقابلات مع عدة مرشحين للوظيفة.",
+      "sources": [
+        "batch39:173"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "capital allocation",
+      "arabic": "تخصيص رأس المال",
+      "english": "Capital allocation is the process of deciding where a company should invest its financial resources.",
+      "level": "C1",
+      "arabic_example": "يعد تخصيص رأس المال من أهم مسؤوليات المدير التنفيذي.",
+      "sources": [
+        "batch39:219"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "capital expenditure",
+      "arabic": "النفقات الرأسمالية",
+      "english": "Capital expenditure refers to money spent on acquiring or improving long-term assets.",
+      "level": "C1",
+      "arabic_example": "استثمرت الشركة في خوادم جديدة ضمن النفقات الرأسمالية.",
+      "sources": [
+        "batch39:193"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "capitalism",
+      "arabic": "رأسمالية",
+      "english": "Capitalism encourages private business ownership.",
+      "level": "C1",
+      "arabic_example": "تشجع الرأسمالية على ملكية الأعمال الخاصة.",
+      "sources": [
+        "batch12:56"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "capitalist",
+      "arabic": "رأسمالي",
+      "english": "He is a successful capitalist entrepreneur.",
+      "level": "C1",
+      "arabic_example": "هو رجل أعمال رأسمالي ناجح.",
+      "sources": [
+        "batch12:57"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cargo",
+      "arabic": "حمولة / بضائع",
+      "english": "The ship carried a cargo of goods.",
+      "level": "C1",
+      "arabic_example": "حملت السفينة حمولة من البضائع.",
+      "sources": [
+        "batch12:59"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "case study",
+      "arabic": "دراسة حالة",
+      "english": "A case study explains how a product solved a real problem for a customer.",
+      "level": "C1",
+      "arabic_example": "نشرنا دراسة حالة لزيادة ثقة العملاء.",
+      "sources": [
+        "batch39:88"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cash burn",
+      "arabic": "استهلاك النقد",
+      "english": "Cash burn refers to the actual cash a business spends over a period.",
+      "level": "C1",
+      "arabic_example": "انخفض استهلاك النقد بعد تقليل المصروفات.",
+      "sources": [
+        "batch39:206"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cash flow",
+      "arabic": "التدفق النقدي",
+      "english": "Cash flow is the movement of money into and out of a business.",
+      "level": "C1",
+      "arabic_example": "التدفق النقدي الإيجابي يساعد الشركة على تغطية نفقاتها.",
+      "sources": [
+        "batch39:190"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cash flow statement",
+      "arabic": "قائمة التدفقات النقدية",
+      "english": "A cash flow statement shows how cash moves through a business during a period.",
+      "level": "C1",
+      "arabic_example": "توضح قائمة التدفقات النقدية مصادر واستخدامات الأموال.",
+      "sources": [
+        "batch39:213"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cash reserve",
+      "arabic": "الاحتياطي النقدي",
+      "english": "A cash reserve is money kept available to cover unexpected expenses or emergencies.",
+      "level": "C1",
+      "arabic_example": "تحتفظ الشركة باحتياطي نقدي لمواجهة الظروف الطارئة.",
+      "sources": [
+        "batch39:191"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "channel partner",
+      "arabic": "شريك توزيع",
+      "english": "A channel partner helps sell or distribute your products to customers.",
+      "level": "C1",
+      "arabic_example": "وقعنا اتفاقية مع شريك توزيع جديد.",
+      "sources": [
+        "batch39:157"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "churn",
+      "arabic": "معدل فقدان العملاء",
+      "english": "Churn is the percentage of customers who stop using a product over time.",
+      "level": "C1",
+      "arabic_example": "ارتفاع معدل فقدان العملاء يشير إلى مشكلة في المنتج.",
+      "sources": [
+        "batch39:9"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "churn rate",
+      "arabic": "معدل فقدان المستخدمين",
+      "english": "Churn rate is the percentage of users who stop using a product over time.",
+      "level": "C1",
+      "arabic_example": "ارتفاع معدل فقدان المستخدمين مشكلة يجب حلها.",
+      "sources": [
+        "batch39:111"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "client",
+      "arabic": "عميل",
+      "english": "A client is a person or company that hires you for a service.",
+      "level": "A2",
+      "arabic_example": "تواصلت مع عميل جديد لمشروع تصميم موقع.",
+      "sources": [
+        "batch39:12"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "closing",
+      "arabic": "إغلاق الصفقة",
+      "english": "Closing is the final stage where the customer agrees to purchase.",
+      "level": "C1",
+      "arabic_example": "إغلاق الصفقة يحتاج إلى توقيت مناسب.",
+      "sources": [
+        "batch39:51",
+        "batch39:149"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cold outreach",
+      "arabic": "التواصل البارد",
+      "english": "Cold outreach means contacting potential clients who have never interacted with you before.",
+      "level": "C1",
+      "arabic_example": "التواصل البارد يحتاج إلى رسالة مختصرة ومقنعة.",
+      "sources": [
+        "batch39:49"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "company culture",
+      "arabic": "ثقافة الشركة",
+      "english": "Company culture is the collection of values, behaviors, and practices within an organization.",
+      "level": "C1",
+      "arabic_example": "ثقافة الشركة الإيجابية تزيد من إنتاجية الموظفين.",
+      "sources": [
+        "batch39:163"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "competitive advantage",
+      "arabic": "الميزة التنافسية",
+      "english": "A competitive advantage is a unique factor that makes a business stronger than competitors.",
+      "level": "C1",
+      "arabic_example": "السرعة في التطوير من أهم ميزاتنا التنافسية.",
+      "sources": [
+        "batch39:63"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "compliance",
+      "arabic": "امتثال / التزام",
+      "english": "Compliance means following laws, regulations, and internal policies.",
+      "level": "C1",
+      "arabic_example": "الشركة تلتزم بالقوانين المحلية.",
+      "sources": [
+        "batch39:227",
+        "batch14:18"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "compromise",
+      "arabic": "حل وسط / يساوم",
+      "english": "They reached a compromise after long negotiations.",
+      "level": "C1",
+      "arabic_example": "توصلوا إلى حل وسط يرضي الجميع.",
+      "sources": [
+        "batch14:27"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "conflict resolution",
+      "arabic": "حل النزاعات",
+      "english": "Conflict resolution is the process of addressing disagreements constructively.",
+      "level": "C1",
+      "arabic_example": "مهارات حل النزاعات مهمة للقادة.",
+      "sources": [
+        "batch39:183"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "content strategy",
+      "arabic": "استراتيجية المحتوى",
+      "english": "Content strategy is planning and creating content to attract and engage an audience.",
+      "level": "C1",
+      "arabic_example": "استراتيجية المحتوى مهمة لبناء علامة شخصية قوية.",
+      "sources": [
+        "batch39:26"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "contingency plan",
+      "arabic": "خطة طوارئ",
+      "english": "A contingency plan is a backup plan prepared for unexpected events.",
+      "level": "C1",
+      "arabic_example": "أعد الفريق خطة طوارئ لمواجهة انقطاع الخدمة.",
+      "sources": [
+        "batch39:246"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "contract",
+      "arabic": "عقد",
+      "english": "A contract is a legal agreement between two parties defining work terms.",
+      "level": "B2",
+      "arabic_example": "وقعت عقد عمل حر مع شركة خارجية.",
+      "sources": [
+        "batch39:13"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "contract value",
+      "arabic": "قيمة العقد",
+      "english": "Contract value is the total monetary value of an agreement.",
+      "level": "C1",
+      "arabic_example": "قيمة العقد تجاوزت خمسين ألف دولار.",
+      "sources": [
+        "batch39:150"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "contractor",
+      "arabic": "مقاول",
+      "english": "The contractor finished the construction early.",
+      "level": "C1",
+      "arabic_example": "المقاول بدأ بناء المنزل الجديد.",
+      "sources": [
+        "batch15:9"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "conversion funnel",
+      "arabic": "قمع التحويل",
+      "english": "A conversion funnel tracks how users move from awareness to purchase.",
+      "level": "C1",
+      "arabic_example": "نحلل قمع التحويل لتحسين المبيعات.",
+      "sources": [
+        "batch39:119"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "conversion rate",
+      "arabic": "معدل التحويل",
+      "english": "Conversion rate is the percentage of users who take a desired action.",
+      "level": "C1",
+      "arabic_example": "تحسين الصفحة زاد معدل التحويل بشكل واضح.",
+      "sources": [
+        "batch39:27"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "copyright",
+      "arabic": "حقوق النشر",
+      "english": "Copyright protects original creative works such as software, books, and designs.",
+      "level": "C1",
+      "arabic_example": "الكود البرمجي محمي بحقوق النشر.",
+      "sources": [
+        "batch39:232"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "copywriting",
+      "arabic": "الكتابة التسويقية",
+      "english": "Copywriting is writing persuasive text that motivates people to take action.",
+      "level": "C1",
+      "arabic_example": "الكتابة التسويقية القوية تحسن معدل التحويل.",
+      "sources": [
+        "batch39:35"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "core values",
+      "arabic": "القيم الأساسية",
+      "english": "Core values are the principles that guide decisions and behavior inside a company.",
+      "level": "C1",
+      "arabic_example": "النزاهة والابتكار من القيم الأساسية للشركة.",
+      "sources": [
+        "batch39:164"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "corporation",
+      "arabic": "شركة مساهمة",
+      "english": "A corporation is a separate legal entity owned by shareholders.",
+      "level": "C1",
+      "arabic_example": "تحولت الشركة إلى شركة مساهمة استعدادًا للتوسع.",
+      "sources": [
+        "batch39:223"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cost structure",
+      "arabic": "هيكل التكاليف",
+      "english": "Cost structure describes all costs involved in running a business.",
+      "level": "C1",
+      "arabic_example": "تحليل هيكل التكاليف يساعد في تحسين الأرباح.",
+      "sources": [
+        "batch39:18"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "CRM",
+      "arabic": "نظام إدارة علاقات العملاء",
+      "english": "CRM stands for Customer Relationship Management, a system used to manage customer interactions.",
+      "level": "C1",
+      "arabic_example": "نستخدم نظام إدارة علاقات العملاء لتنظيم بيانات العملاء.",
+      "sources": [
+        "batch39:48"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cross-functional team",
+      "arabic": "فريق متعدد التخصصات",
+      "english": "A cross-functional team includes members from different departments working together.",
+      "level": "C1",
+      "arabic_example": "تم تشكيل فريق متعدد التخصصات لإطلاق المنتج الجديد.",
+      "sources": [
+        "batch39:180"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "cross-selling",
+      "arabic": "البيع المتقاطع",
+      "english": "Cross-selling means offering related products in addition to the original purchase.",
+      "level": "C1",
+      "arabic_example": "المتجر يستخدم البيع المتقاطع لزيادة المبيعات.",
+      "sources": [
+        "batch39:53"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "CTA",
+      "arabic": "دعوة لاتخاذ إجراء",
+      "english": "CTA stands for Call To Action, which encourages users to take a specific step.",
+      "level": "C1",
+      "arabic_example": "تغيير نص دعوة اتخاذ الإجراء زاد التسجيلات.",
+      "sources": [
+        "batch39:33"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Currency",
+      "arabic": "عملة",
+      "english": "Currency is the official money of a country.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Economics:9"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "customer acquisition",
+      "arabic": "اكتساب العملاء",
+      "english": "Customer acquisition is the process of gaining new paying users or clients.",
+      "level": "C1",
+      "arabic_example": "نركز على اكتساب العملاء عبر التسويق الرقمي.",
+      "sources": [
+        "batch39:7"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "customer journey",
+      "arabic": "رحلة العميل",
+      "english": "Customer journey describes every interaction a user has with a business.",
+      "level": "C1",
+      "arabic_example": "درسنا رحلة العميل لتحسين التحويلات.",
+      "sources": [
+        "batch39:95"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "customer journey map",
+      "arabic": "خريطة رحلة العميل",
+      "english": "A customer journey map visualizes all steps a user takes with a product.",
+      "level": "C1",
+      "arabic_example": "خريطة رحلة العميل تساعد في تحسين التجربة.",
+      "sources": [
+        "batch39:127"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "customer persona",
+      "arabic": "الشخصية النموذجية للعميل",
+      "english": "A customer persona is a fictional profile representing your ideal customer.",
+      "level": "C1",
+      "arabic_example": "أنشأنا شخصية نموذجية لفهم احتياجات المستخدمين.",
+      "sources": [
+        "batch39:62"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "customer success",
+      "arabic": "نجاح العميل",
+      "english": "Customer success ensures customers achieve their desired outcomes.",
+      "level": "C1",
+      "arabic_example": "فريق نجاح العميل يساعد العملاء على تحقيق أهدافهم.",
+      "sources": [
+        "batch39:153"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "dashboard",
+      "arabic": "لوحة التحكم",
+      "english": "A dashboard is a visual interface showing key data and metrics.",
+      "level": "B2",
+      "arabic_example": "لوحة التحكم تعرض أداء التطبيق في الوقت الحقيقي.",
+      "sources": [
+        "batch39:115"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "data visualization",
+      "arabic": "تصوير البيانات",
+      "english": "Data visualization is the representation of data in charts and graphs.",
+      "level": "C1",
+      "arabic_example": "تصوير البيانات يساعد في فهم الأداء بسرعة.",
+      "sources": [
+        "batch39:116"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "data-driven",
+      "arabic": "معتمد على البيانات",
+      "english": "Data-driven decision making relies on analytics and evidence instead of assumptions.",
+      "level": "C1",
+      "arabic_example": "الشركات الحديثة تعتمد على قرارات مبنية على البيانات.",
+      "sources": [
+        "batch39:93"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "deal",
+      "arabic": "صفقة",
+      "english": "A deal is an agreement between a buyer and seller.",
+      "level": "B2",
+      "arabic_example": "أغلق الفريق صفقة مهمة هذا الأسبوع.",
+      "sources": [
+        "batch39:148"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "decision maker",
+      "arabic": "صاحب القرار",
+      "english": "A decision maker is the person who has the authority to approve a purchase.",
+      "level": "C1",
+      "arabic_example": "يجب الوصول إلى صاحب القرار لتسريع عملية البيع.",
+      "sources": [
+        "batch39:133"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "decision-making",
+      "arabic": "اتخاذ القرار",
+      "english": "Decision-making is the process of choosing between alternatives.",
+      "level": "C1",
+      "arabic_example": "يتطلب اتخاذ القرار الجيد بيانات دقيقة.",
+      "sources": [
+        "batch39:182"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "deficit",
+      "arabic": "عجز / نقص",
+      "english": "The country faces a budget deficit.",
+      "level": "C2",
+      "arabic_example": "تعاني الشركة من عجز مالي هذا الشهر.",
+      "sources": [
+        "batch16:35"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "delegation",
+      "arabic": "تفويض المهام",
+      "english": "Delegation is assigning responsibilities to others to improve efficiency.",
+      "level": "C1",
+      "arabic_example": "تفويض المهام يسمح للقادة بالتركيز على الأولويات.",
+      "sources": [
+        "batch39:167"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Demand",
+      "arabic": "الطلب",
+      "english": "Demand is how much consumers want a product.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Economics:1"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "depreciation",
+      "arabic": "الاستهلاك المحاسبي",
+      "english": "Depreciation is the gradual reduction in the value of a long-term asset over time.",
+      "level": "C1",
+      "arabic_example": "يتم احتساب استهلاك المعدات سنويًا.",
+      "sources": [
+        "batch39:216"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "discount",
+      "arabic": "خصم",
+      "english": "A discount is a reduction in the normal selling price.",
+      "level": "B2",
+      "arabic_example": "طلب العميل خصمًا قبل توقيع العقد.",
+      "sources": [
+        "batch39:144"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "discovery call",
+      "arabic": "مكالمة استكشافية",
+      "english": "A discovery call is an initial conversation used to understand a prospect's needs and challenges.",
+      "level": "C1",
+      "arabic_example": "أجرينا مكالمة استكشافية لفهم احتياجات العميل.",
+      "sources": [
+        "batch39:135"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "discrimination",
+      "arabic": "تمييز / عنصرية",
+      "english": "Discrimination is illegal in the workplace.",
+      "level": "C1",
+      "arabic_example": "يجب محاربة التمييز بكل أشكاله.",
+      "sources": [
+        "batch17:36"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "dispute",
+      "arabic": "نزاع / خلاف",
+      "english": "The companies had a dispute over the contract.",
+      "level": "C1",
+      "arabic_example": "نشب نزاع بين الجيران حول الحدود.",
+      "sources": [
+        "batch17:42"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "disruption",
+      "arabic": "إحداث تغيير جذري",
+      "english": "Disruption happens when a new product changes an industry dramatically.",
+      "level": "C1",
+      "arabic_example": "الذكاء الاصطناعي أحدث تغييرًا جذريًا في سوق البرمجيات.",
+      "sources": [
+        "batch39:73"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "diversity",
+      "arabic": "تنوع / اختلاف",
+      "english": "Workplace diversity is important.",
+      "level": "C1",
+      "arabic_example": "أحب أن أغوص في البحر أثناء العطلة.rsity",
+      "sources": [
+        "batch17:58"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "economics",
+      "arabic": "علم الاقتصاد",
+      "english": "He studied economics at university.",
+      "level": "B2",
+      "arabic_example": "يدرس الطالب تخصص الاقتصاد في الجامعة.",
+      "sources": [
+        "batch18:20"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Economy",
+      "arabic": "اقتصاد",
+      "english": "The economy affects employment and trade.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Economics:8"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "employee engagement",
+      "arabic": "اندماج الموظفين",
+      "english": "Employee engagement measures employees' commitment and enthusiasm toward their work.",
+      "level": "C1",
+      "arabic_example": "زيادة اندماج الموظفين تحسن الأداء العام.",
+      "sources": [
+        "batch39:187"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "employee retention",
+      "arabic": "الاحتفاظ بالموظفين",
+      "english": "Employee retention measures a company's ability to keep employees over time.",
+      "level": "C1",
+      "arabic_example": "الاحتفاظ بالموظفين يقلل تكاليف التوظيف.",
+      "sources": [
+        "batch39:184"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "empowerment",
+      "arabic": "التمكين",
+      "english": "Empowerment means giving employees authority and confidence to make decisions.",
+      "level": "C1",
+      "arabic_example": "يساعد التمكين على بناء فرق قوية ومستقلة.",
+      "sources": [
+        "batch39:169"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "engagement",
+      "arabic": "التفاعل",
+      "english": "Engagement measures how actively users interact with your content or product.",
+      "level": "B2",
+      "arabic_example": "ارتفع التفاعل بعد نشر الفيديوهات التعليمية.",
+      "sources": [
+        "batch39:37"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "engagement loop",
+      "arabic": "حلقة التفاعل",
+      "english": "An engagement loop is a system that encourages users to keep coming back.",
+      "level": "C1",
+      "arabic_example": "تصميم حلقة التفاعل يزيد من استخدام التطبيق.",
+      "sources": [
+        "batch39:120"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "engagement rate",
+      "arabic": "معدل التفاعل",
+      "english": "Engagement rate measures how actively users interact with a platform or content.",
+      "level": "C1",
+      "arabic_example": "ارتفع معدل التفاعل بعد تحديث التصميم.",
+      "sources": [
+        "batch39:81"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "enterprise",
+      "arabic": "مشروع / شركة",
+      "english": "The startup is a new enterprise.",
+      "level": "C1",
+      "arabic_example": "أسسوا شركة جديدة ناشئة.",
+      "sources": [
+        "batch18:67"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "enterprise sales",
+      "arabic": "مبيعات المؤسسات",
+      "english": "Enterprise sales refers to selling large solutions to organizations and corporations.",
+      "level": "C1",
+      "arabic_example": "مبيعات المؤسسات تتطلب دورات بيع أطول.",
+      "sources": [
+        "batch39:159"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "entity",
+      "arabic": "كيان / وحدة",
+      "english": "Each department is treated as a separate entity.",
+      "level": "C1",
+      "arabic_example": "تعتبر الشركة كياناً قانونياً مستقلاً.",
+      "sources": [
+        "batch3:14",
+        "batch19:1"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "entrepreneur",
+      "arabic": "رائد أعمال",
+      "english": "An entrepreneur starts and manages businesses.",
+      "level": "B2",
+      "arabic_example": "هي رائدة أعمال ناجحة أسست مشروعها الخاص.",
+      "sources": [
+        "topic_Business:0",
+        "batch19:2"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "equity",
+      "arabic": "حصة ملكية",
+      "english": "Equity represents ownership percentage in a company.",
+      "level": "C1",
+      "arabic_example": "المستثمر طلب حصة ملكية مقابل التمويل.",
+      "sources": [
+        "batch39:69"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "exceed",
+      "arabic": "يتجاوز / يفوق",
+      "english": "The final cost exceeded our budget.",
+      "level": "B2",
+      "arabic_example": "تجاوزت التكلفة النهائية ميزانيتنا.",
+      "sources": [
+        "batch3:29",
+        "batch19:27"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "expansion revenue",
+      "arabic": "إيرادات التوسع",
+      "english": "Expansion revenue comes from existing customers purchasing more services.",
+      "level": "C1",
+      "arabic_example": "إيرادات التوسع زادت بفضل عمليات البيع التصاعدي.",
+      "sources": [
+        "batch39:156"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "feature",
+      "arabic": "ميزة",
+      "english": "A feature is a specific function or capability of a product.",
+      "level": "A2",
+      "arabic_example": "أضفنا ميزة جديدة لتحسين تجربة المستخدم.",
+      "sources": [
+        "batch39:102"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "feature prioritization",
+      "arabic": "ترتيب الأولويات للميزات",
+      "english": "Feature prioritization is deciding which features to build first based on value and impact.",
+      "level": "C1",
+      "arabic_example": "نقوم بترتيب أولويات الميزات حسب احتياجات المستخدمين.",
+      "sources": [
+        "batch39:103"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "feedback culture",
+      "arabic": "ثقافة التغذية الراجعة",
+      "english": "Feedback culture encourages open communication and continuous improvement.",
+      "level": "C1",
+      "arabic_example": "تبنت الشركة ثقافة التغذية الراجعة بين جميع الفرق.",
+      "sources": [
+        "batch39:177"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "fiduciary duty",
+      "arabic": "الواجب الائتماني",
+      "english": "Fiduciary duty is the legal obligation to act in the best interests of another party, such as shareholders.",
+      "level": "C1",
+      "arabic_example": "يلتزم أعضاء مجلس الإدارة بالواجب الائتماني تجاه المساهمين.",
+      "sources": [
+        "batch39:249"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Finance",
+      "arabic": "تمويل",
+      "english": "Finance deals with money and investments.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Business:8"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "financial statement",
+      "arabic": "القوائم المالية",
+      "english": "Financial statements summarize a company's financial performance and position.",
+      "level": "C1",
+      "arabic_example": "راجع المستثمر القوائم المالية قبل الاستثمار.",
+      "sources": [
+        "batch39:210"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "fixed cost",
+      "arabic": "تكلفة ثابتة",
+      "english": "A fixed cost does not change with production or sales volume.",
+      "level": "B2",
+      "arabic_example": "إيجار المكتب يعتبر تكلفة ثابتة.",
+      "sources": [
+        "batch39:207"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "forecast",
+      "arabic": "تنبؤ / يتنبأ",
+      "english": "A forecast predicts future business performance based on current data.",
+      "level": "B2",
+      "arabic_example": "توقعات الطقس تشير إلى هطول أمطار غدًا.",
+      "sources": [
+        "batch39:205",
+        "batch5:0",
+        "batch20:32"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Found",
+      "arabic": "يؤسس",
+      "english": "He founded a tech startup last year.",
+      "level": "B2",
+      "arabic_example": "أسس العلماء مختبرًا جديدًا للأبحاث.",
+      "sources": [
+        "batch5:2"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "founder",
+      "arabic": "مؤسس",
+      "english": "He is the founder of the company.",
+      "level": "B2",
+      "arabic_example": "هو مؤسس الشركة الناجحة.",
+      "sources": [
+        "batch20:47"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "founder mindset",
+      "arabic": "عقلية المؤسس",
+      "english": "Founder mindset refers to strategic thinking focused on ownership, growth, and long-term vision.",
+      "level": "C1",
+      "arabic_example": "عقلية المؤسس تحتاج إلى تحمل المخاطر واتخاذ القرارات.",
+      "sources": [
+        "batch39:99"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "franchise",
+      "arabic": "امتياز / فرنشايز",
+      "english": "They opened a new franchise in the city.",
+      "level": "C1",
+      "arabic_example": "افتتحوا فرعًا جديدًا بنظام الامتياز التجاري.",
+      "sources": [
+        "batch20:52"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "freelancing",
+      "arabic": "العمل الحر",
+      "english": "Freelancing is working independently for multiple clients instead of a single employer.",
+      "level": "B2",
+      "arabic_example": "العمل الحر يوفر مرونة في اختيار المشاريع.",
+      "sources": [
+        "batch39:10"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "freemium",
+      "arabic": "مجاني مع مزايا مدفوعة",
+      "english": "Freemium is a model where basic features are free but advanced features require payment.",
+      "level": "C1",
+      "arabic_example": "التطبيق يستخدم نموذج مجاني مع مزايا مدفوعة لجذب المستخدمين.",
+      "sources": [
+        "batch39:58"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "freemium funnel",
+      "arabic": "قمع فريميوم",
+      "english": "A freemium funnel shows how free users convert into paying users.",
+      "level": "C1",
+      "arabic_example": "نحلل قمع الفريميوم لزيادة التحويل.",
+      "sources": [
+        "batch39:125"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "funding",
+      "arabic": "تمويل",
+      "english": "Funding is the money raised to start or grow a business.",
+      "level": "B2",
+      "arabic_example": "نبحث عن تمويل لتوسيع المشروع.",
+      "sources": [
+        "batch39:20"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "GDP",
+      "arabic": "الناتج المحلي الإجمالي",
+      "english": "GDP measures a country's economic output.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Economics:3"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "governance",
+      "arabic": "حوكمة / إدارة",
+      "english": "Governance is the system of rules and processes used to direct and control an organization.",
+      "level": "C1",
+      "arabic_example": "تحقق الحوكمة الجيدة العدالة والشفافية.",
+      "sources": [
+        "batch39:248",
+        "batch21:24"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "gross",
+      "arabic": "مقزز",
+      "english": "The company made a gross profit.",
+      "level": "B1",
+      "arabic_example": "هذا مقزز!",
+      "sources": [
+        "batch21:39",
+        "batch40:84"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "gross revenue",
+      "arabic": "إجمالي الإيرادات",
+      "english": "Gross revenue is the total income generated before any deductions.",
+      "level": "C1",
+      "arabic_example": "بلغ إجمالي الإيرادات مليون دولار هذا العام.",
+      "sources": [
+        "batch39:196"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "growth hacking",
+      "arabic": "اختراق النمو",
+      "english": "Growth hacking is using creative, low-cost strategies to achieve rapid business growth.",
+      "level": "C1",
+      "arabic_example": "الشركات الناشئة تستخدم اختراق النمو لتحقيق انتشار سريع.",
+      "sources": [
+        "batch39:59"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "headline",
+      "arabic": "العنوان الرئيسي",
+      "english": "A headline is the main title designed to capture attention quickly.",
+      "level": "B2",
+      "arabic_example": "العنوان الرئيسي الجذاب يزيد من تفاعل الزوار.",
+      "sources": [
+        "batch39:36"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "high-performing team",
+      "arabic": "فريق عالي الأداء",
+      "english": "A high-performing team consistently achieves exceptional results.",
+      "level": "C1",
+      "arabic_example": "تسعى الشركات الناشئة لبناء فرق عالية الأداء.",
+      "sources": [
+        "batch39:189"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "income statement",
+      "arabic": "قائمة الدخل",
+      "english": "An income statement reports revenue, expenses, and profit over a period.",
+      "level": "C1",
+      "arabic_example": "أظهرت قائمة الدخل نموًا في الأرباح.",
+      "sources": [
+        "batch39:212"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "inflation",
+      "arabic": "تضخم",
+      "english": "Inflation decreases the purchasing power of money.",
+      "level": "B2",
+      "arabic_example": "يؤثر التضخم على تكلفة المعيشة بشكل كبير.",
+      "sources": [
+        "topic_Economics:2",
+        "batch23:69"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "integration",
+      "arabic": "تكامل",
+      "english": "Integration is connecting different systems or tools to work together.",
+      "level": "C1",
+      "arabic_example": "تكامل واتساب مع النظام زاد سرعة التواصل.",
+      "sources": [
+        "batch39:91"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "intellectual property",
+      "arabic": "الملكية الفكرية",
+      "english": "Intellectual property refers to creations of the mind that are legally protected.",
+      "level": "C1",
+      "arabic_example": "تحرص الشركة على حماية ملكيتها الفكرية.",
+      "sources": [
+        "batch39:229"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "interview",
+      "arabic": "مقابلة عمل",
+      "english": "An interview is a formal meeting to assess a candidate's suitability.",
+      "level": "B2",
+      "arabic_example": "نجح المرشح في مقابلة العمل التقنية.",
+      "sources": [
+        "batch39:174"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "inventory",
+      "arabic": "جرد / مخزون",
+      "english": "The store updated its inventory.",
+      "level": "B2",
+      "arabic_example": "تم تحديث جرد المخزون في المتجر.",
+      "sources": [
+        "batch24:64"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Investment",
+      "arabic": "استثمار",
+      "english": "Investment involves putting money into assets for profit.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Business:1",
+        "topic_Economics:5"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "investor",
+      "arabic": "مستثمر",
+      "english": "An investor is a person who provides money expecting future profit.",
+      "level": "B2",
+      "arabic_example": "المستثمرون حذرون بشأن السوق.",
+      "sources": [
+        "batch39:21",
+        "batch24:66"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "invoice",
+      "arabic": "فاتورة",
+      "english": "An invoice is a document requesting payment for goods or services provided.",
+      "level": "B2",
+      "arabic_example": "أرسلنا الفاتورة إلى العميل بعد انتهاء المشروع.",
+      "sources": [
+        "batch39:14",
+        "batch39:202"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "iteration",
+      "arabic": "تكرار وتحسين",
+      "english": "Iteration is the process of improving a product step by step through repeated cycles.",
+      "level": "B2",
+      "arabic_example": "نقوم بتحسين التطبيق عبر تكرارات مستمرة.",
+      "sources": [
+        "batch39:3"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "iteration cycle",
+      "arabic": "دورة التحسين",
+      "english": "An iteration cycle is the repeated process of improving a product based on feedback.",
+      "level": "C1",
+      "arabic_example": "نحسن المنتج عبر دورات تحسين مستمرة.",
+      "sources": [
+        "batch39:105"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "job description",
+      "arabic": "الوصف الوظيفي",
+      "english": "A job description outlines the responsibilities and requirements of a role.",
+      "level": "B2",
+      "arabic_example": "تم نشر الوصف الوظيفي لمطور الواجهة الأمامية.",
+      "sources": [
+        "batch39:172"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "keyword",
+      "arabic": "كلمة مفتاحية",
+      "english": "A keyword is a term users type into search engines when looking for information.",
+      "level": "B2",
+      "arabic_example": "اخترنا كلمات مفتاحية تناسب جمهورنا المستهدف.",
+      "sources": [
+        "batch39:41"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "KPI",
+      "arabic": "مؤشر الأداء الرئيسي",
+      "english": "KPI stands for Key Performance Indicator, a measurable value showing success.",
+      "level": "C1",
+      "arabic_example": "نستخدم مؤشرات الأداء لتتبع النمو.",
+      "sources": [
+        "batch39:113"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "landing page",
+      "arabic": "صفحة هبوط",
+      "english": "A landing page is a focused web page designed to convert visitors into customers or leads.",
+      "level": "C1",
+      "arabic_example": "أنشأنا صفحة هبوط مخصصة للحملة الإعلانية.",
+      "sources": [
+        "batch39:34"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "lead",
+      "arabic": "عميل محتمل",
+      "english": "A lead is a person who has shown interest in your product or service.",
+      "level": "B2",
+      "arabic_example": "جمعنا مئات العملاء المحتملين من صفحة التسجيل.",
+      "sources": [
+        "batch39:31"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "leadership",
+      "arabic": "القيادة",
+      "english": "Leadership is the ability to guide, influence, and inspire people toward a common goal.",
+      "level": "C1",
+      "arabic_example": "القيادة الفعالة تساعد الفريق على تحقيق أهدافه.",
+      "sources": [
+        "batch39:160"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "lean product development",
+      "arabic": "تطوير منتج رشيق",
+      "english": "Lean product development focuses on building quickly, testing, and iterating.",
+      "level": "C1",
+      "arabic_example": "نستخدم تطوير المنتج الرشيق لتقليل الهدر.",
+      "sources": [
+        "batch39:129"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "lean startup",
+      "arabic": "الشركة الناشئة الرشيقة",
+      "english": "Lean startup is a method of building businesses by testing ideas quickly using minimal resources.",
+      "level": "C1",
+      "arabic_example": "اعتمدنا أسلوب الشركة الناشئة الرشيقة لتقليل المخاطر.",
+      "sources": [
+        "batch39:2"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "legal entity",
+      "arabic": "كيان قانوني",
+      "english": "A legal entity is an organization that has legal rights and responsibilities separate from its owners.",
+      "level": "C1",
+      "arabic_example": "تم تسجيل الشركة ككيان قانوني مستقل.",
+      "sources": [
+        "batch39:220"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "leverage",
+      "arabic": "يستفيد، يستغل",
+      "english": "They leveraged social media to increase sales.",
+      "level": "C2",
+      "arabic_example": "استخدم الشركة نفوذها لتحقيق أهدافها.",
+      "sources": [
+        "batch1:123"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "liability",
+      "arabic": "التزام مالي",
+      "english": "A liability is a financial obligation that a company owes to others.",
+      "level": "C1",
+      "arabic_example": "خفضت الشركة التزاماتها المالية هذا العام.",
+      "sources": [
+        "batch39:215"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "limited liability company",
+      "arabic": "شركة ذات مسؤولية محدودة",
+      "english": "A Limited Liability Company (LLC) protects the owners' personal assets from business liabilities.",
+      "level": "C1",
+      "arabic_example": "اختار تأسيس شركة ذات مسؤولية محدودة لحماية أصوله الشخصية.",
+      "sources": [
+        "batch39:222"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "liquidity",
+      "arabic": "السيولة",
+      "english": "Liquidity is a company's ability to meet its short-term financial obligations.",
+      "level": "C1",
+      "arabic_example": "الحفاظ على السيولة أمر ضروري لاستمرار الشركة.",
+      "sources": [
+        "batch39:198"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "LTV",
+      "arabic": "القيمة العمرية للعميل",
+      "english": "LTV stands for Lifetime Value, which estimates the total revenue from one customer over time.",
+      "level": "C1",
+      "arabic_example": "القيمة العمرية للعميل يجب أن تكون أعلى من تكلفة اكتسابه.",
+      "sources": [
+        "batch39:46"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Management",
+      "arabic": "إدارة",
+      "english": "Management organizes and directs business operations.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Business:6"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "margin",
+      "arabic": "هامش / فرق",
+      "english": "The book has wide margins.",
+      "level": "B2",
+      "arabic_example": "ترك الكتاب هوامش واسعة للكتابة.",
+      "sources": [
+        "batch26:33"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Market",
+      "arabic": "سوق",
+      "english": "A market is where goods and services are traded.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Business:2",
+        "topic_Economics:4"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "market penetration",
+      "arabic": "اختراق السوق",
+      "english": "Market penetration measures how much of a market a product has captured.",
+      "level": "C1",
+      "arabic_example": "نسعى إلى زيادة اختراق السوق في الخليج.",
+      "sources": [
+        "batch39:84"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "market share",
+      "arabic": "الحصة السوقية",
+      "english": "Market share is the percentage of total sales a company controls in a market.",
+      "level": "C1",
+      "arabic_example": "الشركة تسعى لزيادة حصتها السوقية هذا العام.",
+      "sources": [
+        "batch39:64"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "market validation",
+      "arabic": "التحقق من السوق",
+      "english": "Market validation is proving that customers truly want a product before scaling.",
+      "level": "C1",
+      "arabic_example": "نحتاج إلى التحقق من السوق قبل الاستثمار الكبير.",
+      "sources": [
+        "batch39:74"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "marketing funnel",
+      "arabic": "قمع التسويق",
+      "english": "A marketing funnel represents the stages users go through before becoming customers.",
+      "level": "C1",
+      "arabic_example": "نحلل قمع التسويق لمعرفة أين نخسر العملاء المحتملين.",
+      "sources": [
+        "batch39:29"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "maximize",
+      "arabic": "يزيد إلى الحد الأقصى",
+      "english": "We need to maximize our profits.",
+      "level": "C1",
+      "arabic_example": "نحتاج لتعظيم أرباحنا إلى الحد الأقصى.",
+      "sources": [
+        "batch26:44"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "mentorship",
+      "arabic": "الإرشاد المهني",
+      "english": "Mentorship is guidance provided by an experienced person to support growth.",
+      "level": "C1",
+      "arabic_example": "ساعده الإرشاد المهني على تطوير مهاراته القيادية.",
+      "sources": [
+        "batch39:178"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "merger",
+      "arabic": "اندماج",
+      "english": "The merger created a huge corporation.",
+      "level": "C2",
+      "arabic_example": "أدى الاندماج إلى إنشاء شركة ضخمة.",
+      "sources": [
+        "batch26:66"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "metrics",
+      "arabic": "مقاييس",
+      "english": "Metrics are data points used to measure performance.",
+      "level": "B2",
+      "arabic_example": "نراجع المقاييس أسبوعيًا لتحسين الأداء.",
+      "sources": [
+        "batch39:114"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "micromanagement",
+      "arabic": "الإدارة المفرطة",
+      "english": "Micromanagement is excessive control over employees' work and decisions.",
+      "level": "C1",
+      "arabic_example": "الإدارة المفرطة قد تقلل من إبداع الفريق.",
+      "sources": [
+        "batch39:168"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "mission",
+      "arabic": "الرسالة",
+      "english": "A mission explains why a company exists and what problem it aims to solve.",
+      "level": "C1",
+      "arabic_example": "تركز رسالة الشركة على تسهيل التعليم للجميع.",
+      "sources": [
+        "batch39:162"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "monetization",
+      "arabic": "تحقيق الدخل",
+      "english": "Monetization is the process of turning users or traffic into revenue.",
+      "level": "C1",
+      "arabic_example": "ما زلنا نبحث عن أفضل طريقة لتحقيق الدخل من التطبيق.",
+      "sources": [
+        "batch39:56"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "monetization strategy",
+      "arabic": "استراتيجية تحقيق الدخل",
+      "english": "Monetization strategy defines how a product generates revenue.",
+      "level": "C1",
+      "arabic_example": "نختار استراتيجية تحقيق الدخل المناسبة للتطبيق.",
+      "sources": [
+        "batch39:122"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "monopoly",
+      "arabic": "احتكار",
+      "english": "The company has a monopoly in this market.",
+      "level": "C1",
+      "arabic_example": "تملك الشركة احتكار السوق.",
+      "sources": [
+        "batch27:27"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "monthly recurring revenue",
+      "arabic": "الإيرادات الشهرية المتكررة",
+      "english": "MRR measures recurring monthly subscription revenue.",
+      "level": "C1",
+      "arabic_example": "ارتفعت الإيرادات الشهرية المتكررة بنسبة 20٪.",
+      "sources": [
+        "batch39:152"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "MVP",
+      "arabic": "النسخة الأولية القابلة للتجربة",
+      "english": "MVP is the simplest usable version of a product built to validate an idea quickly.",
+      "level": "C1",
+      "arabic_example": "أطلقنا النسخة الأولية القابلة للتجربة لجمع ردود فعل المستخدمين.",
+      "sources": [
+        "batch39:5"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "needs assessment",
+      "arabic": "تحليل الاحتياجات",
+      "english": "Needs assessment is the process of identifying a customer's goals and problems.",
+      "level": "C1",
+      "arabic_example": "بدأنا المشروع بتحليل احتياجات العميل.",
+      "sources": [
+        "batch39:137"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "negotiation",
+      "arabic": "تفاوض",
+      "english": "Negotiation is a discussion aimed at reaching a mutually beneficial agreement.",
+      "level": "B2",
+      "arabic_example": "استمرت المفاوضات لساعات.",
+      "sources": [
+        "batch39:142",
+        "topic_Business:9",
+        "batch27:54"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "net",
+      "arabic": "صافي / شبكة",
+      "english": "The net profit increased this year.",
+      "level": "C1",
+      "arabic_example": "زاد صافي الربح هذا العام.",
+      "sources": [
+        "batch27:57"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "net profit",
+      "arabic": "صافي الربح",
+      "english": "Net profit is the amount remaining after all expenses, taxes, and costs have been deducted.",
+      "level": "B2",
+      "arabic_example": "حقق المشروع صافي ربح أعلى من المتوقع.",
+      "sources": [
+        "batch39:195"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "network effect",
+      "arabic": "تأثير الشبكة",
+      "english": "A network effect occurs when a product becomes more valuable as more people use it.",
+      "level": "C1",
+      "arabic_example": "منصات التواصل تعتمد بشكل أساسي على تأثير الشبكة.",
+      "sources": [
+        "batch39:55",
+        "batch39:83"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "networking",
+      "arabic": "بناء العلاقات المهنية",
+      "english": "Networking is building professional relationships to create opportunities.",
+      "level": "B2",
+      "arabic_example": "بناء العلاقات المهنية يساعد في الحصول على فرص عمل.",
+      "sources": [
+        "batch39:23"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "non-disclosure agreement",
+      "arabic": "اتفاقية عدم الإفصاح",
+      "english": "A Non-Disclosure Agreement (NDA) is a contract that protects confidential information.",
+      "level": "C1",
+      "arabic_example": "وقع جميع الموظفين اتفاقية عدم الإفصاح.",
+      "sources": [
+        "batch39:233"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "nonprofit",
+      "arabic": "غير ربحي",
+      "english": "They work for a nonprofit organization.",
+      "level": "B2",
+      "arabic_example": "يعملون في منظمة غير ربحية.",
+      "sources": [
+        "batch27:69"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "north star metric",
+      "arabic": "المؤشر الأساسي",
+      "english": "A north star metric is the most important metric that represents a product’s core value.",
+      "level": "C1",
+      "arabic_example": "المؤشر الأساسي لدينا هو عدد المستخدمين النشطين يوميًا.",
+      "sources": [
+        "batch39:112"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "objection",
+      "arabic": "اعتراض",
+      "english": "An objection is a concern raised by a prospect during the sales process.",
+      "level": "C1",
+      "arabic_example": "السعر كان الاعتراض الرئيسي لدى العميل.",
+      "sources": [
+        "batch39:140"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "objection handling",
+      "arabic": "معالجة الاعتراضات",
+      "english": "Objection handling is addressing concerns that prevent a prospect from buying.",
+      "level": "C1",
+      "arabic_example": "معالجة الاعتراضات مهارة أساسية في المبيعات.",
+      "sources": [
+        "batch39:141"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "onboarding",
+      "arabic": "تهيئة المستخدم",
+      "english": "Onboarding is the process of helping new users understand and start using a product effectively.",
+      "level": "C1",
+      "arabic_example": "تحسين تهيئة المستخدم زاد نسبة الاحتفاظ.",
+      "sources": [
+        "batch39:76"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "onboarding flow",
+      "arabic": "مسار التهيئة",
+      "english": "An onboarding flow is the step-by-step process that introduces new users to a product.",
+      "level": "C1",
+      "arabic_example": "قمنا بتبسيط مسار التهيئة لتسهيل بدء الاستخدام.",
+      "sources": [
+        "batch39:108"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "operating expenses",
+      "arabic": "المصاريف التشغيلية",
+      "english": "Operating expenses are the ongoing costs required to run a business.",
+      "level": "C1",
+      "arabic_example": "ارتفعت المصاريف التشغيلية بعد افتتاح مكتب جديد.",
+      "sources": [
+        "batch39:192"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "operating profit",
+      "arabic": "الربح التشغيلي",
+      "english": "Operating profit is the profit earned from normal business operations before taxes and interest.",
+      "level": "C1",
+      "arabic_example": "ارتفع الربح التشغيلي بفضل زيادة الكفاءة.",
+      "sources": [
+        "batch39:194"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "opportunity cost",
+      "arabic": "تكلفة الفرصة البديلة",
+      "english": "Opportunity cost is the value of the best alternative that is given up when making a decision.",
+      "level": "C1",
+      "arabic_example": "يجب أن يفكر المؤسس في تكلفة الفرصة البديلة قبل الاستثمار.",
+      "sources": [
+        "batch39:218"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "organic growth",
+      "arabic": "النمو العضوي",
+      "english": "Organic growth happens naturally without relying heavily on paid advertising.",
+      "level": "C1",
+      "arabic_example": "النمو العضوي القوي يقلل من تكاليف التسويق.",
+      "sources": [
+        "batch39:38"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "organizational structure",
+      "arabic": "الهيكل التنظيمي",
+      "english": "An organizational structure defines reporting relationships and responsibilities.",
+      "level": "C1",
+      "arabic_example": "قامت الشركة بتحديث هيكلها التنظيمي.",
+      "sources": [
+        "batch39:179"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "ownership",
+      "arabic": "تحمل المسؤولية",
+      "english": "Ownership means taking responsibility for outcomes instead of making excuses.",
+      "level": "C1",
+      "arabic_example": "يتوقع المدير من الموظفين تحمل المسؤولية عن نتائج عملهم.",
+      "sources": [
+        "batch39:165"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "paid ads",
+      "arabic": "الإعلانات المدفوعة",
+      "english": "Paid ads are advertisements businesses pay for to reach targeted audiences.",
+      "level": "B2",
+      "arabic_example": "استخدمنا الإعلانات المدفوعة لاختبار السوق بسرعة.",
+      "sources": [
+        "batch39:39"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "pain point",
+      "arabic": "نقطة ألم",
+      "english": "A pain point is a specific problem customers experience and want solved.",
+      "level": "C1",
+      "arabic_example": "فهم نقطة الألم هو أساس عملية البيع الناجحة.",
+      "sources": [
+        "batch39:96",
+        "batch39:136"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "patent",
+      "arabic": "براءة اختراع",
+      "english": "A patent gives an inventor exclusive rights to an invention for a limited time.",
+      "level": "C1",
+      "arabic_example": "حصلت الشركة على براءة اختراع لتقنيتها الجديدة.",
+      "sources": [
+        "batch39:230"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "performance review",
+      "arabic": "تقييم الأداء",
+      "english": "A performance review is a formal assessment of an employee's work.",
+      "level": "C1",
+      "arabic_example": "يتم إجراء تقييم الأداء كل ستة أشهر.",
+      "sources": [
+        "batch39:176"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "personal branding",
+      "arabic": "العلامة الشخصية",
+      "english": "Personal branding is how you present your skills, identity, and reputation professionally.",
+      "level": "C1",
+      "arabic_example": "أعمل على تطوير علامتي الشخصية كمطور برمجيات.",
+      "sources": [
+        "batch39:24"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "pitch deck",
+      "arabic": "عرض استثماري",
+      "english": "A pitch deck is a presentation used to explain a startup idea to investors.",
+      "level": "C1",
+      "arabic_example": "جهزنا عرضًا استثماريًا لعرضه على المستثمرين.",
+      "sources": [
+        "batch39:22"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "pivot",
+      "arabic": "تغيير الاتجاه",
+      "english": "A pivot is a significant change in business strategy based on market feedback.",
+      "level": "C1",
+      "arabic_example": "قامت الشركة بتغيير الاتجاه بعد فشل النموذج الأول.",
+      "sources": [
+        "batch39:72"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "portfolio",
+      "arabic": "مجموعة أعمال / حقيبة",
+      "english": "A portfolio is a collection of work that demonstrates your skills and experience.",
+      "level": "C1",
+      "arabic_example": "عرضت محفظة أعمالها على صاحب العمل.",
+      "sources": [
+        "batch39:11",
+        "batch29:52"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "pricing model",
+      "arabic": "نموذج التسعير",
+      "english": "A pricing model defines how customers are charged for a product.",
+      "level": "C1",
+      "arabic_example": "نموذج التسعير يؤثر على قرار الشراء.",
+      "sources": [
+        "batch39:123"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "pricing strategy",
+      "arabic": "استراتيجية التسعير",
+      "english": "Pricing strategy is how a business decides the price of its product or service.",
+      "level": "C1",
+      "arabic_example": "استراتيجية التسعير تؤثر على حجم المبيعات بشكل مباشر.",
+      "sources": [
+        "batch39:15"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "privacy policy",
+      "arabic": "سياسة الخصوصية",
+      "english": "A privacy policy explains how a company collects and uses user data.",
+      "level": "B2",
+      "arabic_example": "تم تحديث سياسة الخصوصية لتتوافق مع القوانين الجديدة.",
+      "sources": [
+        "batch39:235"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "probation period",
+      "arabic": "فترة التجربة",
+      "english": "A probation period is an initial trial period for a new employee.",
+      "level": "C1",
+      "arabic_example": "سيتم تقييم الموظف خلال فترة التجربة.",
+      "sources": [
+        "batch39:175"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "procurement",
+      "arabic": "المشتريات",
+      "english": "Procurement is the process through which organizations purchase products and services.",
+      "level": "C1",
+      "arabic_example": "يجب موافقة قسم المشتريات قبل إتمام الصفقة.",
+      "sources": [
+        "batch39:147"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "procurement cycle",
+      "arabic": "دورة المشتريات",
+      "english": "The procurement cycle is the complete process of purchasing goods or services.",
+      "level": "C1",
+      "arabic_example": "تسعى الشركة إلى تقصير دورة المشتريات.",
+      "sources": [
+        "batch39:239"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "product strategy",
+      "arabic": "استراتيجية المنتج",
+      "english": "Product strategy is the plan for how a product will achieve its goals, serve users, and compete in the market.",
+      "level": "C1",
+      "arabic_example": "استراتيجية المنتج تحدد كيف سنجعل التطبيق ناجحًا في السوق.",
+      "sources": [
+        "batch39:100"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "product-market feedback loop",
+      "arabic": "حلقة تغذية راجعة للسوق",
+      "english": "A feedback loop where user feedback improves the product continuously.",
+      "level": "C1",
+      "arabic_example": "حلقة التغذية الراجعة تسريع تحسين المنتج.",
+      "sources": [
+        "batch39:128"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "product-market fit",
+      "arabic": "ملاءمة المنتج للسوق",
+      "english": "Product-market fit means your product satisfies strong market demand.",
+      "level": "C1",
+      "arabic_example": "وصلنا إلى ملاءمة المنتج للسوق بعد تحسين التجربة.",
+      "sources": [
+        "batch39:6"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Profit",
+      "arabic": "ربح",
+      "english": "Profit is the money left after subtracting costs from revenue.",
+      "level": "A2",
+      "arabic_example": "الربح هو الهدف الأساسي لأي مشروع تجاري.",
+      "sources": [
+        "batch39:17",
+        "topic_Business:4",
+        "topic_Economics:6"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "profit margin",
+      "arabic": "هامش الربح",
+      "english": "Profit margin measures how much profit a business earns from each unit of revenue.",
+      "level": "C1",
+      "arabic_example": "ارتفع هامش الربح بعد تحسين العمليات.",
+      "sources": [
+        "batch39:209"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "profitable",
+      "arabic": "مربح",
+      "english": "This business is highly profitable.",
+      "level": "C1",
+      "arabic_example": "هذا المشروع مربح للغاية للشركة.",
+      "sources": [
+        "batch30:39"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "proposal",
+      "arabic": "عرض سعر / مقترح",
+      "english": "A proposal is a formal document describing a solution and pricing.",
+      "level": "C1",
+      "arabic_example": "أرسلنا عرض سعر مفصلًا للعميل.",
+      "sources": [
+        "batch39:145"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "proposition",
+      "arabic": "اقتراح / مقترح",
+      "english": "He made a business proposition to the investors.",
+      "level": "C2",
+      "arabic_example": "قدم عرضًا تجاريًا للمستثمرين.",
+      "sources": [
+        "batch30:52"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "prospecting",
+      "arabic": "البحث عن العملاء المحتملين",
+      "english": "Prospecting is the process of finding potential customers who may need your product.",
+      "level": "C1",
+      "arabic_example": "يقضي مندوب المبيعات وقتًا كبيرًا في البحث عن العملاء المحتملين.",
+      "sources": [
+        "batch39:132"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "prototype",
+      "arabic": "نموذج أولي",
+      "english": "A prototype is an early version of a product used to test ideas before full development.",
+      "level": "B2",
+      "arabic_example": "صممنا نموذجًا أوليًا لاختبار فكرة التطبيق.",
+      "sources": [
+        "batch39:4"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "provision",
+      "arabic": "نص / تدبير / إمدادات",
+      "english": "The contract includes a provision for early termination.",
+      "level": "C1",
+      "arabic_example": "تتضمن الاتفاقية بندًا يسمح بالإنهاء المبكر.",
+      "sources": [
+        "batch30:64"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "purchase order",
+      "arabic": "أمر شراء",
+      "english": "A purchase order is an official document authorizing the purchase of goods or services.",
+      "level": "C1",
+      "arabic_example": "أصدر قسم المشتريات أمر شراء جديد.",
+      "sources": [
+        "batch39:203"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "qualified lead",
+      "arabic": "عميل محتمل مؤهل",
+      "english": "A qualified lead is a potential customer who is likely to buy your product.",
+      "level": "C1",
+      "arabic_example": "فريق المبيعات يركز على العملاء المحتملين المؤهلين فقط.",
+      "sources": [
+        "batch39:32"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "quality assurance",
+      "arabic": "ضمان الجودة",
+      "english": "Quality assurance ensures products and services consistently meet defined standards.",
+      "level": "C1",
+      "arabic_example": "يراجع فريق ضمان الجودة المنتج قبل الإطلاق.",
+      "sources": [
+        "batch39:242"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "quality control",
+      "arabic": "مراقبة الجودة",
+      "english": "Quality control is the inspection of products to identify defects before delivery.",
+      "level": "C1",
+      "arabic_example": "اكتشف فريق مراقبة الجودة عدة أخطاء قبل التسليم.",
+      "sources": [
+        "batch39:243"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "quotation",
+      "arabic": "عرض سعر",
+      "english": "A quotation is an official estimate of the cost of a product or service.",
+      "level": "C1",
+      "arabic_example": "تم إرسال عرض السعر خلال 24 ساعة.",
+      "sources": [
+        "batch39:146"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "recruitment",
+      "arabic": "التوظيف",
+      "english": "Recruitment is the process of finding and hiring suitable candidates.",
+      "level": "C1",
+      "arabic_example": "تسعى الشركة إلى تحسين عملية التوظيف.",
+      "sources": [
+        "batch39:170"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "regulation",
+      "arabic": "لائحة تنظيمية",
+      "english": "A regulation is an official rule issued by a government or authority.",
+      "level": "C1",
+      "arabic_example": "تلتزم الشركة باللوائح التنظيمية الخاصة بحماية البيانات.",
+      "sources": [
+        "batch39:228"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "regulatory",
+      "arabic": "تنظيمي / رقابي",
+      "english": "Regulatory policies affect businesses.",
+      "level": "C2",
+      "arabic_example": "السياسات التنظيمية تؤثر على الأعمال التجارية.",
+      "sources": [
+        "batch31:62"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "reliability",
+      "arabic": "موثوقية",
+      "english": "Reliability ensures consistent results.",
+      "level": "C1",
+      "arabic_example": "موثوقية الجهاز عالية.",
+      "sources": [
+        "batch7:44",
+        "batch8:30",
+        "batch31:68"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "remote work",
+      "arabic": "العمل عن بعد",
+      "english": "Remote work allows employees to work outside a traditional office.",
+      "level": "B2",
+      "arabic_example": "أصبحت سياسة العمل عن بعد شائعة في الشركات التقنية.",
+      "sources": [
+        "batch39:186"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "renewal",
+      "arabic": "تجديد الاشتراك",
+      "english": "A renewal occurs when a customer continues a subscription or contract.",
+      "level": "C1",
+      "arabic_example": "حققنا معدل تجديد مرتفع هذا الربع.",
+      "sources": [
+        "batch39:155"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "rental",
+      "arabic": "إيجار / تأجير",
+      "english": "They arranged a car rental for their trip.",
+      "level": "C1",
+      "arabic_example": "رتبوا استئجار سيارة لرحلتهم.",
+      "sources": [
+        "batch32:12"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "retention",
+      "arabic": "الاحتفاظ بالعملاء",
+      "english": "Retention is the ability to keep customers using your product over time.",
+      "level": "C1",
+      "arabic_example": "تحسين التجربة يزيد من الاحتفاظ بالعملاء.",
+      "sources": [
+        "batch39:8"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "retention cohort",
+      "arabic": "مجموعة الاحتفاظ",
+      "english": "A retention cohort is a group of users tracked over time to measure how many stay active.",
+      "level": "C1",
+      "arabic_example": "درسنا مجموعة الاحتفاظ لفهم سلوك المستخدمين.",
+      "sources": [
+        "batch39:110"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "retention rate",
+      "arabic": "معدل الاحتفاظ",
+      "english": "Retention rate measures how many users continue using a product over time.",
+      "level": "C1",
+      "arabic_example": "معدل الاحتفاظ المرتفع يدل على جودة المنتج.",
+      "sources": [
+        "batch39:80"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "revenue",
+      "arabic": "إيرادات",
+      "english": "Revenue is the total income a business earns from its operations.",
+      "level": "B2",
+      "arabic_example": "ارتفعت إيرادات الشركة هذا العام.",
+      "sources": [
+        "batch39:16",
+        "topic_Business:3",
+        "topic_Economics:7",
+        "batch32:44"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "risk assessment",
+      "arabic": "تقييم المخاطر",
+      "english": "Risk assessment identifies and evaluates potential threats to a business.",
+      "level": "C1",
+      "arabic_example": "أجرى الفريق تقييمًا للمخاطر قبل إطلاق الخدمة.",
+      "sources": [
+        "batch39:244"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "roadmap",
+      "arabic": "خارطة الطريق",
+      "english": "A roadmap is a plan that outlines the features and direction of a product over time.",
+      "level": "C1",
+      "arabic_example": "خارطة الطريق توضح الميزات التي سنضيفها خلال الأشهر القادمة.",
+      "sources": [
+        "batch39:101"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "runway",
+      "arabic": "المدة المالية المتبقية",
+      "english": "Runway is the amount of time a startup can survive before running out of money.",
+      "level": "C1",
+      "arabic_example": "الشركة لديها مدة مالية تكفي لثمانية أشهر.",
+      "sources": [
+        "batch39:71"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "SaaS",
+      "arabic": "البرمجيات كخدمة",
+      "english": "SaaS stands for Software as a Service, where software is delivered online through subscriptions.",
+      "level": "C1",
+      "arabic_example": "معظم أدوات الذكاء الاصطناعي الحديثة تعمل كنظام برمجيات كخدمة.",
+      "sources": [
+        "batch39:65"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "sales",
+      "arabic": "المبيعات",
+      "english": "Sales is the process of persuading customers to purchase a product or service.",
+      "level": "B2",
+      "arabic_example": "المبيعات هي المصدر الرئيسي للإيرادات في معظم الشركات.",
+      "sources": [
+        "batch39:130"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "sales call",
+      "arabic": "مكالمة مبيعات",
+      "english": "A sales call is a conversation intended to persuade a prospect to buy a product or service.",
+      "level": "B2",
+      "arabic_example": "أجرينا مكالمة مبيعات مع شركة مهتمة بالخدمة.",
+      "sources": [
+        "batch39:50"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "sales pipeline",
+      "arabic": "خط سير المبيعات",
+      "english": "A sales pipeline tracks potential customers through each stage of the sales process.",
+      "level": "C1",
+      "arabic_example": "فريق المبيعات يدير خط سير المبيعات باستخدام نظام CRM.",
+      "sources": [
+        "batch39:47"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "sales pitch",
+      "arabic": "عرض مبيعات",
+      "english": "A sales pitch is a persuasive presentation designed to convince prospects to buy.",
+      "level": "C1",
+      "arabic_example": "قدم عرض مبيعات مختصرًا وواضحًا.",
+      "sources": [
+        "batch39:139"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "scalability",
+      "arabic": "قابلية التوسع",
+      "english": "Scalability is the ability of a system or business to grow without losing performance or increasing costs proportionally.",
+      "level": "C1",
+      "arabic_example": "قابلية التوسع مهمة جدًا في التطبيقات التقنية الحديثة.",
+      "sources": [
+        "batch39:1"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "segment",
+      "arabic": "جزء / شريحة",
+      "english": "This segment of the market is very profitable.",
+      "level": "C1",
+      "arabic_example": "هذه الشريحة من السوق مربحة جدًا.",
+      "sources": [
+        "batch33:27"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "SEO",
+      "arabic": "تحسين محركات البحث",
+      "english": "SEO stands for Search Engine Optimization, which improves website visibility on search engines.",
+      "level": "C1",
+      "arabic_example": "تحسين محركات البحث يساعد في جلب زيارات مجانية.",
+      "sources": [
+        "batch39:40"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "service level agreement",
+      "arabic": "اتفاقية مستوى الخدمة",
+      "english": "A Service Level Agreement (SLA) defines the expected quality and availability of a service.",
+      "level": "C1",
+      "arabic_example": "تنص اتفاقية مستوى الخدمة على توفر بنسبة 99.9٪.",
+      "sources": [
+        "batch39:236"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "shareholder",
+      "arabic": "مساهم / صاحب سهم",
+      "english": "A shareholder is a person or organization that owns shares in a company.",
+      "level": "C1",
+      "arabic_example": "حضر المساهمون الاجتماع السنوي.",
+      "sources": [
+        "batch39:224",
+        "batch33:44"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "short-term",
+      "arabic": "قصير المدى",
+      "english": "He has a short-term contract.",
+      "level": "B2",
+      "arabic_example": "لديه عقد قصير المدى.",
+      "sources": [
+        "batch33:54"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "social proof",
+      "arabic": "الإثبات الاجتماعي",
+      "english": "Social proof is evidence that other people trust or use a product.",
+      "level": "C1",
+      "arabic_example": "التقييمات الإيجابية تعتبر إثباتًا اجتماعيًا قويًا.",
+      "sources": [
+        "batch39:86"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "sole proprietorship",
+      "arabic": "الملكية الفردية",
+      "english": "A sole proprietorship is a business owned and operated by one individual.",
+      "level": "C1",
+      "arabic_example": "بدأ مشروعه كملكية فردية قبل أن يؤسس شركة.",
+      "sources": [
+        "batch39:221"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "solution-oriented",
+      "arabic": "موجه نحو الحلول",
+      "english": "Solution-oriented thinking focuses on solving problems effectively instead of complaining about them.",
+      "level": "C1",
+      "arabic_example": "المؤسسون الناجحون يفكرون بطريقة موجهة نحو الحلول.",
+      "sources": [
+        "batch39:97"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "speculate",
+      "arabic": "يخمّن / يضارب",
+      "english": "Experts speculate on future economic trends.",
+      "level": "C1",
+      "arabic_example": "يضارب المستثمرون في أسعار الأسهم.",
+      "sources": [
+        "batch3:98",
+        "batch34:37"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "stakeholder",
+      "arabic": "صاحب مصلحة",
+      "english": "A stakeholder is any person or group affected by a business decision.",
+      "level": "C1",
+      "arabic_example": "يجب مراعاة جميع أصحاب المصلحة عند اتخاذ القرارات.",
+      "sources": [
+        "batch39:134"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "standard operating procedure",
+      "arabic": "إجراءات التشغيل القياسية",
+      "english": "A Standard Operating Procedure (SOP) is a documented process for performing routine tasks.",
+      "level": "C1",
+      "arabic_example": "تتبع الشركة إجراءات تشغيل قياسية لجميع العمليات.",
+      "sources": [
+        "batch39:240"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Startup",
+      "arabic": "شركة ناشئة",
+      "english": "A startup is a newly created company designed to grow fast by solving a specific problem under uncertainty.",
+      "level": "B2",
+      "arabic_example": "الشركة الناشئة تحتاج إلى اختبار فكرتها قبل التوسع.",
+      "sources": [
+        "batch39:0",
+        "topic_Business:5"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "strategic partnership",
+      "arabic": "شراكة استراتيجية",
+      "english": "A strategic partnership is a collaboration that benefits both organizations.",
+      "level": "C1",
+      "arabic_example": "ساعدت الشراكة الاستراتيجية في دخول سوق جديد.",
+      "sources": [
+        "batch39:158"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Strategy",
+      "arabic": "استراتيجية",
+      "english": "We need a new strategy to solve the problem.",
+      "level": "A2",
+      "arabic_example": "وضع استراتيجية واضحة يساعد في النجاح.",
+      "sources": [
+        "topic_Business:7",
+        "batch8:5"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "subscription",
+      "arabic": "اشتراك",
+      "english": "A subscription is a recurring payment for continuous access to a product.",
+      "level": "B2",
+      "arabic_example": "نظام الاشتراك الشهري شائع في التطبيقات.",
+      "sources": [
+        "batch39:124"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "subscription model",
+      "arabic": "نموذج الاشتراك",
+      "english": "A subscription model charges customers repeatedly on a monthly or yearly basis.",
+      "level": "C1",
+      "arabic_example": "العديد من شركات البرمجيات تعتمد نموذج الاشتراك.",
+      "sources": [
+        "batch39:57"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "succession planning",
+      "arabic": "تخطيط التعاقب الوظيفي",
+      "english": "Succession planning prepares future leaders for critical positions.",
+      "level": "C1",
+      "arabic_example": "تعتمد الشركات الكبيرة على تخطيط التعاقب الوظيفي.",
+      "sources": [
+        "batch39:185"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "Supply",
+      "arabic": "العرض",
+      "english": "Supply refers to the quantity available.",
+      "level": null,
+      "arabic_example": "",
+      "sources": [
+        "topic_Economics:0"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "supply chain",
+      "arabic": "سلسلة التوريد",
+      "english": "A supply chain is the network involved in producing and delivering a product.",
+      "level": "C1",
+      "arabic_example": "أدت الأزمة إلى تعطيل سلسلة التوريد.",
+      "sources": [
+        "batch39:238"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "tactic",
+      "arabic": "تكتيك / أسلوب",
+      "english": "Negotiation was their main tactic.",
+      "level": "C2",
+      "arabic_example": "كان التفاوض هو التكتيك الرئيسي لهم.",
+      "sources": [
+        "batch36:10"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "talent acquisition",
+      "arabic": "استقطاب المواهب",
+      "english": "Talent acquisition is the strategic process of attracting highly qualified candidates.",
+      "level": "C1",
+      "arabic_example": "استقطاب المواهب ضروري لنمو الشركات التقنية.",
+      "sources": [
+        "batch39:171"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "target audience",
+      "arabic": "الجمهور المستهدف",
+      "english": "A target audience is the specific group of people a business wants to reach.",
+      "level": "B2",
+      "arabic_example": "فهم الجمهور المستهدف ضروري لنجاح أي حملة.",
+      "sources": [
+        "batch39:61"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "team dynamics",
+      "arabic": "ديناميكيات الفريق",
+      "english": "Team dynamics refers to the interactions and relationships among team members.",
+      "level": "C1",
+      "arabic_example": "ديناميكيات الفريق الجيدة تسرع تنفيذ المشاريع.",
+      "sources": [
+        "batch39:188"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "terminate",
+      "arabic": "ينهي / يوقف",
+      "english": "The company decided to terminate the contract.",
+      "level": "C1",
+      "arabic_example": "قررت الشركة إنهاء العقد.",
+      "sources": [
+        "batch36:26"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "terms of service",
+      "arabic": "شروط الاستخدام",
+      "english": "Terms of service define the rules users agree to when using a product.",
+      "level": "B2",
+      "arabic_example": "وافق المستخدم على شروط الاستخدام قبل التسجيل.",
+      "sources": [
+        "batch39:234"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "testimonial",
+      "arabic": "شهادة عميل",
+      "english": "A testimonial is a positive statement from a customer about a product or service.",
+      "level": "B2",
+      "arabic_example": "أضفنا شهادات العملاء إلى صفحة الهبوط.",
+      "sources": [
+        "batch39:87"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "traction",
+      "arabic": "الجذب السوقي",
+      "english": "Traction is measurable evidence that customers are using or paying for a product.",
+      "level": "C1",
+      "arabic_example": "حقق التطبيق جذبًا سوقيًا قويًا خلال شهرين.",
+      "sources": [
+        "batch39:75"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "trademark",
+      "arabic": "علامة تجارية",
+      "english": "A trademark legally protects a brand name, logo, or slogan.",
+      "level": "C1",
+      "arabic_example": "سجلت الشركة علامتها التجارية رسميًا.",
+      "sources": [
+        "batch39:231"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "traffic",
+      "arabic": "الزيارات",
+      "english": "Traffic refers to the number of users visiting a website or app.",
+      "level": "A2",
+      "arabic_example": "الموقع حصل على زيارات عالية بعد الحملة الإعلانية.",
+      "sources": [
+        "batch39:28"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "UI",
+      "arabic": "واجهة المستخدم",
+      "english": "UI stands for User Interface, which includes the visual elements users interact with.",
+      "level": "B2",
+      "arabic_example": "قمنا بتحسين واجهة المستخدم لتصبح أبسط.",
+      "sources": [
+        "batch39:78"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "upselling",
+      "arabic": "البيع التصاعدي",
+      "english": "Upselling means encouraging customers to buy a more expensive version of a product.",
+      "level": "C1",
+      "arabic_example": "استخدمنا البيع التصاعدي لزيادة متوسط الإيرادات.",
+      "sources": [
+        "batch39:52"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "usability",
+      "arabic": "سهولة الاستخدام",
+      "english": "Usability refers to how easy and intuitive a product is for users.",
+      "level": "C1",
+      "arabic_example": "سهولة الاستخدام عامل مهم في نجاح أي تطبيق.",
+      "sources": [
+        "batch39:106"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "user acquisition",
+      "arabic": "اكتساب المستخدمين",
+      "english": "User acquisition is the process of attracting new users to a platform or product.",
+      "level": "C1",
+      "arabic_example": "نحتاج إلى استراتيجية قوية لاكتساب المستخدمين.",
+      "sources": [
+        "batch39:44"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "user experience",
+      "arabic": "تجربة المستخدم",
+      "english": "User experience refers to how users feel while interacting with a product or system.",
+      "level": "C1",
+      "arabic_example": "تجربة المستخدم الممتازة تزيد من رضا العملاء.",
+      "sources": [
+        "batch39:77"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "user feedback",
+      "arabic": "ملاحظات المستخدمين",
+      "english": "User feedback is the opinions and suggestions users give about a product.",
+      "level": "B2",
+      "arabic_example": "ملاحظات المستخدمين ساعدتنا على تحسين التطبيق.",
+      "sources": [
+        "batch39:104"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "UX",
+      "arabic": "تجربة المستخدم",
+      "english": "UX stands for User Experience, focusing on usability and satisfaction.",
+      "level": "C1",
+      "arabic_example": "تجربة المستخدم الجيدة تقلل من تعقيد التطبيق.",
+      "sources": [
+        "batch39:79"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "valuation",
+      "arabic": "تقييم الشركة",
+      "english": "Valuation is the estimated financial value of a company.",
+      "level": "C1",
+      "arabic_example": "ارتفع تقييم الشركة بعد زيادة عدد المستخدمين.",
+      "sources": [
+        "batch39:70"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "value metric",
+      "arabic": "مقياس القيمة",
+      "english": "A value metric is what users are charged based on (usage, seats, etc.).",
+      "level": "C1",
+      "arabic_example": "اختيار مقياس القيمة الصحيح مهم لنمو الإيرادات.",
+      "sources": [
+        "batch39:126"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "value proposition",
+      "arabic": "القيمة المقترحة",
+      "english": "A value proposition explains why customers should choose your solution.",
+      "level": "C1",
+      "arabic_example": "يجب أن تكون القيمة المقترحة واضحة ومقنعة.",
+      "sources": [
+        "batch39:138"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "variable cost",
+      "arabic": "تكلفة متغيرة",
+      "english": "A variable cost changes depending on production or sales volume.",
+      "level": "B2",
+      "arabic_example": "تكلفة الشحن تعد من التكاليف المتغيرة.",
+      "sources": [
+        "batch39:208"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "vendor",
+      "arabic": "مورد",
+      "english": "A vendor is a business or person that supplies goods or services.",
+      "level": "B2",
+      "arabic_example": "تتعاون الشركة مع موردين من عدة دول.",
+      "sources": [
+        "batch39:237"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "venture",
+      "arabic": "مغامرة / مشروع",
+      "english": "They started a new business venture.",
+      "level": "C2",
+      "arabic_example": "بدأوا مشروعًا تجاريًا جديدًا.",
+      "sources": [
+        "batch38:9"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "venture capital",
+      "arabic": "رأس المال الجريء",
+      "english": "Venture capital is investment money provided to high-growth startups with strong potential.",
+      "level": "C1",
+      "arabic_example": "حصلت الشركة الناشئة على تمويل من رأس المال الجريء.",
+      "sources": [
+        "batch39:67"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "viral growth",
+      "arabic": "النمو الفيروسي",
+      "english": "Viral growth happens when users naturally invite or attract more users.",
+      "level": "C1",
+      "arabic_example": "التطبيق حقق نموًا فيروسيًا عبر المشاركة بين الأصدقاء.",
+      "sources": [
+        "batch39:54"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "virality",
+      "arabic": "الانتشار الفيروسي",
+      "english": "Virality is the tendency of users to rapidly share a product with others.",
+      "level": "C1",
+      "arabic_example": "حقق التطبيق انتشارًا فيروسيًا على وسائل التواصل.",
+      "sources": [
+        "batch39:82"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "virality coefficient",
+      "arabic": "معامل الانتشار",
+      "english": "Virality coefficient measures how many new users each user brings.",
+      "level": "C1",
+      "arabic_example": "إذا كان معامل الانتشار أكبر من 1، ينمو المنتج بسرعة.",
+      "sources": [
+        "batch39:121"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "vision",
+      "arabic": "الرؤية",
+      "english": "A vision describes the long-term future a company wants to create.",
+      "level": "C1",
+      "arabic_example": "يمتلك المؤسس رؤية واضحة لمستقبل الشركة.",
+      "sources": [
+        "batch39:161"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "warrant",
+      "arabic": "أمر / يضمن",
+      "english": "The evidence warrants further investigation.",
+      "level": "C1",
+      "arabic_example": "حصلت الشرطة على أمر تفتيش.",
+      "sources": [
+        "batch1:71",
+        "batch38:39"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "workflow",
+      "arabic": "سير العمل",
+      "english": "A workflow is the sequence of tasks required to complete a process.",
+      "level": "B2",
+      "arabic_example": "قمنا بأتمتة سير العمل لتوفير الوقت.",
+      "sources": [
+        "batch39:90",
+        "batch39:241"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "workforce",
+      "arabic": "القوى العاملة",
+      "english": "The company employs a skilled workforce.",
+      "level": "B2",
+      "arabic_example": "تتكون القوى العاملة في الشركة من موظفين مهرة.",
+      "sources": [
+        "batch38:66"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "working capital",
+      "arabic": "رأس المال العامل",
+      "english": "Working capital is the difference between a company's current assets and current liabilities.",
+      "level": "C1",
+      "arabic_example": "تحسن رأس المال العامل خلال الربع الأخير.",
+      "sources": [
+        "batch39:199"
+      ],
+      "provenance": "recovered-general"
+    },
+    {
+      "word": "workplace",
+      "arabic": "مكان العمل",
+      "english": "Safety in the workplace is essential.",
+      "level": "B2",
+      "arabic_example": "السلامة في مكان العمل أمر أساسي.",
+      "sources": [
+        "batch38:68"
+      ],
+      "provenance": "recovered-general"
+    }
+  ]
+}

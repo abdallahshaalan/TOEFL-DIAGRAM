@@ -58,7 +58,12 @@ export async function rateWord(library, wordId, rating) {
     (await getProgress(library, wordId)) || createEmptyProgress(wordId, library);
   const updated = applyRating(existing, rating);
   await saveProgress(updated);
-  await bumpActivity({ reviews: 1, ratings: 1 });
+  const delta = { reviews: 1, ratings: 1 };
+  if (library === "business") {
+    delta.businessReviews = 1;
+    delta.businessPracticed = 1;
+  }
+  await bumpActivity(delta);
   return updated;
 }
 
@@ -92,6 +97,9 @@ export async function toggleBookmark(library, wordId, snapshot = {}) {
   return true;
 }
 
+export const BUSINESS_DAILY_GOAL = 15;
+export const BUSINESS_MILESTONES = [50, 100, 250, 500];
+
 export async function bumpActivity(delta = {}) {
   const db = await getDb();
   const date = new Date().toISOString().slice(0, 10);
@@ -101,6 +109,8 @@ export async function bumpActivity(delta = {}) {
     ratings: 0,
     quizzes: 0,
     practiced: 0,
+    businessPracticed: 0,
+    businessReviews: 0,
   };
   const next = {
     ...current,
@@ -108,6 +118,8 @@ export async function bumpActivity(delta = {}) {
     ratings: current.ratings + (delta.ratings || 0),
     quizzes: current.quizzes + (delta.quizzes || 0),
     practiced: current.practiced + (delta.practiced || 0),
+    businessPracticed: (current.businessPracticed || 0) + (delta.businessPracticed || 0),
+    businessReviews: (current.businessReviews || 0) + (delta.businessReviews || 0),
   };
   await db.put("activity", next);
   return next;
@@ -123,10 +135,41 @@ export async function getActivityRange(days = 14) {
     d.setDate(d.getDate() - i);
     const key = d.toISOString().slice(0, 10);
     result.push(
-      map.get(key) || { date: key, reviews: 0, ratings: 0, quizzes: 0, practiced: 0 }
+      map.get(key) || {
+        date: key,
+        reviews: 0,
+        ratings: 0,
+        quizzes: 0,
+        practiced: 0,
+        businessPracticed: 0,
+        businessReviews: 0,
+      }
     );
   }
   return result;
+}
+
+/** Toast goal completion once per local day */
+export async function maybeCelebrateBusinessGoal(todayCount) {
+  if (todayCount < BUSINESS_DAILY_GOAL) return false;
+  const today = new Date().toISOString().slice(0, 10);
+  const already = await getMeta("businessGoalToastDate", null);
+  if (already === today) return false;
+  await setMeta("businessGoalToastDate", today);
+  return true;
+}
+
+export async function unlockBusinessMilestones(practicedCount) {
+  const unlocked = (await getMeta("businessMilestonesUnlocked", [])) || [];
+  const newly = [];
+  for (const m of BUSINESS_MILESTONES) {
+    if (practicedCount >= m && !unlocked.includes(m)) {
+      unlocked.push(m);
+      newly.push(m);
+    }
+  }
+  if (newly.length) await setMeta("businessMilestonesUnlocked", unlocked);
+  return { unlocked, newly };
 }
 
 export async function getMeta(key, fallback = null) {
@@ -230,4 +273,70 @@ export async function migrateLegacyLocalStorage() {
 
   await setMeta("legacyMigratedV1", true);
   return { migrated: true, count };
+}
+
+/**
+ * Copy general progress/bookmarks onto matching business word IDs once.
+ * Does not overwrite existing business records or delete general keys.
+ */
+export async function migrateBusinessProgressV1() {
+  const done = await getMeta("businessProgressMigratedV1", false);
+  if (done) return { migrated: false };
+
+  const { ensureLibrary, getLibraryWordsSync } = await import("./vocabCatalog");
+  await ensureLibrary("business");
+  await ensureLibrary("general");
+
+  const businessList = getLibraryWordsSync("business") || [];
+  const generalList = getLibraryWordsSync("general") || [];
+
+  const norm = (w) =>
+    String(w || "")
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, " ");
+
+  const businessByWord = new Map(businessList.map((w) => [norm(w.word), w]));
+  const generalByWord = new Map();
+  for (const w of generalList) {
+    const key = norm(w.word);
+    if (!generalByWord.has(key)) generalByWord.set(key, w);
+  }
+
+  let progressCopied = 0;
+  let bookmarksCopied = 0;
+
+  for (const [key, bizWord] of businessByWord) {
+    const genWord = generalByWord.get(key);
+    if (!genWord) continue;
+
+    const existingBizProgress = await getProgress("business", bizWord.id);
+    if (!existingBizProgress) {
+      const genProgress = await getProgress("general", genWord.id);
+      if (genProgress) {
+        await saveProgress({
+          ...genProgress,
+          id: undefined,
+          library: "business",
+          wordId: bizWord.id,
+        });
+        progressCopied += 1;
+      }
+    }
+
+    const existingBizBm = await getBookmark("business", bizWord.id);
+    if (!existingBizBm) {
+      const genBm = await getBookmark("general", genWord.id);
+      if (genBm) {
+        await toggleBookmark("business", bizWord.id, {
+          word: bizWord.word,
+          translationAr: bizWord.translationAr || genBm.translationAr || "",
+        });
+        bookmarksCopied += 1;
+      }
+    }
+  }
+
+  await setMeta("businessProgressMigratedV1", true);
+  return { migrated: true, progressCopied, bookmarksCopied };
 }

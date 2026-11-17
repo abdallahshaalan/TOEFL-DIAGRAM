@@ -1,65 +1,89 @@
 /**
  * Lazy vocab catalog with Map(id → word) lookups.
- * Keeps heavy data files out of the shell/dashboard chunk.
+ * Registry supports toefl | general | business.
  */
 
-let toeflList = null;
-let toeflMap = null;
-let generalList = null;
-let generalMap = null;
-let toeflCategoryMeta = null;
-let generalCategories = null;
+const cache = {
+  toefl: { list: null, map: null, categories: null, meta: null, promise: null },
+  general: { list: null, map: null, categories: null, meta: null, promise: null },
+  business: { list: null, map: null, categories: null, meta: null, promise: null },
+};
 
-let toeflPromise = null;
-let generalPromise = null;
-
-async function loadToefl() {
-  if (toeflList) return toeflList;
-  if (!toeflPromise) {
-    toeflPromise = Promise.all([
+function loadToefl() {
+  const c = cache.toefl;
+  if (c.list) return Promise.resolve(c.list);
+  if (!c.promise) {
+    c.promise = Promise.all([
       import("@/data/toeflVocabulary"),
       import("@/data/toeflCategories"),
     ]).then(([vocabMod, catMod]) => {
-      toeflList = vocabMod.default;
-      toeflMap = new Map(toeflList.map((w) => [w.id, w]));
-      toeflCategoryMeta = catMod.default || [];
-      return toeflList;
+      c.list = vocabMod.default;
+      c.map = new Map(c.list.map((w) => [w.id, w]));
+      c.meta = catMod.default || [];
+      c.categories = c.meta.map((x) => x.id);
+      return c.list;
     });
   }
-  return toeflPromise;
+  return c.promise;
 }
 
-async function loadGeneral() {
-  if (generalList) return generalList;
-  if (!generalPromise) {
-    generalPromise = import("@/lib/vocabAdapters").then((mod) => {
-      generalList = mod.getGeneralUniqueByWord();
-      generalMap = new Map(generalList.map((w) => [w.id, w]));
-      generalCategories = mod
+function loadGeneral() {
+  const c = cache.general;
+  if (c.list) return Promise.resolve(c.list);
+  if (!c.promise) {
+    c.promise = import("@/lib/vocabAdapters").then((mod) => {
+      c.list = mod.getGeneralUniqueByWord();
+      c.map = new Map(c.list.map((w) => [w.id, w]));
+      c.categories = mod
         .getGeneralCategories()
-        .filter((c) => !String(c).startsWith("batch"))
+        .filter((x) => !String(x).startsWith("batch"))
         .slice(0, 60);
-      return generalList;
+      c.meta = [];
+      return c.list;
     });
   }
-  return generalPromise;
+  return c.promise;
 }
+
+function loadBusiness() {
+  const c = cache.business;
+  if (c.list) return Promise.resolve(c.list);
+  if (!c.promise) {
+    c.promise = Promise.all([
+      import("@/data/businessVocabulary"),
+      import("@/data/businessCategories"),
+    ]).then(([vocabMod, catMod]) => {
+      c.list = vocabMod.default;
+      c.map = new Map(c.list.map((w) => [w.id, w]));
+      c.meta = catMod.default || [];
+      c.categories = c.meta.map((x) => x.id);
+      return c.list;
+    });
+  }
+  return c.promise;
+}
+
+const LOADERS = {
+  toefl: loadToefl,
+  general: loadGeneral,
+  business: loadBusiness,
+};
 
 export async function ensureLibrary(library) {
-  if (library === "toefl") return loadToefl();
-  return loadGeneral();
+  const loader = LOADERS[library] || loadGeneral;
+  return loader();
 }
 
 export async function ensureAllLibraries() {
-  await Promise.all([loadToefl(), loadGeneral()]);
+  await Promise.all([loadToefl(), loadGeneral(), loadBusiness()]);
 }
 
 export function getLibraryWordsSync(library) {
-  return library === "toefl" ? toeflList : generalList;
+  return cache[library]?.list || null;
 }
 
 export function getWordMapSync(library) {
-  return library === "toefl" ? toeflMap : generalMap;
+  return cache[library]?.map || null;
 }
 
 export function findWordById(library, wordId) {
@@ -68,14 +92,16 @@ export function findWordById(library, wordId) {
 }
 
 export function getCategoriesSync(library) {
-  if (library === "toefl") {
-    return (toeflCategoryMeta || []).map((c) => c.id);
-  }
-  return generalCategories || [];
+  return cache[library]?.categories || [];
 }
 
+export function getCategoryMetaSync(library) {
+  return cache[library]?.meta || [];
+}
+
+/** @deprecated use getCategoryMetaSync("toefl") */
 export function getToeflCategoryMetaSync() {
-  return toeflCategoryMeta || [];
+  return getCategoryMetaSync("toefl");
 }
 
 export async function getLibraryWords(library) {
@@ -86,7 +112,26 @@ export async function getLibraryWords(library) {
 export async function getLibraryTotals() {
   await ensureAllLibraries();
   return {
-    toeflTotal: toeflList.length,
-    generalTotal: generalList.length,
+    toeflTotal: cache.toefl.list?.length || 0,
+    generalTotal: cache.general.list?.length || 0,
+    businessTotal: cache.business.list?.length || 0,
   };
+}
+
+/** Normalized headword → business word id for progress migration */
+export function getBusinessWordIdByNormalizedWord(word) {
+  const list = cache.business.list;
+  if (!list) return null;
+  const key = String(word || "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ");
+  const hit = list.find(
+    (w) =>
+      String(w.word || "")
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, " ") === key
+  );
+  return hit?.id || null;
 }
