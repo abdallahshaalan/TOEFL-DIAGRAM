@@ -86,12 +86,21 @@ export default function PrefixesAndSuffixes() {
   const allItems = [...prefixes, ...suffixes];
 
   useEffect(() => {
-    const saved = localStorage.getItem("lovedAffixes_v2");
-    if (saved) setLovedItems(JSON.parse(saved));
+    let cancelled = false;
+    import("@/lib/toolStorage").then(({ loadToolState }) => {
+      loadToolState("lovedAffixes_v2", []).then((saved) => {
+        if (!cancelled && Array.isArray(saved)) setLovedItems(saved);
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("lovedAffixes_v2", JSON.stringify(lovedItems));
+    import("@/lib/toolStorage").then(({ saveToolState }) => {
+      saveToolState("lovedAffixes_v2", lovedItems);
+    });
   }, [lovedItems]);
 
   useEffect(() => {

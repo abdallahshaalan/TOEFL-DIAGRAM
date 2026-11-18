@@ -191,12 +191,21 @@ export default function VocabTopics() {
     : allDisplayed;
 
   useEffect(() => {
-    const saved = localStorage.getItem("lovedVocabs2");
-    if (saved) setLovedVocabs(JSON.parse(saved));
+    let cancelled = false;
+    import("@/lib/toolStorage").then(({ loadToolState }) => {
+      loadToolState("lovedVocabs2", []).then((saved) => {
+        if (!cancelled && Array.isArray(saved)) setLovedVocabs(saved);
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("lovedVocabs2", JSON.stringify(lovedVocabs));
+    import("@/lib/toolStorage").then(({ saveToolState }) => {
+      saveToolState("lovedVocabs2", lovedVocabs);
+    });
   }, [lovedVocabs]);
 
   const toggleLove = (wordObj) => {

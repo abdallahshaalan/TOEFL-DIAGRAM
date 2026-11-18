@@ -1,3 +1,7 @@
+/**
+ * Legacy unused page (quarantined). General vocab lives in VocabLibraryPage + vocabAdapters.
+ * Kept for reference; not routed from App.jsx.
+ */
 import React, { useState, useEffect } from "react";
 import vocab from "../data/vocabs";
 import { Helmet } from "react-helmet-async";

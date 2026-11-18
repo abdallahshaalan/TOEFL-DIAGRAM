@@ -1,18 +1,11 @@
-import { Bookmark, Volume2 } from "lucide-react";
+import { Bookmark } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import MasteryControls from "@/components/shared/MasteryControls";
+import SpeakButton from "@/components/shared/SpeakButton";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/cn";
-
-function speak(word) {
-  if (!window.speechSynthesis) return;
-  const u = new SpeechSynthesisUtterance(word);
-  u.lang = "en-US";
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(u);
-}
 
 function Field({ label, children, rtl }) {
   if (!children) return null;
@@ -30,8 +23,10 @@ export default function VocabStudyPanel({
   word,
   bookmarked,
   mastery,
+  progress,
   onToggleBookmark,
   onRate,
+  onUnsuspend,
   onOpenRelated,
   categoryMeta = [],
   showRating = true,
@@ -54,33 +49,31 @@ export default function VocabStudyPanel({
           <div className="flex flex-wrap gap-1.5">
             {word.pos && <Badge variant="secondary">{word.pos}</Badge>}
             {word.difficulty && <Badge variant="outline">{word.difficulty}</Badge>}
+            {word.quality === "draft" && (
+              <Badge variant="warning">{t("common.draft")}</Badge>
+            )}
             {(word.categories || []).slice(0, 3).map((c) => (
               <Badge key={c} variant="outline">
                 {labelCategory(c)}
               </Badge>
             ))}
           </div>
-          {word.phonetic && (
+          {word.phonetic ? (
             <p className="text-sm text-muted-foreground">
               {t("vocab.phonetic")}: {word.phonetic}
             </p>
+          ) : (
+            <p className="text-sm text-muted-foreground">{t("vocab.phoneticUnavailable")}</p>
           )}
         </div>
         <div className="flex gap-1">
-          <Button
-            type="button"
-            variant="ghost"
-            size="icon"
-            aria-label={t("common.pronounce")}
-            onClick={() => speak(word.word)}
-          >
-            <Volume2 className="h-4 w-4" />
-          </Button>
+          <SpeakButton text={word.word} />
           {onToggleBookmark && (
             <Button
               type="button"
               variant="ghost"
               size="icon"
+              className="h-11 w-11"
               aria-label={t("common.bookmark")}
               onClick={onToggleBookmark}
             >
@@ -103,7 +96,10 @@ export default function VocabStudyPanel({
 
       {word.exampleEn && (
         <div className="rounded-md border bg-muted/40 p-3">
-          <div className="text-meta">{t("vocab.example")}</div>
+          <div className="flex items-center justify-between gap-2">
+            <div className="text-meta">{t("vocab.example")}</div>
+            <SpeakButton text={word.exampleEn} labelKey="common.pronounceExample" />
+          </div>
           <p className="mt-1 text-sm italic leading-relaxed">{word.exampleEn}</p>
           {word.exampleAr && (
             <p dir="rtl" className="mt-2 text-sm text-muted-foreground">
@@ -145,6 +141,21 @@ export default function VocabStudyPanel({
       {(word.wordFamily || []).length > 0 && (
         <Field label={t("vocab.wordFamily")}>{word.wordFamily.join(", ")}</Field>
       )}
+
+      {(progress?.suspended || (progress?.buriedUntil && progress.buriedUntil > Date.now())) &&
+        onUnsuspend && (
+          <div className="flex flex-wrap gap-2">
+            {progress.suspended && (
+              <Badge variant="warning">{t("common.suspend")}</Badge>
+            )}
+            {progress.buriedUntil && progress.buriedUntil > Date.now() && (
+              <Badge variant="outline">{t("common.bury")}</Badge>
+            )}
+            <Button type="button" variant="outline" className="min-h-11" onClick={onUnsuspend}>
+              {t("common.unsuspend")}
+            </Button>
+          </div>
+        )}
 
       {showRating && onRate && (
         <>

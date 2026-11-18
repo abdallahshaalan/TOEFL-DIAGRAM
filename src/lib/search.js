@@ -1,4 +1,5 @@
 import Fuse from "fuse.js";
+import { isDue, isNewProgress } from "@/lib/srs";
 
 const OPTIONS = {
   keys: [
@@ -58,9 +59,9 @@ export function searchVocabulary(words, query, filters = {}) {
       const m = p?.mastery ?? 0;
       switch (filters.masteryBucket) {
         case "new":
-          return m === 0;
+          return isNewProgress(p);
         case "struggling":
-          return m === 1 || m === 2;
+          return !isNewProgress(p) && (m === 1 || m === 2);
         case "good":
           return m === 3;
         case "easy":
@@ -81,8 +82,19 @@ export function searchVocabulary(words, query, filters = {}) {
     const now = Date.now();
     results = results.filter((w) => {
       const p = filters.masteryMap.get(`${w.library}::${w.id}`);
-      if (!p?.nextReviewAt) return true;
-      return p.nextReviewAt <= now;
+      return isDue(p, now);
+    });
+  }
+  if (filters.excludeDraft) {
+    results = results.filter((w) => w.quality !== "draft");
+  }
+  if (filters.draftOnly) {
+    results = results.filter((w) => w.quality === "draft");
+  }
+  if (filters.leechOnly && filters.masteryMap) {
+    results = results.filter((w) => {
+      const p = filters.masteryMap.get(`${w.library}::${w.id}`);
+      return p?.leech || (p?.lapses || 0) >= 4;
     });
   }
   if (filters.bookmarkedOnly && filters.bookmarkSet) {

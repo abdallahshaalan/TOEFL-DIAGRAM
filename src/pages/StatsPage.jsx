@@ -96,11 +96,20 @@ export default function StatsPage() {
     <div className="space-y-6">
       <PageHeader title={t("stats.title")} subtitle={t("stats.subtitle")} />
 
-      <div className="grid gap-4 sm:grid-cols-3">
-        <StatPill label={t("common.difficult")} value={stats.difficultCount} />
-        <StatPill label={t("common.mastered")} value={stats.masteredCount} />
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <StatPill label={t("common.learning")} value={stats.difficultCount} />
+        <StatPill label={t("common.stable")} value={stats.stableCount ?? stats.masteredCount} />
         <StatPill label={t("common.due")} value={stats.dueCount} />
+        <StatPill label={t("common.leech")} value={stats.leechCount ?? 0} />
       </div>
+      <p className="text-xs text-muted-foreground">{t("stats.stableHint")}</p>
+      {(stats.leechCount ?? 0) > 0 && (
+        <p className="text-xs text-muted-foreground">
+          <Link className="underline underline-offset-2" to="/vocab/toefl">
+            {t("stats.leechHint")}
+          </Link>
+        </p>
+      )}
 
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>

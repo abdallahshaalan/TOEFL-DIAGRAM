@@ -1,5 +1,13 @@
 import { openDB } from "idb";
-import { applyRating, createEmptyProgress } from "./srs";
+import { localDateKey } from "./dateKey";
+import {
+  applyRating,
+  buryUntilTimestamp,
+  createEmptyProgress,
+  isNewProgress,
+} from "./srs";
+
+export { localDateKey };
 
 const DB_NAME = "toefl-companion";
 const DB_VERSION = 1;
@@ -20,7 +28,7 @@ export function getDb() {
           store.createIndex("library", "library");
         }
         if (!db.objectStoreNames.contains("activity")) {
-          const store = db.createObjectStore("activity", { keyPath: "date" });
+          db.createObjectStore("activity", { keyPath: "date" });
         }
         if (!db.objectStoreNames.contains("meta")) {
           db.createObjectStore("meta", { keyPath: "key" });
@@ -53,18 +61,192 @@ export async function saveProgress(record) {
   return { ...record, id };
 }
 
+/**
+ * Persist an SRS rating and bump honest activity counters.
+ * Semantics:
+ * - `ratings` / `reviews` = one SRS rating event (global)
+ * - library `*Reviews` = rating events for that library (daily goal counter)
+ * - Do NOT bump library `*Practiced` here (legacy field; avoid double-count)
+ * - First rating of a new card bumps `newCardsIntroduced` for the day
+ */
 export async function rateWord(library, wordId, rating) {
   const existing =
     (await getProgress(library, wordId)) || createEmptyProgress(wordId, library);
+  const wasNew = isNewProgress(existing);
+  const previousSnapshot = { ...existing, history: [...(existing.history || [])] };
   const updated = applyRating(existing, rating);
   await saveProgress(updated);
-  const delta = { reviews: 1, ratings: 1 };
-  if (library === "business") {
-    delta.businessReviews = 1;
-    delta.businessPracticed = 1;
-  }
+  const delta = { reviews: 1, ratings: 1, ...libraryReviewsDelta(library, 1) };
   await bumpActivity(delta);
+  let newCardBump = false;
+  if (wasNew) {
+    await bumpNewCardsIntroduced(library);
+    newCardBump = true;
+  }
+  await setMeta("lastRatingUndo", {
+    library,
+    wordId,
+    previousProgress: previousSnapshot,
+    activityDelta: delta,
+    newCardBump,
+    at: Date.now(),
+  });
   return updated;
+}
+
+/** Increment today's new-card intro count for a library (on first rating only). */
+export async function bumpNewCardsIntroduced(library) {
+  const today = localDateKey();
+  const introMeta = (await getMeta("newCardsIntroduced", {})) || {};
+  const byLibrary =
+    introMeta.date === today
+      ? { ...(introMeta.byLibrary || { toefl: 0, business: 0, general: 0 }) }
+      : { toefl: 0, business: 0, general: 0 };
+  byLibrary[library] = (byLibrary[library] || 0) + 1;
+  await setMeta("newCardsIntroduced", { date: today, byLibrary });
+  return byLibrary;
+}
+
+export async function getNewCardsIntroducedToday() {
+  const today = localDateKey();
+  const introMeta = (await getMeta("newCardsIntroduced", {})) || {};
+  if (introMeta.date !== today) {
+    return { toefl: 0, business: 0, general: 0 };
+  }
+  return introMeta.byLibrary || { toefl: 0, business: 0, general: 0 };
+}
+
+/** Default: hide draft-quality words from study queues. */
+export async function getIncludeDrafts() {
+  return Boolean(await getMeta("includeDrafts", false));
+}
+
+export async function setIncludeDrafts(value) {
+  await setMeta("includeDrafts", Boolean(value));
+  return Boolean(value);
+}
+
+async function decrementNewCardsIntroduced(library) {
+  const today = localDateKey();
+  const introMeta = (await getMeta("newCardsIntroduced", {})) || {};
+  if (introMeta.date !== today) return;
+  const byLibrary = { ...(introMeta.byLibrary || {}) };
+  byLibrary[library] = Math.max(0, (byLibrary[library] || 0) - 1);
+  await setMeta("newCardsIntroduced", { date: today, byLibrary });
+}
+
+/**
+ * One-step undo of the last rateWord (restores progress + reverses activity/new-card bump).
+ */
+export async function undoLastRating() {
+  const snap = await getMeta("lastRatingUndo", null);
+  if (!snap?.library || !snap?.wordId || !snap?.previousProgress) return null;
+
+  const db = await getDb();
+  const id = progressKey(snap.library, snap.wordId);
+  const prev = snap.previousProgress;
+
+  if (isNewProgress(prev)) {
+    await db.delete("progress", id);
+  } else {
+    await saveProgress({ ...prev, library: snap.library, wordId: snap.wordId });
+  }
+
+  const d = snap.activityDelta || {};
+  await bumpActivity({
+    reviews: -(d.reviews || 0),
+    ratings: -(d.ratings || 0),
+    toeflReviews: -(d.toeflReviews || 0),
+    businessReviews: -(d.businessReviews || 0),
+    generalReviews: -(d.generalReviews || 0),
+  });
+
+  if (snap.newCardBump) {
+    await decrementNewCardsIntroduced(snap.library);
+  }
+
+  await setMeta("lastRatingUndo", null);
+  return snap;
+}
+
+export async function buryWord(library, wordId, now = Date.now()) {
+  const existing =
+    (await getProgress(library, wordId)) || createEmptyProgress(wordId, library);
+  const updated = {
+    ...existing,
+    buriedUntil: buryUntilTimestamp(now),
+  };
+  await saveProgress(updated);
+  return updated;
+}
+
+export async function suspendWord(library, wordId) {
+  const existing =
+    (await getProgress(library, wordId)) || createEmptyProgress(wordId, library);
+  const updated = { ...existing, suspended: true };
+  await saveProgress(updated);
+  return updated;
+}
+
+export async function unsuspendWord(library, wordId) {
+  const existing = await getProgress(library, wordId);
+  if (!existing) return null;
+  const updated = { ...existing, suspended: false, buriedUntil: null };
+  await saveProgress(updated);
+  return updated;
+}
+
+/** Rating-event delta for library daily goals (not unique-word practiced). */
+export function libraryReviewsDelta(library, reviews = 1) {
+  if (library === "toefl") return { toeflReviews: reviews };
+  if (library === "business") return { businessReviews: reviews };
+  if (library === "general") return { generalReviews: reviews };
+  return {};
+}
+
+/** @deprecated use libraryReviewsDelta — practiced no longer bumped on rate */
+export function libraryActivityDelta(library, practiced = 0, reviews = 0) {
+  const base = libraryReviewsDelta(library, reviews);
+  if (!practiced) return base;
+  if (library === "toefl") return { ...base, toeflPracticed: practiced };
+  if (library === "business") return { ...base, businessPracticed: practiced };
+  if (library === "general") return { ...base, generalPracticed: practiced };
+  return base;
+}
+
+/** @deprecated Daily goals use libraryReviewsKey */
+export function libraryPracticedKey(library) {
+  return libraryReviewsKey(library);
+}
+
+/** Daily library goal counter key (SRS rating events). */
+export function libraryReviewsKey(library) {
+  if (library === "toefl") return "toeflReviews";
+  if (library === "business") return "businessReviews";
+  if (library === "general") return "generalReviews";
+  return null;
+}
+
+/** Study schedule caps (IndexedDB meta). */
+export const DEFAULT_NEW_CARDS_PER_DAY = 10;
+export const DEFAULT_REVIEWS_PER_DAY = 50;
+export const LEECH_LAPSES = 4;
+
+export async function getStudyCaps() {
+  const [newCards, reviews] = await Promise.all([
+    getMeta("newCardsPerDay", DEFAULT_NEW_CARDS_PER_DAY),
+    getMeta("reviewsPerDay", DEFAULT_REVIEWS_PER_DAY),
+  ]);
+  return {
+    newCardsPerDay: Number(newCards) > 0 ? Number(newCards) : DEFAULT_NEW_CARDS_PER_DAY,
+    reviewsPerDay: Number(reviews) > 0 ? Number(reviews) : DEFAULT_REVIEWS_PER_DAY,
+  };
+}
+
+export async function setStudyCaps({ newCardsPerDay, reviewsPerDay } = {}) {
+  if (newCardsPerDay != null) await setMeta("newCardsPerDay", Number(newCardsPerDay));
+  if (reviewsPerDay != null) await setMeta("reviewsPerDay", Number(reviewsPerDay));
+  return getStudyCaps();
 }
 
 export async function getBookmark(library, wordId) {
@@ -97,29 +279,40 @@ export async function toggleBookmark(library, wordId, snapshot = {}) {
   return true;
 }
 
-export const BUSINESS_DAILY_GOAL = 15;
+export const LIBRARY_DAILY_GOAL = 15;
+/** @deprecated use LIBRARY_DAILY_GOAL */
+export const BUSINESS_DAILY_GOAL = LIBRARY_DAILY_GOAL;
 export const BUSINESS_MILESTONES = [50, 100, 250, 500];
+
+const EMPTY_ACTIVITY = {
+  reviews: 0,
+  ratings: 0,
+  quizzes: 0,
+  practiced: 0,
+  toeflPracticed: 0,
+  toeflReviews: 0,
+  businessPracticed: 0,
+  businessReviews: 0,
+  generalPracticed: 0,
+  generalReviews: 0,
+};
 
 export async function bumpActivity(delta = {}) {
   const db = await getDb();
-  const date = new Date().toISOString().slice(0, 10);
-  const current = (await db.get("activity", date)) || {
-    date,
-    reviews: 0,
-    ratings: 0,
-    quizzes: 0,
-    practiced: 0,
-    businessPracticed: 0,
-    businessReviews: 0,
-  };
+  const date = localDateKey();
+  const current = (await db.get("activity", date)) || { date, ...EMPTY_ACTIVITY };
   const next = {
     ...current,
     reviews: current.reviews + (delta.reviews || 0),
     ratings: current.ratings + (delta.ratings || 0),
     quizzes: current.quizzes + (delta.quizzes || 0),
     practiced: current.practiced + (delta.practiced || 0),
+    toeflPracticed: (current.toeflPracticed || 0) + (delta.toeflPracticed || 0),
+    toeflReviews: (current.toeflReviews || 0) + (delta.toeflReviews || 0),
     businessPracticed: (current.businessPracticed || 0) + (delta.businessPracticed || 0),
     businessReviews: (current.businessReviews || 0) + (delta.businessReviews || 0),
+    generalPracticed: (current.generalPracticed || 0) + (delta.generalPracticed || 0),
+    generalReviews: (current.generalReviews || 0) + (delta.generalReviews || 0),
   };
   await db.put("activity", next);
   return next;
@@ -133,30 +326,26 @@ export async function getActivityRange(days = 14) {
   for (let i = days - 1; i >= 0; i -= 1) {
     const d = new Date();
     d.setDate(d.getDate() - i);
-    const key = d.toISOString().slice(0, 10);
-    result.push(
-      map.get(key) || {
-        date: key,
-        reviews: 0,
-        ratings: 0,
-        quizzes: 0,
-        practiced: 0,
-        businessPracticed: 0,
-        businessReviews: 0,
-      }
-    );
+    const key = localDateKey(d);
+    result.push(map.get(key) || { date: key, ...EMPTY_ACTIVITY });
   }
   return result;
 }
 
-/** Toast goal completion once per local day */
-export async function maybeCelebrateBusinessGoal(todayCount) {
-  if (todayCount < BUSINESS_DAILY_GOAL) return false;
-  const today = new Date().toISOString().slice(0, 10);
-  const already = await getMeta("businessGoalToastDate", null);
+/** Toast goal completion once per library per local day */
+export async function maybeCelebrateLibraryGoal(library, todayCount) {
+  if (todayCount < LIBRARY_DAILY_GOAL) return false;
+  const today = localDateKey();
+  const metaKey = `${library}GoalToastDate`;
+  const already = await getMeta(metaKey, null);
   if (already === today) return false;
-  await setMeta("businessGoalToastDate", today);
+  await setMeta(metaKey, today);
   return true;
+}
+
+/** @deprecated use maybeCelebrateLibraryGoal("business", count) */
+export async function maybeCelebrateBusinessGoal(todayCount) {
+  return maybeCelebrateLibraryGoal("business", todayCount);
 }
 
 export async function unlockBusinessMilestones(practicedCount) {

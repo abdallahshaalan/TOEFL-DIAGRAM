@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# ABOOD TOEFL Companion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Offline-first vocabulary and study companion for TOEFL, Business English, and General English. Built with **Vite + React + JavaScript**. Progress lives in **IndexedDB** on your device (export/import backups; no cloud account required).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Three libraries: TOEFL, Business, General
+- Spaced repetition review (learning steps, daily new/review caps, undo / bury / suspend)
+- Practice modes: flashcards, quiz, cloze, spelling, scenarios, writing
+- Draft-quality gates (weak/template definitions hidden from study by default)
+- PWA install + offline shell; EN / AR UI
 
-### `npm start`
+## Scripts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm run build      # production build → dist/
+npm test           # Vitest (jsdom + fake-indexeddb)
+npm run lint
+npm run preview    # preview production build
+npm run verify:business
+npm run verify:toefl
+npm run annotate:business
+npm run annotate:toefl
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Do **not** rely on `npm run dev` in constrained environments; prefer `npm run build` + Vitest for verification.
 
-### `npm test`
+## Offline / PWA notes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- After the first successful online load, the app shell works offline.
+- Large vocabulary chunks are **runtime-cached** (not all precached on first install). Open each library once online so those chunks are available offline.
+- Fonts ship via `@fontsource` (self-hosted), not Google Fonts CDN.
 
-### `npm run build`
+## Content quality
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Business and TOEFL entries may be tagged `quality: "ok" | "draft"`.
+- Drafts are excluded from Practice / Review unless you enable **Include drafts** in Settings.
+- IPA is filled only from verified maps — never invented. Missing pronunciation shows as unavailable.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Progress, bookmarks, activity, and settings: IndexedDB (`toefl-companion`)
+- Backup: Settings → Export / Import JSON
+- Vocabulary IDs are stable — do not wipe banks without a migration plan
 
-### `npm run eject`
+## Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Vite 6.x, React 18, React Router, Tailwind, Vitest, Workbox PWA

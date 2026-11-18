@@ -142,10 +142,10 @@ const SECTIONS = [
 ];
 
 const MOTIVATIONS = [
-  { quote: "Every section mastered brings you one step closer to your dream university.", author: "ETS Mentor" },
-  { quote: "Your TOEFL score opens doors to over 11,000 universities worldwide!", author: "Global Education Board" },
-  { quote: "Study with persistence. Real success comes from consistency, not intensity.", author: "Language Expert" },
-  { quote: "The TOEFL is not just a test — it is a passport to global opportunity.", author: "Scholar Abroad" },
+  { quote: "Every section you practice brings clearer academic English habits.", author: "Study tip" },
+  { quote: "Universities look at many factors — treat this companion as skill practice, not a score promise.", author: "Study tip" },
+  { quote: "Study with persistence. Real progress comes from consistency, not intensity.", author: "Study tip" },
+  { quote: "Use timers, notes, and review — small daily sessions beat cramming.", author: "Study tip" },
 ];
 
 const ADVICES = [
@@ -202,9 +202,9 @@ export default function TOEFLGuide() {
       </Helmet>
 
       <div className="tg-hero">
-        <div className="tg-hero-badge">Official TOEFL Overview</div>
+        <div className="tg-hero-badge">Study companion overview</div>
         <h1>TOEFL <span>Mastery Hub</span></h1>
-        <p>Get acquainted with every section in minutes — strategies, question types, and expert advice.</p>
+        <p>Section strategies and question types for practice — not an official ETS publication or score prediction.</p>
         <div className="tg-search-wrap">
           <input
             className="tg-search"
@@ -218,10 +218,12 @@ export default function TOEFLGuide() {
 
       <div className="tg-main">
 
-        {/* Score Estimator */}
+        {/* Self-check practice estimate (not predictive ETS scoring) */}
         <div className="tg-estimator">
-          <div className="tg-heading" style={{ fontSize: 17 }}>Score Estimator</div>
-          <div className="tg-subheading" style={{ marginBottom: 0 }}>Drag sliders to estimate your current TOEFL total score</div>
+          <div className="tg-heading" style={{ fontSize: 17 }}>Self-check practice estimate</div>
+          <div className="tg-subheading" style={{ marginBottom: 0 }}>
+            Drag sliders for a personal practice target — this is not an official or predictive TOEFL score
+          </div>
           <div className="tg-estim-grid">
             {[
               { key: "r", label: "Reading (0–30)" },
@@ -242,8 +244,8 @@ export default function TOEFLGuide() {
           </div>
           <div className="tg-estim-total">
             <div>
-              <div className="tg-total-label">Estimated Total Score</div>
-              <div style={{ fontSize: 12, opacity: 0.7, marginTop: 2 }}>TOEFL iBT (0–120)</div>
+              <div className="tg-total-label">Practice total (self-check)</div>
+              <div style={{ fontSize: 12, opacity: 0.7, marginTop: 2 }}>iBT scale 0–120 — for planning only</div>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <div className="tg-total-score">{total}</div>
@@ -333,8 +335,8 @@ export default function TOEFLGuide() {
         </div>
 
         {/* Advice */}
-        <div className="tg-heading">Expert Advice</div>
-        <div className="tg-subheading">Strategies from top TOEFL mentors</div>
+        <div className="tg-heading">Study advice</div>
+        <div className="tg-subheading">Practical habits for academic English practice</div>
         <div className="tg-advice-grid">
           {ADVICES.map((a, i) => {
             const AdviceIcon = a.icon;

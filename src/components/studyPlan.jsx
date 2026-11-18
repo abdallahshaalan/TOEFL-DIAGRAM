@@ -7,6 +7,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import { useI18n } from "@/i18n";
 
 const styles = `
   .legacy-tool-root, .legacy-tool-root * { box-sizing: border-box; }
@@ -145,16 +156,20 @@ function generatePlan() {
 }
 
 export default function StudyPlan() {
+  const { t } = useI18n();
   const [plan, setPlan] = useState(() => {
     try {
       const raw = localStorage.getItem("toeflPlan_v3");
       if (raw) return JSON.parse(raw);
-    } catch (e) {}
+    } catch {
+      /* ignore */
+    }
     return generatePlan();
   });
 
   const [selectedWeek, setSelectedWeek] = useState(1);
   const [filter, setFilter] = useState("all");
+  const [resetOpen, setResetOpen] = useState(false);
 
   useEffect(() => {
     if (!document.getElementById("sp-styles")) {
@@ -168,7 +183,9 @@ export default function StudyPlan() {
   }, []);
 
   useEffect(() => {
-    try { localStorage.setItem("toeflPlan_v3", JSON.stringify(plan)); } catch (e) {}
+    import("@/lib/toolStorage").then(({ saveToolState }) => {
+      saveToolState("toeflPlan_v3", plan);
+    });
   }, [plan]);
 
   const allDays = plan.flatMap((w) => w.days);
@@ -208,8 +225,11 @@ export default function StudyPlan() {
     ));
   };
 
-  const resetAll = () => {
-    if (window.confirm("Reset all progress?")) setPlan(generatePlan());
+  const resetAll = () => setResetOpen(true);
+
+  const confirmReset = () => {
+    setPlan(generatePlan());
+    setResetOpen(false);
   };
 
   const exportJSON = () => {
@@ -357,6 +377,23 @@ export default function StudyPlan() {
       <footer className="sp-footer">
         <p>© 2025 <span className="brand">ABOOD | JAMAL TOEFL TEST</span> — Automatically generated. Good luck!</p>
       </footer>
+
+      <AlertDialog open={resetOpen} onOpenChange={setResetOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("studyPlanTool.resetTitle")}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {t("studyPlanTool.resetDescription")}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t("common.cancel")}</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmReset}>
+              {t("studyPlanTool.resetConfirm")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </>
   );
 }

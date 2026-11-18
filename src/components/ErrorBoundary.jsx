@@ -11,6 +11,14 @@ export default class ErrorBoundary extends React.Component {
     return { hasError: true, message: error?.message || "Error" };
   }
 
+  componentDidCatch(error, info) {
+    console.error("[ErrorBoundary]", {
+      message: error?.message || String(error),
+      stack: error?.stack || null,
+      componentStack: info?.componentStack || null,
+    });
+  }
+
   render() {
     if (this.state.hasError) {
       const lang = document.documentElement.lang === "ar" ? "ar" : "en";

@@ -19,6 +19,7 @@ describe("vocabAdapters", () => {
     expect(n.exampleEn).toContain("abundant");
     expect(n.difficulty).toBe("C1");
     expect(n.id).toContain("general_abundant");
+    expect(n.quality).toBe("legacy");
   });
 
   it("returns unique general words from seed data", () => {

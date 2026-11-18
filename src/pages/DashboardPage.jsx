@@ -95,8 +95,13 @@ export default function DashboardPage() {
           <Button asChild variant="outline" className="min-h-11">
             <Link to="/vocab/business">{t("dashboard.startBusiness")}</Link>
           </Button>
+          <Button asChild variant="outline" className="min-h-11">
+            <Link to="/vocab/general">{t("dashboard.startGeneral")}</Link>
+          </Button>
         </CardContent>
       </Card>
+
+      <p className="text-xs text-muted-foreground">{t("dashboard.metricsHint")}</p>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
         <MetricCard
@@ -105,6 +110,7 @@ export default function DashboardPage() {
           icon={GraduationCap}
           progress={stats.toeflTotal ? (stats.toeflPracticed / stats.toeflTotal) * 100 : 0}
           showProgress
+          hint={`${t("dashboard.toeflToday")}: ${stats.toeflToday}/${stats.libraryGoal} · ${t("dashboard.toeflStreak")}: ${stats.toeflStreak}`}
         />
         <MetricCard
           label={t("dashboard.businessLearned")}
@@ -122,6 +128,7 @@ export default function DashboardPage() {
           icon={BookOpen}
           progress={stats.generalTotal ? (stats.generalPracticed / stats.generalTotal) * 100 : 0}
           showProgress
+          hint={`${t("dashboard.generalToday")}: ${stats.generalToday}/${stats.libraryGoal} · ${t("dashboard.generalStreak")}: ${stats.generalStreak}`}
         />
         <MetricCard label={t("dashboard.dueReviews")} value={stats.dueCount} icon={Clock} />
         <MetricCard label={t("dashboard.streak")} value={stats.streak} icon={Flame} />

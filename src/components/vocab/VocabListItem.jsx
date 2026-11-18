@@ -1,16 +1,9 @@
-import { Bookmark, ChevronRight, Volume2 } from "lucide-react";
+import { Bookmark, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import SpeakButton from "@/components/shared/SpeakButton";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/cn";
-
-function speak(word) {
-  if (!window.speechSynthesis) return;
-  const u = new SpeechSynthesisUtterance(word);
-  u.lang = "en-US";
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(u);
-}
 
 function masteryVariant(mastery) {
   if (!mastery) return "outline";
@@ -68,6 +61,11 @@ export default function VocabListItem({
           <Badge variant={masteryVariant(mastery)} className="h-5 px-1.5 text-[10px]">
             {masteryLabel(mastery, t)}
           </Badge>
+          {word.quality === "draft" && (
+            <Badge variant="warning" className="h-5 px-1.5 text-[10px]">
+              {t("common.draft")}
+            </Badge>
+          )}
         </div>
         <p className="mt-0.5 truncate text-sm text-muted-foreground">
           {word.definitionEn || word.exampleEn || word.translationAr}
@@ -80,16 +78,7 @@ export default function VocabListItem({
       </div>
 
       <div className="flex shrink-0 items-center gap-0.5" onClick={(e) => e.stopPropagation()}>
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          className="h-10 w-10"
-          aria-label={t("common.pronounce")}
-          onClick={() => speak(word.word)}
-        >
-          <Volume2 className="h-4 w-4" />
-        </Button>
+        <SpeakButton text={word.word} className="h-10 w-10" />
         <Button
           type="button"
           variant="ghost"

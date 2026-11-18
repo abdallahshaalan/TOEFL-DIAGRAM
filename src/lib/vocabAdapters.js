@@ -31,6 +31,7 @@ export function normalizeGeneralEntry(raw, source, index) {
     phonetic: raw.phonetic || null,
     provenance: raw.provenance || "legacy-general",
     batch: raw.batch || source,
+    quality: raw.quality || "legacy",
   };
 }
 

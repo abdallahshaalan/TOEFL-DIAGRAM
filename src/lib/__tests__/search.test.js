@@ -42,4 +42,47 @@ describe("searchVocabulary", () => {
     expect(res).toHaveLength(1);
     expect(res[0].word).toBe("however");
   });
+
+  it("dueOnly excludes unseen words", () => {
+    const masteryMap = new Map([
+      [
+        "toefl::toefl_analyze",
+        {
+          mastery: 3,
+          history: [{ rating: 3, at: 1 }],
+          lastReviewedAt: 1,
+          nextReviewAt: Date.now() - 1000,
+        },
+      ],
+    ]);
+    const res = searchVocabulary(words, "", { dueOnly: true, masteryMap });
+    expect(res).toHaveLength(1);
+    expect(res[0].word).toBe("analyze");
+  });
+
+  it("dueOnly excludes future nextReviewAt", () => {
+    const masteryMap = new Map([
+      [
+        "toefl::toefl_analyze",
+        {
+          mastery: 3,
+          history: [{ rating: 3, at: 1 }],
+          lastReviewedAt: 1,
+          nextReviewAt: Date.now() + 99999999,
+        },
+      ],
+      [
+        "toefl::toefl_however",
+        {
+          mastery: 2,
+          history: [{ rating: 2, at: 1 }],
+          lastReviewedAt: 1,
+          nextReviewAt: Date.now() - 1,
+        },
+      ],
+    ]);
+    const res = searchVocabulary(words, "", { dueOnly: true, masteryMap });
+    expect(res).toHaveLength(1);
+    expect(res[0].word).toBe("however");
+  });
 });

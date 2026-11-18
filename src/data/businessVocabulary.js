@@ -1,8 +1,5 @@
-/**
- * AUTO-GENERATED — do not edit by hand.
- * Run: node scripts/generate-business-vocab.mjs
- * total=1231 recovered=300 curatedOnly=931
- */
+/** Auto-annotated quality flags by scripts/annotate-business-quality.mjs — preserve IDs. */
+
 const businessVocabulary = [
   {
     "id": "business_5s_workplace_method",
@@ -36,7 +33,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_a_b_testing",
@@ -70,7 +68,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_aarrr_framework",
@@ -104,7 +103,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_abc_inventory_classification",
@@ -138,7 +138,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_absenteeism",
@@ -172,7 +173,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌæb.sənˈtiː.ɪ.zəm/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_absolute_advantage",
@@ -206,7 +208,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_accessibility",
@@ -240,7 +243,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_account_management",
@@ -274,7 +278,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_account_based_marketing",
@@ -308,7 +313,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_accountability",
@@ -342,7 +348,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_accountant",
@@ -376,7 +383,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/əˈkaʊn.tənt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_accounting_cycle",
@@ -410,7 +418,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_accounting_equation",
@@ -444,7 +453,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_accounting_period",
@@ -478,7 +488,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_accounts_payable",
@@ -512,7 +523,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_accounts_receivable",
@@ -546,7 +558,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_accrual_accounting",
@@ -580,7 +593,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_accrued_expense",
@@ -614,7 +628,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_accrued_income",
@@ -648,7 +663,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_accumulated_depreciation",
@@ -682,7 +698,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_acquisition",
@@ -716,7 +733,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_acquisition_target",
@@ -750,7 +768,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_action_item_list",
@@ -784,7 +803,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_activation",
@@ -818,7 +838,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_activation_rate",
@@ -852,7 +873,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_active_listening_skill",
@@ -886,7 +908,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_ad_copy",
@@ -920,7 +943,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_adjusting_entry",
@@ -954,7 +978,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_adverse_selection",
@@ -988,7 +1013,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_advisory_board_seat",
@@ -1022,7 +1048,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_affiliate_program",
@@ -1056,7 +1083,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_agenda",
@@ -1090,7 +1118,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/əˈdʒen.də/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_aggregate_demand",
@@ -1124,7 +1153,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_aggregate_supply",
@@ -1158,7 +1188,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_alignment",
@@ -1192,7 +1223,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_allocate",
@@ -1226,7 +1258,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_allowance_for_doubtful_accounts",
@@ -1260,7 +1293,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_amortization",
@@ -1294,7 +1328,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌæm.ər.təˈzeɪ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_analytics",
@@ -1328,7 +1363,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_analytics_dashboard",
@@ -1362,7 +1398,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_analytics_engineer",
@@ -1396,7 +1433,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_analytics_maturity_model",
@@ -1430,7 +1468,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_andon_alert_system",
@@ -1464,7 +1503,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_angel_investor",
@@ -1498,7 +1538,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_angel_syndicate",
@@ -1532,7 +1573,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_annual_general_meeting",
@@ -1566,7 +1608,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_annual_recurring_revenue",
@@ -1600,7 +1643,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_annual_report",
@@ -1634,7 +1678,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_anomaly_detection",
@@ -1668,7 +1713,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_anti_bribery_law",
@@ -1702,7 +1748,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_anti_dilution_clause",
@@ -1736,7 +1783,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_anti_discrimination_law",
@@ -1770,7 +1818,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_anti_dumping_duty",
@@ -1804,7 +1853,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_anti_money_laundering",
@@ -1838,7 +1888,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_antitrust_regulation",
@@ -1872,7 +1923,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_api",
@@ -1906,7 +1958,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_apology_statement",
@@ -1940,7 +1993,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_arbitration_agreement",
@@ -1974,7 +2028,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_articles_of_incorporation",
@@ -2008,7 +2063,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_assembly_line_balancing",
@@ -2042,7 +2098,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_assertive_communication",
@@ -2076,7 +2133,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_asset",
@@ -2109,7 +2167,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_asset_allocation",
@@ -2143,7 +2202,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_asynchronous_update",
@@ -2177,7 +2237,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_attachment_reference",
@@ -2211,7 +2272,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_attribution_model",
@@ -2245,7 +2307,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_audit",
@@ -2279,7 +2342,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_austerity_measure",
@@ -2313,7 +2377,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_authority",
@@ -2347,7 +2412,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_autocratic_leadership",
@@ -2381,7 +2447,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_automation",
@@ -2415,7 +2482,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_awareness",
@@ -2449,7 +2517,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_b2b_marketing",
@@ -2483,7 +2552,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_balance_of_payments",
@@ -2517,7 +2587,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_balance_of_trade",
@@ -2551,7 +2622,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_balance_sheet",
@@ -2584,7 +2656,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_balanced_scorecard",
@@ -2618,7 +2691,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bank_guarantee",
@@ -2652,7 +2726,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bank_reconciliation",
@@ -2686,7 +2761,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_base_rate",
@@ -2720,7 +2796,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_batch_production_run",
@@ -2754,7 +2831,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_batna",
@@ -2788,7 +2866,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_beachhead_market",
@@ -2822,7 +2901,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bear_market",
@@ -2856,7 +2936,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_benchmark",
@@ -2890,7 +2971,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_benchmark_dashboard",
@@ -2924,7 +3006,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_benchmark_rate",
@@ -2958,7 +3041,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_benefits_package",
@@ -2992,7 +3076,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_beps_initiative",
@@ -3026,7 +3111,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_big_data_platform",
@@ -3060,7 +3146,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bill_of_lading",
@@ -3094,7 +3181,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bill_of_materials",
@@ -3128,7 +3216,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_blind_copy_discretion",
@@ -3162,7 +3251,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_blue_ocean_strategy",
@@ -3196,7 +3286,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_board_of_directors",
@@ -3230,7 +3321,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_bond",
@@ -3264,7 +3356,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bond_maturity",
@@ -3298,7 +3391,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bonded_warehouse",
@@ -3332,7 +3426,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bonus",
@@ -3366,7 +3461,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈboʊ.nəs/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_book_value",
@@ -3400,7 +3496,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_book_to_market_ratio",
@@ -3434,7 +3531,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bookkeeping",
@@ -3468,7 +3566,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈbʊk.kiː.pɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bootstrapped_growth",
@@ -3502,7 +3601,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bootstrapping",
@@ -3536,7 +3636,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_bottom_line",
@@ -3570,7 +3671,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_branch",
@@ -3604,7 +3706,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/bræntʃ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_brand",
@@ -3638,7 +3741,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/brænd/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_brand_ambassador",
@@ -3672,7 +3776,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_brand_awareness_metric",
@@ -3706,7 +3811,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_brand_equity",
@@ -3740,7 +3846,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_brand_extension_decision",
@@ -3774,7 +3881,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_brand_loyalty",
@@ -3808,7 +3916,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_brand_positioning",
@@ -3842,7 +3951,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_breach_of_contract",
@@ -3876,7 +3986,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_break_even_point",
@@ -3910,7 +4021,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_break_even_sensitivity",
@@ -3944,7 +4056,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bridge_financing",
@@ -3978,7 +4091,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bridge_loan",
@@ -4012,7 +4126,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_briefing",
@@ -4046,7 +4161,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈbriː.fɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_briefing_document",
@@ -4080,7 +4196,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_brownfield_acquisition",
@@ -4114,7 +4231,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_budget",
@@ -4148,7 +4266,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_budget_surplus",
@@ -4182,7 +4301,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bull_market",
@@ -4216,7 +4336,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_bundle_pricing",
@@ -4250,7 +4371,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_burn_rate",
@@ -4284,7 +4406,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_business_accelerator",
@@ -4318,7 +4441,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_continuity",
@@ -4352,7 +4476,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_business_correspondence",
@@ -4386,7 +4511,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_courtesy",
@@ -4420,7 +4546,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_cycle_phase",
@@ -4454,7 +4581,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_defamation",
@@ -4488,7 +4616,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_development",
@@ -4522,7 +4651,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_business_etiquette_rule",
@@ -4556,7 +4686,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_intelligence_platform",
@@ -4590,7 +4721,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_business_license",
@@ -4624,7 +4756,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_model",
@@ -4658,7 +4791,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_business_model_canvas",
@@ -4692,7 +4826,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_business_plan_outline",
@@ -4726,7 +4861,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_business_process_outsourcing",
@@ -4760,7 +4896,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_proposal",
@@ -4794,7 +4931,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_business_travel_visa",
@@ -4828,7 +4966,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_buyer_journey",
@@ -4862,7 +5001,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_bylaws",
@@ -4896,7 +5036,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cac",
@@ -4930,7 +5071,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_call_to_action_phrase",
@@ -4964,7 +5106,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_candidate",
@@ -4998,7 +5141,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_capacity_planning",
@@ -5032,7 +5176,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_capacity_utilization",
@@ -5066,7 +5211,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_capital_account_flow",
@@ -5100,7 +5246,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_capital_allocation",
@@ -5134,7 +5281,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_capital_budgeting",
@@ -5168,7 +5316,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_capital_call",
@@ -5202,7 +5351,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_capital_expenditure",
@@ -5236,7 +5386,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_capital_gains",
@@ -5270,7 +5421,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_capitalism",
@@ -5304,7 +5456,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_capitalist",
@@ -5338,7 +5491,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_capitalization_table",
@@ -5372,7 +5526,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_carbon_border_adjustment",
@@ -5406,7 +5561,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cargo",
@@ -5440,7 +5596,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_carried_interest",
@@ -5474,7 +5631,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_carrying_amount",
@@ -5508,7 +5666,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cartel_behavior",
@@ -5542,7 +5701,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_case_study",
@@ -5576,7 +5736,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cash_burn",
@@ -5610,7 +5771,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cash_flow",
@@ -5643,7 +5805,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cash_flow_statement",
@@ -5677,7 +5840,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cash_reserve",
@@ -5711,7 +5875,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cash_runway",
@@ -5745,7 +5910,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cash_basis_accounting",
@@ -5779,7 +5945,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_central_bank_rate",
@@ -5813,7 +5980,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_chain_of_command",
@@ -5847,7 +6015,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_chairperson",
@@ -5881,7 +6050,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈtʃer.pɝː.sən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_change_communication_plan",
@@ -5915,7 +6085,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_change_management",
@@ -5949,7 +6120,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_channel_partner",
@@ -5983,7 +6155,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_channel_strategy",
@@ -6017,7 +6190,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_chart_of_accounts",
@@ -6051,7 +6225,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_chief_data_officer",
@@ -6085,7 +6260,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_chief_executive_officer",
@@ -6119,7 +6295,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_choice_of_law",
@@ -6153,7 +6330,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_churn",
@@ -6187,7 +6365,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_churn_rate",
@@ -6221,7 +6400,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cif_shipping_term",
@@ -6255,7 +6435,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_civil_tort",
@@ -6289,7 +6470,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_clarifying_question",
@@ -6323,7 +6505,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_class_action_lawsuit",
@@ -6357,7 +6540,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_classification_algorithm",
@@ -6391,7 +6575,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_clearing_house",
@@ -6425,7 +6610,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_click_through_rate",
@@ -6459,7 +6645,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_client",
@@ -6493,7 +6680,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cliff_vesting",
@@ -6527,7 +6715,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_closed_ended_question",
@@ -6561,7 +6750,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_closing",
@@ -6595,7 +6785,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_closing_entry",
@@ -6629,7 +6820,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cloud_data_warehouse",
@@ -6663,7 +6855,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_co_branding_agreement",
@@ -6697,7 +6890,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_co_founder_agreement",
@@ -6731,7 +6925,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_coaching",
@@ -6765,7 +6960,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈkoʊ.tʃɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_code_of_ethics",
@@ -6799,7 +6995,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cohort_analysis",
@@ -6833,7 +7030,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cold_outreach",
@@ -6867,7 +7065,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_collaboration",
@@ -6901,7 +7100,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kəˌlæb.əˈreɪ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_collective_bargaining",
@@ -6935,7 +7135,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_commerce",
@@ -6969,7 +7170,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈkɑː.mɝːs/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_common_resource",
@@ -7003,7 +7205,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_common_shares",
@@ -7037,7 +7240,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_company",
@@ -7071,7 +7275,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈkʌm.pə.ni/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_company_culture",
@@ -7105,7 +7310,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_comparative_advantage",
@@ -7139,7 +7345,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_compensation",
@@ -7173,7 +7380,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌkɑːm.pənˈseɪ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_competitive_advantage",
@@ -7207,7 +7415,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_competitive_benchmarking",
@@ -7241,7 +7450,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_competitor",
@@ -7275,7 +7485,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kəmˈpet.ɪ.tər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_compliance",
@@ -7308,7 +7519,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_compliance_training",
@@ -7342,7 +7554,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_complimentary_close",
@@ -7376,7 +7589,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_compromise",
@@ -7410,7 +7624,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_conference_call_etiquette",
@@ -7444,7 +7659,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_confidence_interval",
@@ -7478,7 +7694,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_confidentiality_obligation",
@@ -7512,7 +7729,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_conflict_de_escalation",
@@ -7546,7 +7764,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_conflict_of_interest_policy",
@@ -7580,7 +7799,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_conflict_resolution",
@@ -7614,7 +7834,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_conglomerate",
@@ -7648,7 +7869,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kənˈɡlɑː.mər.ət/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_consensus_decision",
@@ -7682,7 +7904,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_consent_management",
@@ -7716,7 +7939,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_consistency_principle",
@@ -7750,7 +7974,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_consolidation_center",
@@ -7784,7 +8009,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_constructive_feedback",
@@ -7818,7 +8044,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_consumer",
@@ -7852,7 +8079,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kənˈsuː.mər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_consumer_price_index",
@@ -7886,7 +8114,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_consumer_promotion",
@@ -7920,7 +8149,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_consumer_protection_law",
@@ -7954,7 +8184,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_consumer_surplus",
@@ -7988,7 +8219,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_content_calendar",
@@ -8022,7 +8254,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_content_strategy",
@@ -8056,7 +8289,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_contingency_plan",
@@ -8090,7 +8324,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_contingent_liability",
@@ -8124,7 +8359,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_contra_account",
@@ -8158,7 +8394,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_contract",
@@ -8192,7 +8429,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_contract_formation",
@@ -8226,7 +8464,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_contract_manufacturing",
@@ -8260,7 +8499,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_contract_value",
@@ -8294,7 +8534,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_contractor",
@@ -8328,7 +8569,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_control_account",
@@ -8362,7 +8604,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_controller",
@@ -8396,7 +8639,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kənˈtroʊ.lər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_controlling",
@@ -8430,7 +8674,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kənˈtroʊ.lɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_conversion_funnel",
@@ -8464,7 +8709,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_conversion_rate",
@@ -8498,7 +8744,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_convertible_bond",
@@ -8532,7 +8779,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_convertible_note",
@@ -8566,7 +8814,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_coordination",
@@ -8600,7 +8849,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/koʊˌɔːr.dəˈneɪ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_copy_etiquette",
@@ -8634,7 +8884,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_copyright",
@@ -8668,7 +8919,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_copyright_license",
@@ -8702,7 +8954,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_copywriting",
@@ -8736,7 +8989,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_core_competency",
@@ -8770,7 +9024,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_core_values",
@@ -8804,7 +9059,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_corporate_bond",
@@ -8838,7 +9094,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporate_bylaws",
@@ -8872,7 +9129,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporate_governance_code",
@@ -8906,7 +9164,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporate_identity",
@@ -8940,7 +9199,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_corporate_social_responsibility",
@@ -8974,7 +9234,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporate_storytelling",
@@ -9008,7 +9269,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporate_transparency",
@@ -9042,7 +9304,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporate_venture_arm",
@@ -9076,7 +9339,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_corporation",
@@ -9110,7 +9374,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_correlation_analysis",
@@ -9144,7 +9409,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_correspondent_bank_due_diligence",
@@ -9178,7 +9444,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_correspondent_banking",
@@ -9212,7 +9479,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cost",
@@ -9246,7 +9514,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/kɔːst/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cost_center",
@@ -9280,7 +9549,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cost_of_capital",
@@ -9314,7 +9584,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cost_of_goods_sold",
@@ -9348,7 +9619,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cost_structure",
@@ -9382,7 +9654,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_countervailing_duty",
@@ -9416,7 +9689,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_country_risk_rating",
@@ -9450,7 +9724,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_coupon_payment",
@@ -9484,7 +9759,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_creative_brief",
@@ -9518,7 +9794,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_credit",
@@ -9552,7 +9829,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈkred.ɪt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_credit_default_swap",
@@ -9586,7 +9864,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_credit_note",
@@ -9620,7 +9899,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_credit_rating",
@@ -9654,7 +9934,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_credit_spread",
@@ -9688,7 +9969,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_crisis_communication_plan",
@@ -9722,7 +10004,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_crisis_management",
@@ -9756,7 +10039,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_crm",
@@ -9790,7 +10074,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cross_border_payment",
@@ -9824,7 +10109,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cross_cultural_communication",
@@ -9858,7 +10144,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cross_docking_operation",
@@ -9892,7 +10179,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cross_functional_team",
@@ -9926,7 +10214,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cross_selling",
@@ -9960,7 +10249,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cross_selling_offer",
@@ -9994,7 +10284,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_crowding_out_effect",
@@ -10028,7 +10319,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_cta",
@@ -10062,7 +10354,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_cultural_distance_index",
@@ -10096,7 +10389,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_currency",
@@ -10130,7 +10424,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_currency_hedge",
@@ -10164,7 +10459,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_currency_swap",
@@ -10198,7 +10494,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_current_account_balance",
@@ -10232,7 +10529,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_current_asset",
@@ -10266,7 +10564,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_current_liability",
@@ -10300,7 +10599,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_custodian_bank",
@@ -10334,7 +10634,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_custody_fee",
@@ -10368,7 +10669,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_customer",
@@ -10402,7 +10704,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈkʌs.tə.mər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_acquisition",
@@ -10436,7 +10739,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_customer_advocacy",
@@ -10470,7 +10774,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_development",
@@ -10504,7 +10809,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_discovery_interview",
@@ -10538,7 +10844,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_effort_score",
@@ -10572,7 +10879,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_experience_design",
@@ -10606,7 +10914,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_journey",
@@ -10640,7 +10949,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_customer_journey_map",
@@ -10674,7 +10984,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_customer_lifetime_value",
@@ -10708,7 +11019,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_persona",
@@ -10742,7 +11054,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_customer_persona_map",
@@ -10776,7 +11089,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_segmentation_model",
@@ -10810,7 +11124,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customer_success",
@@ -10844,7 +11159,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_customs_brokerage_fee",
@@ -10878,7 +11194,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customs_documentation",
@@ -10912,7 +11229,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_customs_duty_rate",
@@ -10946,7 +11264,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_cycle_time_reduction",
@@ -10980,7 +11299,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_dashboard",
@@ -11013,7 +11333,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_data_cleansing_job",
@@ -11047,7 +11368,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_governance_framework",
@@ -11081,7 +11403,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_lake",
@@ -11115,7 +11438,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_lineage_tracking",
@@ -11149,7 +11473,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_mesh_architecture",
@@ -11183,7 +11508,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_pipeline",
@@ -11217,7 +11543,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_protection_law",
@@ -11251,7 +11578,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_data_quality_rule",
@@ -11285,7 +11613,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_steward_role",
@@ -11319,7 +11648,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_storytelling",
@@ -11353,7 +11683,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_visualization",
@@ -11389,7 +11720,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_data_warehouse",
@@ -11423,7 +11755,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_data_driven",
@@ -11457,7 +11790,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_data_driven_culture",
@@ -11491,7 +11825,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_deal",
@@ -11525,7 +11860,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_debit",
@@ -11559,7 +11895,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈdeb.ɪt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_debit_note",
@@ -11593,7 +11930,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_debt_service",
@@ -11627,7 +11965,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_debt_to_capital_ratio",
@@ -11661,7 +12000,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_decision_maker",
@@ -11695,7 +12035,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_decision_making",
@@ -11729,7 +12070,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_defect_rate",
@@ -11763,7 +12105,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_deferred_income",
@@ -11797,7 +12140,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_deferred_tax",
@@ -11831,7 +12175,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_deficit",
@@ -11865,7 +12210,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_deflation_risk",
@@ -11899,7 +12245,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_delegation",
@@ -11933,7 +12280,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_delegation_request",
@@ -11967,7 +12315,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_demand",
@@ -12000,7 +12349,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_demand_forecasting_model",
@@ -12034,7 +12384,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_demand_sensing",
@@ -12068,7 +12419,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_demo_day_event",
@@ -12102,7 +12454,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_democratic_leadership",
@@ -12136,7 +12489,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_demotion",
@@ -12170,7 +12524,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/dɪˈmoʊ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_department",
@@ -12204,7 +12559,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/dɪˈpɑːrt.mənt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_depreciation",
@@ -12238,7 +12594,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_descriptive_analytics",
@@ -12272,7 +12629,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_diagnostic_analytics",
@@ -12306,7 +12664,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_dimensional_modeling",
@@ -12340,7 +12699,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_diplomatic_wording",
@@ -12374,7 +12734,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_directing",
@@ -12408,7 +12769,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/dəˈrek.tɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_director",
@@ -12442,7 +12804,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/dəˈrek.tər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_director_liability",
@@ -12476,7 +12839,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_disciplinary_action",
@@ -12510,7 +12874,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_discount",
@@ -12544,7 +12909,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_discovery_call",
@@ -12578,7 +12944,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_discrimination",
@@ -12612,7 +12979,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_discussion_moderation",
@@ -12646,7 +13014,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_diseconomies_of_scale",
@@ -12680,7 +13049,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_display_advertising",
@@ -12714,7 +13084,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_dispute",
@@ -12748,7 +13119,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_disruption",
@@ -12782,7 +13154,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_distribution_planning",
@@ -12816,7 +13189,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_distribution_strategy",
@@ -12850,7 +13224,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_distribution_waterfall",
@@ -12884,7 +13259,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_diversity",
@@ -12918,7 +13294,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_divestment",
@@ -12952,7 +13329,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/daɪˈvest.mənt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_dividend_yield",
@@ -12986,7 +13364,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_dividends_payable",
@@ -13020,7 +13399,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_division",
@@ -13054,7 +13434,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/dɪˈvɪʒ.ən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_documentary_collection",
@@ -13088,7 +13469,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_documentary_credit",
@@ -13122,7 +13504,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_double_taxation_relief",
@@ -13156,7 +13539,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_double_entry_bookkeeping",
@@ -13190,7 +13574,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_down_round_financing",
@@ -13224,7 +13609,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_downsizing",
@@ -13258,7 +13644,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈdaʊn.saɪ.zɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_downward_communication",
@@ -13292,7 +13679,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_drag_along_right",
@@ -13326,7 +13714,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_drill_down_analysis",
@@ -13360,7 +13749,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_due_diligence_investigation",
@@ -13394,7 +13784,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_due_diligence_review",
@@ -13428,7 +13819,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_duration_risk",
@@ -13462,7 +13854,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_duty_of_care",
@@ -13496,7 +13889,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_duty_of_loyalty",
@@ -13530,7 +13924,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_dynamic_pricing",
@@ -13564,7 +13959,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_early_adopter_segment",
@@ -13598,7 +13994,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_earnings_per_share",
@@ -13632,7 +14029,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_development",
@@ -13666,7 +14064,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_expansion",
@@ -13700,7 +14099,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_exposure",
@@ -13734,7 +14134,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_globalization",
@@ -13768,7 +14169,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_order_quantity",
@@ -13802,7 +14204,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_recession",
@@ -13836,7 +14239,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economic_sanctions_compliance",
@@ -13870,7 +14274,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economics",
@@ -13904,7 +14309,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_economies_of_scale",
@@ -13938,7 +14344,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_economy",
@@ -13972,7 +14379,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_editorial_calendar",
@@ -14006,7 +14414,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_elevator_pitch_script",
@@ -14040,7 +14449,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_email_drip_sequence",
@@ -14074,7 +14484,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_email_etiquette_standard",
@@ -14108,7 +14519,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_embedded_analytics",
@@ -14142,7 +14554,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_emerging_market_entry",
@@ -14176,7 +14589,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_empathetic_response",
@@ -14210,7 +14624,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_employee",
@@ -14244,7 +14659,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪmˈplɔɪ.iː/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_employee_engagement",
@@ -14278,7 +14694,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_employee_retention",
@@ -14312,7 +14729,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_employer",
@@ -14346,7 +14764,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪmˈplɔɪ.ər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_employment_agreement",
@@ -14380,7 +14799,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_empowerment",
@@ -14414,7 +14834,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_engagement",
@@ -14448,7 +14869,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_engagement_loop",
@@ -14482,7 +14904,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_engagement_rate",
@@ -14516,7 +14939,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_enterprise",
@@ -14550,7 +14974,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_enterprise_resource_planning",
@@ -14584,7 +15009,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_enterprise_sales",
@@ -14618,7 +15044,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_enterprise_value",
@@ -14652,7 +15079,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_entity",
@@ -14686,7 +15114,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_entrepreneur",
@@ -14720,7 +15149,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_environmental_compliance",
@@ -14754,7 +15184,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_equal_employment_opportunity",
@@ -14788,7 +15219,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_equipment_lease",
@@ -14822,7 +15254,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_equity",
@@ -14856,7 +15289,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_equity_crowdfunding",
@@ -14890,7 +15324,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_escalation_path",
@@ -14924,7 +15359,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_ethics_hotline",
@@ -14958,7 +15394,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_event_marketing",
@@ -14992,7 +15429,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_event_tracking_plan",
@@ -15026,7 +15464,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_exceed",
@@ -15060,7 +15499,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_exchange_rate_regime",
@@ -15094,7 +15534,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_exchange_traded_fund",
@@ -15128,7 +15569,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_executive",
@@ -15162,7 +15604,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪɡˈzek.jə.tɪv/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_executive_committee",
@@ -15196,7 +15639,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_executive_dashboard",
@@ -15230,7 +15674,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_executive_summary",
@@ -15264,7 +15709,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_exit_strategy",
@@ -15298,7 +15744,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_expansion",
@@ -15332,7 +15779,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪkˈspæn.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_expansion_revenue",
@@ -15366,7 +15814,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_expatriate_assignment",
@@ -15400,7 +15849,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_expense",
@@ -15434,7 +15884,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪkˈspens/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_experiential_marketing",
@@ -15468,7 +15919,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_experimentation_mindset",
@@ -15502,7 +15954,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_experimentation_platform",
@@ -15536,7 +15989,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_export_control_license",
@@ -15570,7 +16024,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_export_control_screening",
@@ -15604,7 +16059,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_export_credit_agency",
@@ -15638,7 +16094,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_export_documentation",
@@ -15672,7 +16129,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_export_processing_zone",
@@ -15706,7 +16164,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_export_subsidy",
@@ -15740,7 +16199,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_external_auditor",
@@ -15774,7 +16234,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_extract_transform_load",
@@ -15808,7 +16269,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_extraterritorial_regulation",
@@ -15842,7 +16304,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_facilitation_skill",
@@ -15876,7 +16339,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_facility_layout_design",
@@ -15910,7 +16374,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_factoring",
@@ -15944,7 +16409,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fair_labor_standard",
@@ -15978,7 +16444,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fair_trade_certification",
@@ -16012,7 +16479,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fair_trading_law",
@@ -16046,7 +16514,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fair_value",
@@ -16080,7 +16549,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_feature",
@@ -16114,7 +16584,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_feature_prioritization",
@@ -16148,7 +16619,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_feature_store",
@@ -16182,7 +16654,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_feedback_culture",
@@ -16216,7 +16689,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_feedback_session",
@@ -16250,7 +16724,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fiduciary_duty",
@@ -16284,7 +16759,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_fiduciary_obligation",
@@ -16318,7 +16794,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fifo",
@@ -16352,7 +16829,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_finance",
@@ -16386,7 +16864,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_financial_leverage",
@@ -16420,7 +16899,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_financial_statement",
@@ -16454,7 +16934,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_firm",
@@ -16488,7 +16969,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/fɜːrm/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_first_mover_advantage",
@@ -16522,7 +17004,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fiscal_deficit",
@@ -16556,7 +17039,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fiscal_multiplier",
@@ -16590,7 +17074,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fiscal_policy",
@@ -16624,7 +17109,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_fiscal_year",
@@ -16658,7 +17144,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_fixed_cost",
@@ -16692,7 +17179,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_fixed_rate_loan",
@@ -16726,7 +17214,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_flat_organization",
@@ -16760,7 +17249,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_floating_rate",
@@ -16794,7 +17284,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_fob_shipping_term",
@@ -16828,7 +17319,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_focus_group_study",
@@ -16862,7 +17354,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_follow_up_message",
@@ -16896,7 +17389,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_force_majeure_clause",
@@ -16930,7 +17424,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_forecast",
@@ -16964,7 +17459,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_foreign_direct_investment",
@@ -16998,7 +17494,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_foreign_exchange_forward",
@@ -17032,7 +17529,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_foreign_exchange_market",
@@ -17066,7 +17564,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_foreign_subsidiary_governance",
@@ -17100,7 +17599,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_formality_register",
@@ -17134,7 +17634,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_found",
@@ -17168,7 +17669,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_founder",
@@ -17202,7 +17704,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_founder_mindset",
@@ -17236,7 +17739,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_founder_market_fit",
@@ -17270,7 +17774,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_founding_team",
@@ -17304,7 +17809,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_franchise",
@@ -17338,7 +17844,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_franchise_opportunity",
@@ -17372,7 +17879,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_franchisee",
@@ -17406,7 +17914,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌfræn.tʃaɪˈziː/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_franchisor",
@@ -17440,7 +17949,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈfræn.tʃaɪ.zɔːr/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_free_cash_flow",
@@ -17474,7 +17984,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_free_trade_zone",
@@ -17508,7 +18019,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_freelancing",
@@ -17542,7 +18054,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_freemium",
@@ -17576,7 +18089,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_freemium_funnel",
@@ -17610,7 +18124,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_freemium_model",
@@ -17644,7 +18159,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_freight_forwarding",
@@ -17678,7 +18194,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_frontier_market",
@@ -17712,7 +18229,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_fund_prospectus",
@@ -17746,7 +18264,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_funding",
@@ -17779,7 +18298,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_funnel_analytics",
@@ -17813,7 +18333,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_game_theory_model",
@@ -17847,7 +18368,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_gdp",
@@ -17881,7 +18403,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_general_ledger",
@@ -17915,7 +18438,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_general_partner",
@@ -17949,7 +18473,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_geopolitical_risk_assessment",
@@ -17983,7 +18508,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_gift_and_hospitality_policy",
@@ -18017,7 +18543,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_gini_coefficient",
@@ -18051,7 +18578,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_global_distribution_network",
@@ -18085,7 +18613,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_global_mobility_program",
@@ -18119,7 +18648,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_global_sourcing_strategy",
@@ -18153,7 +18683,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_global_standardization",
@@ -18187,7 +18718,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_global_supply_chain_ethics",
@@ -18221,7 +18753,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_global_virtual_team",
@@ -18255,7 +18788,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_glocalization_approach",
@@ -18289,7 +18823,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_go_to_market_experiment",
@@ -18323,7 +18858,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_go_to_market_plan",
@@ -18357,7 +18893,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_goal",
@@ -18391,7 +18928,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɡoʊl/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_going_concern",
@@ -18425,7 +18963,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_good_manufacturing_practice",
@@ -18459,7 +18998,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_goods",
@@ -18493,7 +19033,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɡʊdz/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_goodwill",
@@ -18527,7 +19068,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈɡʊd.wɪl/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_governance",
@@ -18561,7 +19103,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_green_finance",
@@ -18595,7 +19138,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_greenfield_investment",
@@ -18629,7 +19173,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_greenwashing_risk",
@@ -18663,7 +19208,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_grievance",
@@ -18697,7 +19243,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈɡriː.vəns/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_gross",
@@ -18731,7 +19278,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_gross_revenue",
@@ -18765,7 +19313,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_growth",
@@ -18799,7 +19348,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɡroʊθ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_growth_hacking",
@@ -18833,7 +19383,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_growth_hypothesis",
@@ -18867,7 +19418,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_growth_loop",
@@ -18901,7 +19453,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_guerrilla_marketing",
@@ -18935,7 +19488,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_hazard_analysis_plan",
@@ -18969,7 +19523,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_headcount",
@@ -19003,7 +19558,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈhed.kaʊnt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_headline",
@@ -19037,7 +19593,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_headquarters",
@@ -19071,7 +19628,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈhedˌkwɔːr.tərz/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_hedge_fund",
@@ -19105,7 +19663,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_hedging_expression",
@@ -19139,7 +19698,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_hierarchy",
@@ -19173,7 +19733,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈhaɪə.rɑːr.ki/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_high_context_culture",
@@ -19207,7 +19768,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_high_performing_team",
@@ -19241,7 +19803,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_historical_cost",
@@ -19275,7 +19838,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_holding_company",
@@ -19309,7 +19873,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_human_capital_theory",
@@ -19343,7 +19908,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_human_resources",
@@ -19377,7 +19943,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_hybrid_work",
@@ -19411,7 +19978,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_impact_venture",
@@ -19445,7 +20013,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_impairment",
@@ -19479,7 +20048,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪmˈper.mənt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_import_clearance",
@@ -19513,7 +20083,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_import_quota",
@@ -19547,7 +20118,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_impression",
@@ -19581,7 +20153,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_inbound_logistics",
@@ -19615,7 +20188,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_incentive",
@@ -19649,7 +20223,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ɪnˈsen.tɪv/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_income",
@@ -19683,7 +20258,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈɪn.kʌm/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_income_statement",
@@ -19717,7 +20293,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_incoterms_rule",
@@ -19751,7 +20328,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_indemnification_clause",
@@ -19785,7 +20363,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_industry",
@@ -19819,7 +20398,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈɪn.də.stri/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_inflation",
@@ -19852,7 +20432,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_influencer_partnership",
@@ -19886,7 +20467,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_informal_grapevine",
@@ -19920,7 +20502,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_information_asymmetry",
@@ -19954,7 +20537,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_initial_public_offering",
@@ -19988,7 +20572,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_insider_trading_rule",
@@ -20022,7 +20607,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_intangible_asset",
@@ -20056,7 +20642,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_integration",
@@ -20090,7 +20677,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_intellectual_property",
@@ -20124,7 +20712,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_intellectual_property_strategy",
@@ -20158,7 +20747,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_intercultural_training",
@@ -20192,7 +20782,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_interest_coverage_ratio",
@@ -20226,7 +20817,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_internal_control",
@@ -20260,7 +20852,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_internal_investigation",
@@ -20294,7 +20887,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_internal_memo",
@@ -20328,7 +20922,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_internal_newsletter",
@@ -20362,7 +20957,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_internal_rate_of_return",
@@ -20396,7 +20992,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_international_arbitration",
@@ -20430,7 +21027,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_international_contract_law",
@@ -20464,7 +21062,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_international_licensing",
@@ -20498,7 +21097,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_international_logistics_hub",
@@ -20532,7 +21132,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_international_market_adaptation",
@@ -20566,7 +21167,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_interview",
@@ -20600,7 +21202,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_intrapreneurship_program",
@@ -20634,7 +21237,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_introduction_email",
@@ -20668,7 +21272,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_inventory",
@@ -20701,7 +21306,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_inventory_optimization_model",
@@ -20735,7 +21341,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_investment",
@@ -20768,7 +21375,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_investment_term_sheet",
@@ -20802,7 +21410,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_investor",
@@ -20836,7 +21445,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_invoice",
@@ -20870,7 +21480,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_islamic_finance",
@@ -20904,7 +21515,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_iso_quality_certification",
@@ -20938,7 +21550,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_iteration",
@@ -20972,7 +21585,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_iteration_cycle",
@@ -21006,7 +21620,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_iteration_speed",
@@ -21040,7 +21655,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_job_description",
@@ -21074,7 +21690,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_job_enrichment",
@@ -21108,7 +21725,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_job_rotation",
@@ -21142,7 +21760,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_joint_venture",
@@ -21176,7 +21795,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_joint_venture_abroad",
@@ -21210,7 +21830,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_journal_entry",
@@ -21244,7 +21865,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_jurisdiction_clause",
@@ -21278,7 +21900,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_just_in_time_production",
@@ -21312,7 +21935,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_kaizen_event",
@@ -21346,7 +21970,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_kanban_system",
@@ -21380,7 +22005,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_key_result_area",
@@ -21414,7 +22040,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_keyword",
@@ -21448,7 +22075,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_know_your_customer_rule",
@@ -21482,7 +22110,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_kpi",
@@ -21515,7 +22144,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_kpi_definition",
@@ -21549,7 +22179,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_labor_force_participation",
@@ -21583,7 +22214,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_labor_union",
@@ -21617,7 +22249,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_landed_cost_calculation",
@@ -21651,7 +22284,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_landing_page",
@@ -21685,7 +22319,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_last_mile_delivery",
@@ -21719,7 +22354,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_lateral_communication",
@@ -21753,7 +22389,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_law_of_demand",
@@ -21787,7 +22424,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_law_of_supply",
@@ -21821,7 +22459,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_layoff",
@@ -21855,7 +22494,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈleɪ.ɔːf/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_lead",
@@ -21889,7 +22529,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_lead_nurturing",
@@ -21923,7 +22564,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_leadership",
@@ -21957,7 +22599,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_leadership_style",
@@ -21991,7 +22634,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_lean_canvas_model",
@@ -22025,7 +22669,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_lean_manufacturing",
@@ -22059,7 +22704,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_lean_product_development",
@@ -22093,7 +22739,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_lean_startup",
@@ -22127,7 +22774,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_ledger",
@@ -22161,7 +22809,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈledʒ.ər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_legal_entity",
@@ -22195,7 +22844,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_letter_of_credit",
@@ -22229,7 +22879,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_leverage",
@@ -22263,7 +22914,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_liability",
@@ -22296,7 +22948,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_licensing_deal",
@@ -22330,7 +22983,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_lifo",
@@ -22364,7 +23018,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_limitation_of_liability",
@@ -22398,7 +23053,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_limited_liability_company",
@@ -22432,7 +23088,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_limited_partner",
@@ -22466,7 +23123,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_line_manager",
@@ -22500,7 +23158,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_liquidation_preference",
@@ -22534,7 +23193,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_liquidity",
@@ -22568,7 +23228,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_loan_covenant",
@@ -22602,7 +23263,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_lobbying_disclosure",
@@ -22636,7 +23298,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_localization_strategy",
@@ -22670,7 +23333,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_loss",
@@ -22704,7 +23368,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/lɔːs/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_low_context_culture",
@@ -22738,7 +23403,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_lower_of_cost_or_net_realizable_value",
@@ -22772,7 +23438,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_loyalty_rewards_program",
@@ -22806,7 +23473,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_ltv",
@@ -22840,7 +23508,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_macroeconomics",
@@ -22874,7 +23543,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_maintenance_schedule",
@@ -22908,7 +23578,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_make_or_buy_analysis",
@@ -22942,7 +23613,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_management",
@@ -22976,7 +23648,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_management_by_objectives",
@@ -23010,7 +23683,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_management_fee",
@@ -23044,7 +23718,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_manager",
@@ -23078,7 +23753,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈmæn.ɪ.dʒər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_manufacturing_lead_time",
@@ -23112,7 +23788,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_margin",
@@ -23146,7 +23823,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_marginal_cost",
@@ -23180,7 +23858,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_marginal_revenue",
@@ -23214,7 +23893,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_marginal_utility",
@@ -23248,7 +23928,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_market",
@@ -23282,7 +23963,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_market_capitalization",
@@ -23316,7 +23998,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_market_entry_mode",
@@ -23350,7 +24033,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_market_equilibrium",
@@ -23384,7 +24068,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_market_failure",
@@ -23418,7 +24103,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_market_penetration",
@@ -23452,7 +24138,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_market_research_survey",
@@ -23486,7 +24173,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_market_segmentation",
@@ -23520,7 +24208,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_market_share",
@@ -23554,7 +24243,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_market_validation",
@@ -23588,7 +24278,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_marketing_automation_flow",
@@ -23622,7 +24313,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_marketing_funnel",
@@ -23656,7 +24348,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_marketing_mix",
@@ -23690,7 +24383,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_marketing_mix_model",
@@ -23724,7 +24418,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_marketing_qualified_lead",
@@ -23758,7 +24453,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_marketplace",
@@ -23792,7 +24488,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈmɑːr.kɪt.pleɪs/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_marketplace_business_model",
@@ -23826,7 +24523,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_markup",
@@ -23860,7 +24558,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈmɑːrk.ʌp/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_master_data_management",
@@ -23894,7 +24593,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_master_franchise",
@@ -23928,7 +24628,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_master_production_schedule",
@@ -23962,7 +24663,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_matching_principle",
@@ -23996,7 +24698,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_material_misstatement",
@@ -24030,7 +24733,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_material_requirements_planning",
@@ -24064,7 +24768,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_materiality",
@@ -24098,7 +24803,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/məˌtɪr.iˈæl.ə.ti/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_matrix_structure",
@@ -24132,7 +24838,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_maximize",
@@ -24166,7 +24873,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_mean_time_between_failures",
@@ -24200,7 +24908,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_media_kit",
@@ -24234,7 +24943,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_media_planning",
@@ -24268,7 +24978,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_meeting_facilitation",
@@ -24302,7 +25013,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_meeting_minutes_template",
@@ -24336,7 +25048,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_meeting_summary",
@@ -24370,7 +25083,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_mentor_network",
@@ -24404,7 +25118,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_mentorship",
@@ -24438,7 +25153,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_merchandise",
@@ -24472,7 +25188,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈmɝː.tʃən.daɪs/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_merchandising_plan",
@@ -24506,7 +25223,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_merger",
@@ -24540,7 +25258,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_message_clarity",
@@ -24574,7 +25293,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_metadata_catalog",
@@ -24608,7 +25328,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_metric_taxonomy",
@@ -24642,7 +25363,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_metrics",
@@ -24676,7 +25398,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_mezzanine_debt",
@@ -24710,7 +25433,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_microeconomics",
@@ -24744,7 +25468,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_micromanagement",
@@ -24778,7 +25503,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_middle_management",
@@ -24812,7 +25538,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_minimum_feature_set",
@@ -24846,7 +25573,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_minority_shareholder_right",
@@ -24880,7 +25608,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_minutes",
@@ -24914,7 +25643,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈmɪn.ɪts/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_mission",
@@ -24948,7 +25678,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_mistake_proofing_device",
@@ -24982,7 +25713,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_model_deployment_pipeline",
@@ -25016,7 +25748,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_model_drift_monitoring",
@@ -25050,7 +25783,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_modern_slavery_act_compliance",
@@ -25084,7 +25818,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_monetary_policy",
@@ -25118,7 +25853,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_monetization",
@@ -25152,7 +25888,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_monetization_strategy",
@@ -25186,7 +25923,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_monopolistic_competition",
@@ -25220,7 +25958,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_monopoly",
@@ -25254,7 +25993,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_monte_carlo_simulation",
@@ -25288,7 +26028,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_monthly_recurring_revenue",
@@ -25322,7 +26063,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_moral_hazard_problem",
@@ -25356,7 +26098,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_morale",
@@ -25390,7 +26133,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/məˈræl/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_motivation",
@@ -25424,7 +26168,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌmoʊ.təˈveɪ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_moving_average",
@@ -25458,7 +26203,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_multidomestic_strategy",
@@ -25492,7 +26238,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_multinational_enterprise",
@@ -25526,7 +26273,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_municipal_bond",
@@ -25560,7 +26308,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_mutual_fund",
@@ -25594,7 +26343,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_mvp",
@@ -25627,7 +26377,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_native_advertising",
@@ -25661,7 +26412,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_natural_language_processing",
@@ -25695,7 +26447,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_natural_monopoly",
@@ -25729,7 +26482,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_nearshoring_decision",
@@ -25763,7 +26517,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_needs_assessment",
@@ -25797,7 +26552,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_negative_externality",
@@ -25831,7 +26587,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_negligence_standard",
@@ -25865,7 +26622,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_negotiation",
@@ -25898,7 +26656,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_negotiation_preparation",
@@ -25932,7 +26691,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_net",
@@ -25966,7 +26726,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_net_present_value",
@@ -26000,7 +26761,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_net_profit",
@@ -26034,7 +26796,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_net_promoter_score",
@@ -26068,7 +26831,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_network_effect",
@@ -26102,7 +26866,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_network_effects",
@@ -26136,7 +26901,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_networking",
@@ -26170,7 +26936,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_networking_follow_up",
@@ -26204,7 +26971,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_niche",
@@ -26238,7 +27006,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/nɪtʃ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_nominal_interest_rate",
@@ -26272,7 +27041,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_non_compete_covenant",
@@ -26306,7 +27076,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_non_current_asset",
@@ -26340,7 +27111,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_non_current_liability",
@@ -26374,7 +27146,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_non_disclosure_agreement",
@@ -26410,7 +27183,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_nonprofit",
@@ -26444,7 +27218,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_nonverbal_signal",
@@ -26478,7 +27253,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_north_star_metric",
@@ -26512,7 +27288,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_notes_to_the_accounts",
@@ -26546,7 +27323,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_notice_period",
@@ -26580,7 +27358,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_objection",
@@ -26614,7 +27393,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_objection_handling",
@@ -26648,7 +27428,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_objective",
@@ -26682,7 +27463,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/əbˈdʒek.tɪv/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_observability_stack",
@@ -26716,7 +27498,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_occupational_safety_rule",
@@ -26750,7 +27533,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_oecd_guideline",
@@ -26784,7 +27568,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_offboarding",
@@ -26818,7 +27603,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_officer_liability",
@@ -26852,7 +27638,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_offshore_outsourcing",
@@ -26886,7 +27673,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_okr_tracking",
@@ -26920,7 +27708,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_omnichannel_retail",
@@ -26954,7 +27743,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_on_the_job_training",
@@ -26988,7 +27778,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_onboarding",
@@ -27022,7 +27813,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_onboarding_flow",
@@ -27056,7 +27848,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_online_analytical_processing",
@@ -27090,7 +27883,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_open_account_trade",
@@ -27124,7 +27918,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_open_market_operation",
@@ -27158,7 +27953,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_open_ended_question",
@@ -27192,7 +27988,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_operating_expenses",
@@ -27226,7 +28023,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_operating_profit",
@@ -27260,7 +28058,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_operational_dashboard",
@@ -27294,7 +28093,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_opportunity_cost",
@@ -27330,7 +28130,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_order_fulfillment",
@@ -27364,7 +28165,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_organic_growth",
@@ -27398,7 +28200,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_organizational_culture",
@@ -27432,7 +28235,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_organizational_structure",
@@ -27466,7 +28270,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_organizing",
@@ -27500,7 +28305,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈɔːr.ɡə.naɪ.zɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_out_of_office_reply",
@@ -27534,7 +28340,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_outbound_logistics",
@@ -27568,7 +28375,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_outlet",
@@ -27602,7 +28410,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈaʊt.let/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_overall_equipment_effectiveness",
@@ -27636,7 +28445,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_overall_process_efficiency",
@@ -27670,7 +28480,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_overhead",
@@ -27704,7 +28515,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈoʊ.vər.hed/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_overtime",
@@ -27738,7 +28550,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈoʊ.vər.taɪm/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_owner",
@@ -27772,7 +28585,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈoʊ.nər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_owner_s_equity",
@@ -27806,7 +28620,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_ownership",
@@ -27840,7 +28655,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_paid_ads",
@@ -27874,7 +28690,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_pain_point",
@@ -27908,7 +28725,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_paraphrasing_technique",
@@ -27942,7 +28760,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_parent_company",
@@ -27976,7 +28795,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_partner",
@@ -28010,7 +28830,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈpɑːrt.nər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_partnership",
@@ -28044,7 +28865,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈpɑːrt.nər.ʃɪp/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_patent",
@@ -28078,7 +28900,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_patent_application",
@@ -28112,7 +28935,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_patent_licensing",
@@ -28146,7 +28970,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_payback_period",
@@ -28180,7 +29005,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_peer_review",
@@ -28214,7 +29040,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_penetration_pricing",
@@ -28248,7 +29075,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_per_capita_income",
@@ -28282,7 +29110,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_perceptual_mapping",
@@ -28316,7 +29145,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_perfect_competition",
@@ -28350,7 +29180,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_performance",
@@ -28384,7 +29215,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/pərˈfɔːr.məns/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_performance_appraisal",
@@ -28418,7 +29250,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_performance_discussion",
@@ -28452,7 +29285,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_performance_fee",
@@ -28486,7 +29320,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_performance_review",
@@ -28520,7 +29355,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_personal_branding",
@@ -28554,7 +29390,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_persuasive_argument",
@@ -28588,7 +29425,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_persuasive_business_writing",
@@ -28622,7 +29460,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_petty_cash",
@@ -28656,7 +29495,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_phillips_curve",
@@ -28690,7 +29530,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_pick_and_pack_process",
@@ -28724,7 +29565,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_piercing_the_corporate_veil",
@@ -28758,7 +29600,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_pitch_competition",
@@ -28792,7 +29635,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_pitch_deck",
@@ -28826,7 +29670,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_pivot",
@@ -28860,7 +29705,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_pivot_strategy",
@@ -28894,7 +29740,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_planned_downtime",
@@ -28928,7 +29775,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_planning",
@@ -28962,7 +29810,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈplæn.ɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_point_of_sale_display",
@@ -28996,7 +29845,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_policy",
@@ -29030,7 +29880,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈpɑː.lə.si/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_political_risk_insurance",
@@ -29064,7 +29915,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_portfolio",
@@ -29098,7 +29950,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_portfolio_diversification",
@@ -29132,7 +29985,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_positive_externality",
@@ -29166,7 +30020,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_post_money_valuation",
@@ -29200,7 +30055,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_pre_money_valuation",
@@ -29234,7 +30090,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_predictive_analytics",
@@ -29268,7 +30125,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_preferential_trade_agreement",
@@ -29302,7 +30160,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_preferred_shares",
@@ -29336,7 +30195,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_prepaid_expense",
@@ -29370,7 +30230,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_prescriptive_analytics",
@@ -29404,7 +30265,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_presentation_structure",
@@ -29438,7 +30300,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_press_release_draft",
@@ -29472,7 +30335,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_preventive_maintenance",
@@ -29506,7 +30370,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_price",
@@ -29540,7 +30405,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/praɪs/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_price_ceiling_policy",
@@ -29574,7 +30440,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_price_collusion",
@@ -29608,7 +30475,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_price_elasticity_of_demand",
@@ -29642,7 +30510,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_price_elasticity_of_supply",
@@ -29676,7 +30545,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_price_floor_policy",
@@ -29710,7 +30580,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_price_to_earnings_ratio",
@@ -29744,7 +30615,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_pricing_analytics",
@@ -29778,7 +30650,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_pricing_elasticity",
@@ -29812,7 +30685,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_pricing_model",
@@ -29846,7 +30720,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_pricing_strategy",
@@ -29880,7 +30755,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_principal_amount",
@@ -29914,7 +30790,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_privacy_notice",
@@ -29948,7 +30825,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_privacy_policy",
@@ -29982,7 +30860,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_private_company",
@@ -30016,7 +30895,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_private_equity_fund",
@@ -30050,7 +30930,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_probation_period",
@@ -30084,7 +30965,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_problem_validation",
@@ -30118,7 +31000,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_problem_solution_fit",
@@ -30152,7 +31035,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_procedure",
@@ -30186,7 +31070,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/prəˈsiː.dʒər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_process_bottleneck",
@@ -30220,7 +31105,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_procurement",
@@ -30254,7 +31140,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_procurement_cycle",
@@ -30288,7 +31175,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_procurement_process",
@@ -30322,7 +31210,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_producer_price_index",
@@ -30356,7 +31245,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_producer_surplus",
@@ -30390,7 +31280,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_product_launch_event",
@@ -30424,7 +31315,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_product_liability_claim",
@@ -30458,7 +31350,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_product_line",
@@ -30492,7 +31385,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_product_placement_deal",
@@ -30526,7 +31420,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_product_sampling",
@@ -30560,7 +31455,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_product_strategy",
@@ -30594,7 +31490,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_product_warranty",
@@ -30628,7 +31525,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_product_market_feedback_loop",
@@ -30662,7 +31560,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "ok"
   },
   {
     "id": "business_product_market_fit",
@@ -30696,7 +31595,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_product_market_validation",
@@ -30730,7 +31630,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_production_possibilities_frontier",
@@ -30764,7 +31665,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_productivity",
@@ -30798,7 +31700,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌproʊ.dəkˈtɪv.ə.ti/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_productivity_growth_rate",
@@ -30832,7 +31735,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_professional_body_language",
@@ -30866,7 +31770,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_professional_rapport",
@@ -30900,7 +31805,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_professional_salutation",
@@ -30934,7 +31840,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_professional_voicemail",
@@ -30968,7 +31875,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_profit",
@@ -31002,7 +31910,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_profit_center",
@@ -31036,7 +31945,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_profit_margin",
@@ -31070,7 +31980,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_profit_repatriation",
@@ -31104,7 +32015,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_profitable",
@@ -31138,7 +32050,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_programmatic_advertising",
@@ -31172,7 +32085,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_project_management",
@@ -31206,7 +32120,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_promotion",
@@ -31240,7 +32155,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/prəˈmoʊ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_promotional_campaign",
@@ -31274,7 +32190,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_proof_of_concept",
@@ -31308,7 +32225,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_proposal",
@@ -31341,7 +32259,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_proposition",
@@ -31375,7 +32294,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_prospecting",
@@ -31409,7 +32329,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_protectionist_tariff",
@@ -31443,7 +32364,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_prototype",
@@ -31477,7 +32399,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_provision",
@@ -31511,7 +32434,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_proxy_voting",
@@ -31545,7 +32469,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_prudence",
@@ -31579,7 +32504,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈpruː.dəns/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_psychological_pricing",
@@ -31613,7 +32539,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_public_company",
@@ -31647,7 +32574,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_public_debt_ratio",
@@ -31681,7 +32609,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_public_good",
@@ -31715,7 +32644,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_public_relations",
@@ -31749,7 +32679,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_pull_production_system",
@@ -31783,7 +32714,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_purchase_order",
@@ -31817,7 +32749,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_purchasing_power",
@@ -31851,7 +32784,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_purchasing_power_parity",
@@ -31885,7 +32819,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_push_production_system",
@@ -31919,7 +32854,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_qualified_lead",
@@ -31953,7 +32889,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_quality_assurance",
@@ -31987,7 +32924,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_quality_assurance_audit",
@@ -32021,7 +32959,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_quality_control",
@@ -32055,7 +32994,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_quality_control_inspection",
@@ -32089,7 +33029,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_quantitative_easing",
@@ -32123,7 +33064,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_quorum_requirement",
@@ -32157,7 +33099,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_quota",
@@ -32191,7 +33134,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈkwoʊ.tə/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_quotation",
@@ -32225,7 +33169,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_raci_matrix",
@@ -32259,7 +33204,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_real_gross_domestic_product",
@@ -32293,7 +33239,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_real_interest_rate",
@@ -32327,7 +33274,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_real_time_metrics",
@@ -32361,7 +33309,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_receipt",
@@ -32395,7 +33344,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/rɪˈsiːt/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_recognition_message",
@@ -32429,7 +33379,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_recommendation_system",
@@ -32463,7 +33414,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_recruitment",
@@ -32497,7 +33449,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_referral_incentive",
@@ -32531,7 +33484,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_refinancing",
@@ -32565,7 +33519,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_regional_trade_bloc",
@@ -32599,7 +33554,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_registered_agent",
@@ -32633,7 +33589,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_regression_model",
@@ -32667,7 +33624,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_regulation",
@@ -32701,7 +33659,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_regulatory",
@@ -32735,7 +33694,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_regulatory_enforcement",
@@ -32769,7 +33729,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_regulatory_filing",
@@ -32803,7 +33764,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_regulatory_sandbox",
@@ -32837,7 +33799,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_reliability",
@@ -32871,7 +33834,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_remarketing_campaign",
@@ -32905,7 +33869,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_remote_work",
@@ -32939,7 +33904,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_renewal",
@@ -32973,7 +33939,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_rental",
@@ -33007,7 +33974,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_reorder_point",
@@ -33041,7 +34009,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_reporting_line",
@@ -33075,7 +34044,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_reshoring_initiative",
@@ -33109,7 +34079,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_resignation",
@@ -33143,7 +34114,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌrez.ɪɡˈneɪ.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_restructuring",
@@ -33177,7 +34149,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌriːˈstrʌk.tʃər.ɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_retail",
@@ -33211,7 +34184,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈriː.teɪl/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_retained_earnings",
@@ -33245,7 +34219,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_retargeting_pixel",
@@ -33279,7 +34254,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_retention",
@@ -33313,7 +34289,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_retention_cohort",
@@ -33347,7 +34324,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_retention_rate",
@@ -33381,7 +34359,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_return_on_ad_spend",
@@ -33415,7 +34394,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_returns_management",
@@ -33449,7 +34429,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_revenue",
@@ -33483,7 +34464,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_revenue_milestone",
@@ -33517,7 +34499,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_reverse_logistics_process",
@@ -33551,7 +34534,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_revolving_credit",
@@ -33585,7 +34569,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_rfm_analysis",
@@ -33619,7 +34604,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_rfp_response",
@@ -33653,7 +34639,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_risk_assessment",
@@ -33687,7 +34674,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_roadmap",
@@ -33721,7 +34709,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_role_based_access",
@@ -33755,7 +34744,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_root_cause_analysis",
@@ -33789,7 +34779,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_runway",
@@ -33823,7 +34814,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_saas",
@@ -33857,7 +34849,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_safe_agreement",
@@ -33891,7 +34884,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_safeguard_tariff",
@@ -33925,7 +34919,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_safety_stock_level",
@@ -33959,7 +34954,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_salary",
@@ -33993,7 +34989,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈsæl.ər.i/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_sale_and_leaseback",
@@ -34027,7 +35024,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sales",
@@ -34061,7 +35059,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_sales_and_operations_planning",
@@ -34095,7 +35094,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sales_call",
@@ -34129,7 +35129,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_sales_funnel_stage",
@@ -34163,7 +35164,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sales_pipeline",
@@ -34197,7 +35199,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_sales_pitch",
@@ -34231,7 +35234,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_sales_qualified_lead",
@@ -34265,7 +35269,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sales_tax",
@@ -34299,7 +35304,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_sample_size_calculation",
@@ -34333,7 +35339,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sanctions_screening",
@@ -34367,7 +35374,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_scalability",
@@ -34401,7 +35409,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_scale_up_phase",
@@ -34435,7 +35444,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_scenario_analysis",
@@ -34469,7 +35479,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_search_engine_marketing",
@@ -34503,7 +35514,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_seasonal_adjustment",
@@ -34537,7 +35549,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_secondary_offering",
@@ -34571,7 +35584,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_secondary_share_sale",
@@ -34605,7 +35619,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sector",
@@ -34639,7 +35654,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈsek.tər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_securities_disclosure",
@@ -34673,7 +35689,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_seed_funding_round",
@@ -34707,7 +35724,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_segment",
@@ -34740,7 +35758,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_self_service_reporting",
@@ -34774,7 +35793,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_semantic_layer",
@@ -34808,7 +35828,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sensitivity_table",
@@ -34842,7 +35863,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sentiment_score",
@@ -34876,7 +35898,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sentiment_tracking",
@@ -34910,7 +35933,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_seo",
@@ -34944,7 +35968,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_series_a_round",
@@ -34978,7 +36003,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_servant_leadership",
@@ -35012,7 +36038,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_service_level_agreement",
@@ -35046,7 +36073,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_service_level_target",
@@ -35080,7 +36108,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_serviceable_obtainable_market",
@@ -35114,7 +36143,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_services",
@@ -35148,7 +36178,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈsɝː.vɪ.sɪz/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_settlement_negotiation",
@@ -35182,7 +36213,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_severance",
@@ -35216,7 +36248,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈsev.ər.əns/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_share_buyback",
@@ -35250,7 +36283,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_share_capital",
@@ -35284,7 +36318,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_share_of_voice",
@@ -35318,7 +36353,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_shareholder",
@@ -35352,7 +36388,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_shareholder_agreement",
@@ -35386,7 +36423,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_short_term",
@@ -35420,7 +36458,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_side_project_validation",
@@ -35454,7 +36493,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_six_sigma_project",
@@ -35488,7 +36528,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_skimming_pricing",
@@ -35522,7 +36563,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_small_business",
@@ -35556,7 +36598,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_social_enterprise_model",
@@ -35590,7 +36633,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_social_proof",
@@ -35624,7 +36668,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_sole_proprietorship",
@@ -35658,7 +36703,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_solution_oriented",
@@ -35692,7 +36738,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_source_document",
@@ -35726,7 +36773,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_sovereign_bond",
@@ -35760,7 +36808,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_span_of_control",
@@ -35794,7 +36843,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_spare_parts_planning",
@@ -35828,7 +36878,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_speak_up_culture",
@@ -35862,7 +36913,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_speculate",
@@ -35896,7 +36948,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_spin_off",
@@ -35930,7 +36983,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_sponsorship_deal",
@@ -35964,7 +37018,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sql_reporting",
@@ -35998,7 +37053,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_staff",
@@ -36032,7 +37088,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/stæf/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_staff_turnover",
@@ -36066,7 +37123,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_staffing",
@@ -36100,7 +37158,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈstæf.ɪŋ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_stagflation",
@@ -36134,7 +37193,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_stakeholder",
@@ -36167,7 +37227,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_stakeholder_update",
@@ -36201,7 +37262,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_stand_up_meeting_format",
@@ -36235,7 +37297,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_standard_operating_procedure",
@@ -36269,7 +37332,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_standard_work_instruction",
@@ -36303,7 +37367,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_star_schema",
@@ -36337,7 +37402,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_startup",
@@ -36370,7 +37436,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_startup_incubator",
@@ -36404,7 +37471,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_startup_studio",
@@ -36438,7 +37506,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_statistical_hypothesis_test",
@@ -36472,7 +37541,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_statistical_significance_test",
@@ -36506,7 +37576,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_status_update_email",
@@ -36540,7 +37611,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_statute_of_limitations",
@@ -36574,7 +37646,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_stimulus_package",
@@ -36608,7 +37681,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_stock_exchange",
@@ -36642,7 +37716,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_stock_split",
@@ -36676,7 +37751,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_straight_line_method",
@@ -36710,7 +37786,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_strategic_partnership",
@@ -36744,7 +37821,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_strategy",
@@ -36777,7 +37855,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_strict_liability_rule",
@@ -36811,7 +37890,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_subject_line_clarity",
@@ -36845,7 +37925,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_subordinate",
@@ -36879,7 +37960,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/səˈbɔːr.də.nət/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_subpoena_request",
@@ -36913,7 +37995,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_subscription",
@@ -36947,7 +38030,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_subscription_model",
@@ -36981,7 +38065,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_subscription_revenue",
@@ -37015,7 +38100,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_subsidiary",
@@ -37049,7 +38135,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/səbˈsɪd.iˌer.i/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_subsidiary_ledger",
@@ -37083,7 +38170,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_succession_planning",
@@ -37117,7 +38205,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_sukuk",
@@ -37151,7 +38240,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sunk_cost",
@@ -37185,7 +38275,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_supervised_learning_model",
@@ -37219,7 +38310,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_supervision",
@@ -37253,7 +38345,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˌsuː.pərˈvɪʒ.ən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_supervisor",
@@ -37287,7 +38380,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈsuː.pər.vaɪ.zər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_supplier",
@@ -37321,7 +38415,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/səˈplaɪ.ər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_supplier_scorecard",
@@ -37355,7 +38450,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_supply",
@@ -37388,7 +38484,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_supply_chain",
@@ -37422,7 +38519,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_supply_chain_design",
@@ -37456,7 +38554,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_supply_chain_due_diligence",
@@ -37490,7 +38589,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_supply_side_policy",
@@ -37524,7 +38624,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_survey_analytics",
@@ -37558,7 +38659,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_suspense_account",
@@ -37592,7 +38694,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_sustainability_reporting",
@@ -37626,7 +38729,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_sweat_equity",
@@ -37660,7 +38764,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_swift_transfer",
@@ -37694,7 +38799,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_swot_analysis",
@@ -37728,7 +38834,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_syndicated_loan",
@@ -37762,7 +38869,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_t_account",
@@ -37796,7 +38904,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_tactic",
@@ -37830,7 +38939,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_tag_along_right",
@@ -37864,7 +38974,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_tagline_development",
@@ -37898,7 +39009,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_takeover",
@@ -37932,7 +39044,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈteɪk.oʊ.vər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_takt_time",
@@ -37966,7 +39079,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_talent_acquisition",
@@ -38000,7 +39114,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_talent_pipeline",
@@ -38034,7 +39149,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_tangible_asset",
@@ -38068,7 +39184,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_target_audience",
@@ -38102,7 +39219,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_targeting_strategy",
@@ -38136,7 +39254,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_tax_treaty_benefit",
@@ -38170,7 +39289,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_taxable_income",
@@ -38204,7 +39324,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_team_dynamics",
@@ -38238,7 +39359,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_team_leader",
@@ -38272,7 +39394,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_teamwork",
@@ -38306,7 +39429,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈtiːm.wɝːk/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_technical_report_writing",
@@ -38340,7 +39464,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_term_loan",
@@ -38374,7 +39499,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_terminate",
@@ -38408,7 +39534,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_terms_of_service",
@@ -38442,7 +39569,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_testimonial",
@@ -38476,7 +39604,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_text_analytics",
@@ -38510,7 +39639,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_thank_you_note",
@@ -38544,7 +39674,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_third_party_logistics",
@@ -38578,7 +39709,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_throughput_rate",
@@ -38612,7 +39744,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_time_management",
@@ -38646,7 +39779,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_time_series_forecast",
@@ -38680,7 +39814,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_time_zone_coordination",
@@ -38714,7 +39849,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_timekeeping_rule",
@@ -38748,7 +39884,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_tone_at_the_top",
@@ -38782,7 +39919,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_tone_of_voice_guide",
@@ -38816,7 +39954,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_top_management",
@@ -38850,7 +39989,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_total_addressable_market",
@@ -38884,7 +40024,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_total_quality_management",
@@ -38918,7 +40059,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_touchpoint_analysis",
@@ -38952,7 +40094,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_town_hall_meeting",
@@ -38986,7 +40129,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_traction",
@@ -39020,7 +40164,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_trade_barrier",
@@ -39054,7 +40199,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_trade_compliance_program",
@@ -39088,7 +40234,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_trade_deficit",
@@ -39122,7 +40269,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_trade_promotion",
@@ -39156,7 +40304,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_trade_secret_policy",
@@ -39190,7 +40339,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_trade_surplus",
@@ -39224,7 +40374,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_trademark",
@@ -39258,7 +40409,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_trademark_protection",
@@ -39292,7 +40444,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_traffic",
@@ -39326,7 +40479,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_transaction",
@@ -39360,7 +40514,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/trænˈzæk.ʃən/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_transaction_exposure",
@@ -39394,7 +40549,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_transfer_pricing_policy",
@@ -39428,7 +40584,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_transformational_leadership",
@@ -39462,7 +40619,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_translation_exposure",
@@ -39496,7 +40654,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_transnational_strategy",
@@ -39530,7 +40689,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_transportation_management_system",
@@ -39564,7 +40724,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_treasury_bill",
@@ -39598,7 +40759,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_trial_balance",
@@ -39632,7 +40794,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_turnover",
@@ -39666,7 +40829,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈtɝːn.oʊ.vər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_ui",
@@ -39700,7 +40864,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_unemployment_rate",
@@ -39734,7 +40899,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_unfair_competition_law",
@@ -39768,7 +40934,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_unique_selling_proposition",
@@ -39802,7 +40969,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_unit_economics",
@@ -39836,7 +41004,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_unplanned_downtime",
@@ -39870,7 +41039,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_unqualified_opinion",
@@ -39904,7 +41074,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_up_round_financing",
@@ -39938,7 +41109,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_upselling",
@@ -39972,7 +41144,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_upward_communication",
@@ -40006,7 +41179,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_usability",
@@ -40040,7 +41214,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_user_acquisition",
@@ -40074,7 +41249,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_user_experience",
@@ -40108,7 +41284,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_user_feedback",
@@ -40142,7 +41319,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_user_interview_guide",
@@ -40176,7 +41354,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_ux",
@@ -40210,7 +41389,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_valuation",
@@ -40244,7 +41424,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_value_chain",
@@ -40278,7 +41459,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_value_hypothesis",
@@ -40312,7 +41494,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_value_metric",
@@ -40346,7 +41529,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_value_proposition",
@@ -40382,7 +41566,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_value_stream_mapping",
@@ -40416,7 +41601,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_value_added_tax",
@@ -40450,7 +41636,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_variable_cost",
@@ -40484,7 +41671,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_variable_cost_curve",
@@ -40518,7 +41706,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_vendor",
@@ -40552,7 +41741,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_vendor_managed_inventory",
@@ -40586,7 +41776,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_venture",
@@ -40620,7 +41811,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_venture_capital",
@@ -40654,7 +41846,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_venture_debt",
@@ -40688,7 +41881,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_venture_scout",
@@ -40722,7 +41916,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_vesting_schedule",
@@ -40756,7 +41951,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_video_conference_protocol",
@@ -40790,7 +41986,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_viral_growth",
@@ -40824,7 +42021,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_virality",
@@ -40858,7 +42056,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_virality_coefficient",
@@ -40892,7 +42091,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_vision",
@@ -40926,7 +42126,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_visual_identity_system",
@@ -40960,7 +42161,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_visual_management_board",
@@ -40994,7 +42196,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_voucher",
@@ -41028,7 +42231,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈvaʊ.tʃər/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_wage",
@@ -41062,7 +42266,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/weɪdʒ/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_warehouse_management",
@@ -41096,7 +42301,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_warehouse_management_system",
@@ -41130,7 +42336,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_warrant",
@@ -41164,7 +42371,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_waste_elimination",
@@ -41198,7 +42406,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_web_traffic_analytics",
@@ -41232,7 +42441,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_weighted_average_cost_of_capital",
@@ -41266,7 +42476,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_whistleblower_policy",
@@ -41300,7 +42511,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_wholesale",
@@ -41334,7 +42546,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈhoʊl.seɪl/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_withholding_tax",
@@ -41368,7 +42581,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_work_order_system",
@@ -41402,7 +42616,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_work_permit_process",
@@ -41436,7 +42651,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_workflow",
@@ -41470,7 +42686,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_workforce",
@@ -41504,7 +42721,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_workforce_planning",
@@ -41538,7 +42756,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_working_capital",
@@ -41572,7 +42791,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_workplace",
@@ -41606,7 +42826,8 @@ const businessVocabulary = [
     ],
     "phonetic": null,
     "provenance": "recovered-general",
-    "enriched": true
+    "enriched": true,
+    "quality": "draft"
   },
   {
     "id": "business_workplace_ergonomics",
@@ -41640,7 +42861,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_workplace_harassment_policy",
@@ -41674,7 +42896,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_workplace_mediation",
@@ -41708,7 +42931,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_world_trade_organization",
@@ -41742,7 +42966,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_write_off",
@@ -41776,7 +43001,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": "/ˈraɪt.ɔːf/",
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "ok"
   },
   {
     "id": "business_wrongful_dismissal",
@@ -41810,7 +43036,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   },
   {
     "id": "business_yield_curve",
@@ -41844,7 +43071,8 @@ const businessVocabulary = [
       "speaking"
     ],
     "phonetic": null,
-    "provenance": "curated-business"
+    "provenance": "curated-business",
+    "quality": "draft"
   }
 ];
 

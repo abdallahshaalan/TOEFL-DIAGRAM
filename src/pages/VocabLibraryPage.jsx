@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { useI18n } from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import {
   Sheet,
   SheetContent,
@@ -18,15 +16,18 @@ import { Search } from "lucide-react";
 import EmptyState from "@/components/shared/EmptyState";
 import VocabListItem from "@/components/vocab/VocabListItem";
 import VocabStudyPanel from "@/components/vocab/VocabStudyPanel";
+import LibraryCoachPanel from "@/components/vocab/LibraryCoachPanel";
 import { searchVocabulary } from "@/lib/search";
 import { useDebouncedValue } from "@/hooks/useDebouncedValue";
 import {
-  BUSINESS_DAILY_GOAL,
   getActivityRange,
   getAllBookmarks,
   getAllProgress,
+  getIncludeDrafts,
+  libraryReviewsKey,
   rateWord,
   toggleBookmark,
+  unsuspendWord,
 } from "@/lib/db";
 import {
   ensureLibrary,
@@ -35,13 +36,7 @@ import {
   getLibraryWordsSync,
 } from "@/lib/vocabCatalog";
 import { getLibraryMeta } from "@/lib/libraries";
-import {
-  buildBusinessCategoryStats,
-  summarizeBusinessProgress,
-} from "@/lib/businessCategoryStats";
-import { buildPracticeUrl, buildReviewUrl } from "@/lib/practiceUrl";
-import businessExamPacks from "@/data/businessExamPacks";
-import { cn } from "@/lib/cn";
+import { buildCategoryStats, summarizeLibraryProgress } from "@/lib/categoryStats";
 
 const PAGE_SIZE = 30;
 
@@ -55,14 +50,16 @@ export default function VocabLibraryPage({ library }) {
   const [masteryBucket, setMasteryBucket] = useState("");
   const [dueOnly, setDueOnly] = useState("");
   const [bookmarkedOnly, setBookmarkedOnly] = useState("");
+  const [leechOnly, setLeechOnly] = useState("");
+  const [includeDrafts, setIncludeDraftsPref] = useState(false);
   const [page, setPage] = useState(0);
   const [progressMap, setProgressMap] = useState(new Map());
   const [bookmarkSet, setBookmarkSet] = useState(new Set());
   const [selected, setSelected] = useState(null);
   const [ready, setReady] = useState(false);
   const [catalogTick, setCatalogTick] = useState(0);
-  const [businessToday, setBusinessToday] = useState(0);
-  const [businessStreak, setBusinessStreak] = useState(0);
+  const [todayCount, setTodayCount] = useState(0);
+  const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
@@ -115,14 +112,16 @@ export default function VocabLibraryPage({ library }) {
   }, [words]);
 
   const categoryOverview = useMemo(() => {
-    if (library !== "business" || !categoryMeta.length) return [];
-    return buildBusinessCategoryStats(words, categoryMeta, progressMap, library);
+    if (!categoryMeta.length) return [];
+    return buildCategoryStats(words, categoryMeta, progressMap, library).filter(
+      (c) => c.count > 0
+    );
   }, [library, categoryMeta, words, progressMap]);
 
-  const summary = useMemo(() => {
-    if (library !== "business") return null;
-    return summarizeBusinessProgress(words, progressMap, library);
-  }, [library, words, progressMap]);
+  const summary = useMemo(
+    () => summarizeLibraryProgress(words, progressMap, library),
+    [library, words, progressMap]
+  );
 
   const weakAreas = useMemo(
     () => categoryOverview.filter((c) => c.weak).slice(0, 2),
@@ -137,22 +136,25 @@ export default function VocabLibraryPage({ library }) {
     setProgressMap(new Map(progress.map((p) => [`${p.library}::${p.wordId}`, p])));
     setBookmarkSet(new Set(bookmarks.map((b) => b.wordId)));
 
-    if (library === "business") {
-      const activity = await getActivityRange(30);
-      const today = activity[activity.length - 1];
-      setBusinessToday(today?.businessPracticed || 0);
-      let streak = 0;
-      for (let i = activity.length - 1; i >= 0; i -= 1) {
-        const a = activity[i];
-        if ((a.businessPracticed || 0) + (a.businessReviews || 0) > 0) streak += 1;
-        else if (i < activity.length - 1) break;
-      }
-      setBusinessStreak(streak);
+    const activity = await getActivityRange(30);
+    const today = activity[activity.length - 1];
+    const reviewsKey = libraryReviewsKey(library);
+    setTodayCount(reviewsKey ? today?.[reviewsKey] || 0 : 0);
+    let nextStreak = 0;
+    for (let i = activity.length - 1; i >= 0; i -= 1) {
+      const a = activity[i];
+      const dayVal = reviewsKey ? a[reviewsKey] || 0 : 0;
+      if (dayVal > 0) nextStreak += 1;
+      else if (i < activity.length - 1) break;
     }
+    setStreak(nextStreak);
   };
 
   useEffect(() => {
     refreshMeta();
+    getIncludeDrafts().then(setIncludeDraftsPref);
+    // refreshMeta closes over library; re-run when library changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [library]);
 
   const filtered = useMemo(
@@ -163,6 +165,8 @@ export default function VocabLibraryPage({ library }) {
         masteryBucket: masteryBucket || undefined,
         dueOnly: dueOnly === "1",
         bookmarkedOnly: bookmarkedOnly === "1",
+        leechOnly: leechOnly === "1",
+        excludeDraft: !includeDrafts,
         masteryMap: progressMap,
         bookmarkSet,
       }),
@@ -174,6 +178,8 @@ export default function VocabLibraryPage({ library }) {
       masteryBucket,
       dueOnly,
       bookmarkedOnly,
+      leechOnly,
+      includeDrafts,
       progressMap,
       bookmarkSet,
     ]
@@ -181,7 +187,17 @@ export default function VocabLibraryPage({ library }) {
 
   useEffect(() => {
     setPage(0);
-  }, [debouncedQuery, category, difficulty, masteryBucket, dueOnly, bookmarkedOnly, library]);
+  }, [
+    debouncedQuery,
+    category,
+    difficulty,
+    masteryBucket,
+    dueOnly,
+    bookmarkedOnly,
+    leechOnly,
+    includeDrafts,
+    library,
+  ]);
 
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -204,6 +220,7 @@ export default function VocabLibraryPage({ library }) {
   }
   if (dueOnly === "1") chips.push({ id: "due", label: t("common.dueOnly") });
   if (bookmarkedOnly === "1") chips.push({ id: "bm", label: t("common.bookmarkedOnly") });
+  if (leechOnly === "1") chips.push({ id: "leech", label: t("common.leechOnly") });
 
   const clearChip = (id) => {
     if (id === "category") setCategory("");
@@ -211,6 +228,7 @@ export default function VocabLibraryPage({ library }) {
     if (id === "mastery") setMasteryBucket("");
     if (id === "due") setDueOnly("");
     if (id === "bm") setBookmarkedOnly("");
+    if (id === "leech") setLeechOnly("");
   };
 
   const applyDifficultyPath = (path) => {
@@ -233,7 +251,6 @@ export default function VocabLibraryPage({ library }) {
   const title = libMeta ? t(libMeta.titleKey) : library;
   const subtitle = libMeta ? t(libMeta.subtitleKey) : "";
   const libraryLabel = libMeta ? t(libMeta.labelKey) : library;
-  const goalPct = Math.min(100, Math.round((businessToday / BUSINESS_DAILY_GOAL) * 100));
 
   if (!ready) {
     return <p className="text-muted-foreground">{t("common.loading")}</p>;
@@ -247,235 +264,32 @@ export default function VocabLibraryPage({ library }) {
         library={library}
         libraryLabel={libraryLabel}
         actions={
-          <Badge variant="secondary">
-            {t("vocab.showing")} {filtered.length} / {words.length} {t("common.words")}
-          </Badge>
+          <div className="flex flex-wrap gap-1.5">
+            <Badge variant="secondary">
+              {t("vocab.showing")} {filtered.length} / {words.length} {t("common.words")}
+            </Badge>
+            {(library === "toefl" || library === "business") && (
+              <Badge variant="outline">
+                {words.filter((w) => w.quality === "ok").length} {t("common.okQuality")} ·{" "}
+                {words.filter((w) => w.quality === "draft").length} {t("common.draft")}
+              </Badge>
+            )}
+          </div>
         }
       />
 
-      {library === "business" && summary && (
-        <section className="space-y-3 rounded-xl border bg-card p-4">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <div className="text-meta">{t("vocab.dailyGoal")}</div>
-              <div className="text-lg font-semibold tabular-nums">
-                {businessToday} {t("vocab.goalOf")} {BUSINESS_DAILY_GOAL}
-              </div>
-              <Progress value={goalPct} className="mt-2 h-1.5" />
-            </div>
-            <div>
-              <div className="text-meta">{t("vocab.businessStreakLabel")}</div>
-              <div className="text-lg font-semibold tabular-nums">{businessStreak}</div>
-            </div>
-            <div>
-              <div className="text-meta">{t("vocab.dueSummary")}</div>
-              <div className="text-lg font-semibold tabular-nums">{summary.due}</div>
-            </div>
-            <div>
-              <div className="text-meta">{t("vocab.strugglingSummary")}</div>
-              <div className="text-lg font-semibold tabular-nums">{summary.struggling}</div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            <Button asChild className="min-h-11" size="sm">
-              <Link
-                to={buildPracticeUrl({
-                  library: "business",
-                  mode: "flashcards",
-                  count: 12,
-                  category: category || undefined,
-                  autostart: true,
-                })}
-              >
-                {t("vocab.practiceAll")}
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="min-h-11" size="sm">
-              <Link
-                to={buildPracticeUrl({
-                  library: "business",
-                  mode: "flashcards",
-                  focus: "struggling",
-                  count: 10,
-                  autostart: true,
-                })}
-              >
-                {t("vocab.practiceStruggling")}
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="min-h-11" size="sm">
-              <Link
-                to={buildPracticeUrl({
-                  library: "business",
-                  mode: "flashcards",
-                  focus: "due",
-                  count: 10,
-                  autostart: true,
-                })}
-              >
-                {t("vocab.practiceDue")}
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="min-h-11" size="sm">
-              <Link
-                to={buildPracticeUrl({
-                  library: "business",
-                  mode: "flashcards",
-                  focus: "bookmarked",
-                  count: 10,
-                  autostart: true,
-                })}
-              >
-                {t("vocab.practiceBookmarked")}
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="min-h-11" size="sm">
-              <Link to={buildReviewUrl({ library: "business" })}>
-                {t("vocab.reviewBusiness")}
-              </Link>
-            </Button>
-          </div>
-
-          <div className="space-y-1.5">
-            <div className="text-meta">{t("vocab.difficultyPath")}</div>
-            <div className="flex flex-wrap gap-2">
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                className="min-h-11"
-                onClick={() => applyDifficultyPath("beginner")}
-              >
-                {t("vocab.pathBeginner")}
-              </Button>
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                className="min-h-11"
-                onClick={() => applyDifficultyPath("intermediate")}
-              >
-                {t("vocab.pathIntermediate")}
-              </Button>
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                className="min-h-11"
-                onClick={() => applyDifficultyPath("advanced")}
-              >
-                {t("vocab.pathAdvanced")}
-              </Button>
-            </div>
-          </div>
-
-          {weakAreas.length > 0 && (
-            <div className="rounded-lg border border-warning/30 bg-warning/5 px-3 py-2 text-sm">
-              {weakAreas.map((w) => {
-                const label = lang === "ar" ? w.labelAr : w.labelEn;
-                return (
-                  <div
-                    key={w.id}
-                    className="flex flex-wrap items-center justify-between gap-2 py-1"
-                  >
-                    <span>
-                      {label} {t("vocab.weakAlert")}
-                    </span>
-                    <Button asChild size="sm" variant="outline" className="min-h-11">
-                      <Link
-                        to={buildPracticeUrl({
-                          library: "business",
-                          category: w.id,
-                          focus: "struggling",
-                          mode: "flashcards",
-                          count: 10,
-                          autostart: true,
-                        })}
-                      >
-                        {t("vocab.studyDiscipline")}
-                      </Link>
-                    </Button>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </section>
-      )}
-
-      {library === "business" && categoryOverview.length > 0 && (
-        <section className="space-y-2" aria-label={t("vocab.categoryOverview")}>
-          <div>
-            <h2 className="text-sm font-semibold tracking-tight">{t("vocab.categoryOverview")}</h2>
-            <p className="text-xs text-muted-foreground">{t("vocab.categoryOverviewHint")}</p>
-          </div>
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {categoryOverview.map((c) => {
-              const active = category === c.id;
-              const label = lang === "ar" ? c.labelAr : c.labelEn;
-              return (
-                <div
-                  key={c.id}
-                  className={cn(
-                    "min-h-11 w-[11.5rem] shrink-0 rounded-lg border p-2.5",
-                    active
-                      ? "border-primary bg-primary/10"
-                      : "bg-card hover:border-primary/30"
-                  )}
-                >
-                  <button
-                    type="button"
-                    className="w-full text-start"
-                    onClick={() => setCategory(active ? "" : c.id)}
-                  >
-                    <div className="text-xs font-medium leading-tight">{label}</div>
-                    <div className="mt-1 text-[11px] text-muted-foreground">
-                      {c.practiced}/{c.count} · {t("vocab.dueSummary")} {c.due}
-                      {c.weak ? ` · ${t("vocab.weakCategory")}` : ""}
-                    </div>
-                    <Progress value={c.progressPct} className="mt-2 h-1" />
-                  </button>
-                  <Button asChild size="sm" variant="ghost" className="mt-1 h-9 w-full">
-                    <Link
-                      to={buildPracticeUrl({
-                        library: "business",
-                        category: c.id,
-                        mode: "flashcards",
-                        count: 12,
-                        autostart: true,
-                      })}
-                    >
-                      {t("vocab.studyDiscipline")}
-                    </Link>
-                  </Button>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {library === "business" && (
-        <section className="space-y-2">
-          <h2 className="text-sm font-semibold tracking-tight">{t("vocab.examPacks")}</h2>
-          <div className="flex flex-wrap gap-2">
-            {businessExamPacks.map((pack) => (
-              <Button key={pack.id} asChild variant="outline" className="min-h-11" size="sm">
-                <Link
-                  to={buildPracticeUrl({
-                    library: "business",
-                    pack: pack.id,
-                    autostart: true,
-                  })}
-                >
-                  {t(pack.titleKey)}
-                </Link>
-              </Button>
-            ))}
-          </div>
-        </section>
-      )}
+      <LibraryCoachPanel
+        library={library}
+        todayCount={todayCount}
+        streak={streak}
+        summary={summary}
+        categoryOverview={categoryOverview.slice(0, library === "general" ? 12 : 24)}
+        weakAreas={weakAreas}
+        activeCategory={category}
+        onSelectCategory={setCategory}
+        onDifficultyPath={applyDifficultyPath}
+        hasDifficulty={difficulties.length > 0}
+      />
 
       <FilterBar
         query={query}
@@ -527,6 +341,13 @@ export default function VocabLibraryPage({ library }) {
             onChange: setBookmarkedOnly,
             options: [{ value: "1", label: t("common.bookmarkedOnly") }],
           },
+          {
+            id: "leech",
+            label: t("common.leech"),
+            value: leechOnly,
+            onChange: setLeechOnly,
+            options: [{ value: "1", label: t("common.leechOnly") }],
+          },
         ]}
         activeChips={chips}
         onClearChip={clearChip}
@@ -544,7 +365,7 @@ export default function VocabLibraryPage({ library }) {
         <EmptyState
           icon={Search}
           title={t("common.empty")}
-          description={t("common.clearFilters")}
+          description={t("common.emptyFiltered")}
         />
       ) : (
         <div className="divide-y rounded-xl border bg-card">
@@ -602,11 +423,17 @@ export default function VocabLibraryPage({ library }) {
               <VocabStudyPanel
                 word={selected}
                 categoryMeta={categoryMeta}
+                progress={progressMap.get(`${library}::${selected.id}`)}
                 mastery={progressMap.get(`${library}::${selected.id}`)?.mastery || 0}
                 bookmarked={bookmarkSet.has(selected.id)}
                 onOpenRelated={openRelated}
                 onToggleBookmark={async () => {
                   await toggleBookmark(library, selected.id, selected);
+                  refreshMeta();
+                }}
+                onUnsuspend={async () => {
+                  await unsuspendWord(library, selected.id);
+                  toast.success(t("review.unsuspended"));
                   refreshMeta();
                 }}
                 onRate={async (rating) => {

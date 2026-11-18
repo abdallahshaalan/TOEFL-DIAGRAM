@@ -38,7 +38,12 @@ function loadGeneral() {
         .getGeneralCategories()
         .filter((x) => !String(x).startsWith("batch"))
         .slice(0, 60);
-      c.meta = [];
+      c.meta = c.categories.map((id) => {
+        const label = String(id)
+          .replace(/[-_]+/g, " ")
+          .replace(/\b\w/g, (ch) => ch.toUpperCase());
+        return { id, labelEn: label, labelAr: label };
+      });
       return c.list;
     });
   }
