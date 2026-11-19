@@ -498,6 +498,7 @@ export default function PracticePage() {
                 <SelectContent>
                   <SelectItem value="toefl">{t("vocab.libraryToefl")}</SelectItem>
                   <SelectItem value="business">{t("vocab.libraryBusiness")}</SelectItem>
+                  <SelectItem value="everyday">{t("vocab.libraryEveryday")}</SelectItem>
                   <SelectItem value="general">{t("vocab.libraryGeneral")}</SelectItem>
                 </SelectContent>
               </Select>
@@ -661,7 +662,7 @@ export default function PracticePage() {
           }))}
           correctId={word.id}
           onAnswer={async (ok) => {
-            await rateWord(session.library, word.id, ok ? RATING.GOOD : RATING.HARD);
+            await rateWord(session.library, word.id, ok ? RATING.GOOD : RATING.AGAIN);
             setTimeout(() => advance(session.score + (ok ? 1 : 0)), 400);
           }}
         />

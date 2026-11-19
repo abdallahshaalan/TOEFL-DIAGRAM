@@ -5,24 +5,26 @@ import SpeakButton from "@/components/shared/SpeakButton";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/cn";
 
-function masteryVariant(mastery) {
+function masteryVariant(mastery, stable) {
+  if (stable) return "success";
   if (!mastery) return "outline";
   if (mastery <= 2) return "warning";
-  if (mastery === 3) return "secondary";
-  return "success";
+  return "secondary";
 }
 
-function masteryLabel(mastery, t) {
+function masteryLabel(mastery, stable, t) {
+  if (stable) return t("common.stable");
   if (!mastery) return t("common.new");
   if (mastery <= 2) return t("common.struggling");
   if (mastery === 3) return t("ratings.good");
-  return t("common.mastered");
+  return t("ratings.easy");
 }
 
 export default function VocabListItem({
   word,
   bookmarked,
   mastery,
+  stable = false,
   onSelect,
   onToggleBookmark,
 }) {
@@ -58,8 +60,8 @@ export default function VocabListItem({
               {word.difficulty}
             </Badge>
           )}
-          <Badge variant={masteryVariant(mastery)} className="h-5 px-1.5 text-[10px]">
-            {masteryLabel(mastery, t)}
+          <Badge variant={masteryVariant(mastery, stable)} className="h-5 px-1.5 text-[10px]">
+            {masteryLabel(mastery, stable, t)}
           </Badge>
           {word.quality === "draft" && (
             <Badge variant="warning" className="h-5 px-1.5 text-[10px]">

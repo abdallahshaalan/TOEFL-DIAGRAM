@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
-  BookOpen,
   Brain,
-  Briefcase,
   ChartNoAxesCombined,
   ChevronDown,
   Clock,
-  GraduationCap,
   Languages,
   LayoutDashboard,
   Menu,
@@ -21,15 +18,18 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { TooltipProvider } from "@/components/ui/tooltip";
 import PageMotion from "@/components/layout/PageMotion";
 import StatusBadge from "@/components/shared/StatusBadge";
+import { LIBRARIES } from "@/lib/libraries";
 import { TOOLS_CATALOG } from "@/lib/toolsCatalog";
 import { getRouteTitleKey } from "@/lib/routes";
 import { cn } from "@/lib/cn";
 
 const mainNav = [
   { to: "/", icon: LayoutDashboard, key: "dashboard", end: true },
-  { to: "/vocab/toefl", icon: GraduationCap, key: "toeflVocab" },
-  { to: "/vocab/business", icon: Briefcase, key: "businessVocab" },
-  { to: "/vocab/general", icon: BookOpen, key: "generalVocab" },
+  ...LIBRARIES.map((lib) => ({
+    to: lib.route,
+    icon: lib.navIcon,
+    key: lib.navKey,
+  })),
   { to: "/practice", icon: Brain, key: "practice" },
   { to: "/review", icon: Clock, key: "review" },
   { to: "/stats", icon: ChartNoAxesCombined, key: "stats" },

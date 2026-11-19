@@ -9,6 +9,7 @@ import {
   migrateLegacyLocalStorage,
   unlockBusinessMilestones,
 } from "@/lib/db";
+import { LIBRARIES, libraryReviewsField } from "@/lib/libraries";
 import { isDue, isNewProgress, isStable, retentionBucket } from "@/lib/srs";
 import { getLibraryTotals } from "@/lib/vocabCatalog";
 
@@ -38,14 +39,9 @@ export function useLearningStats() {
     ]);
 
     const ratedProgress = progress.filter((p) => !isNewProgress(p));
-    const toeflProgress = ratedProgress.filter((p) => p.library === "toefl");
-    const businessProgress = ratedProgress.filter((p) => p.library === "business");
-    const generalProgress = ratedProgress.filter((p) => p.library === "general");
     const due = progress.filter((p) => isDue(p));
     const businessDue = due.filter((p) => p.library === "business");
-    const difficult = ratedProgress.filter(
-      (p) => retentionBucket(p) === "learning" && (p.mastery || 0) <= 2
-    );
+    const learning = ratedProgress.filter((p) => retentionBucket(p) === "learning");
     const stable = progress.filter((p) => isStable(p));
     const leeches = progress.filter((p) => retentionBucket(p) === "leech");
 
@@ -57,13 +53,19 @@ export function useLearningStats() {
       else if (i < activity.length - 1) break;
     }
 
-    const toeflToday = today?.toeflReviews || 0;
-    const businessToday = today?.businessReviews || 0;
-    const generalToday = today?.generalReviews || 0;
-    const toeflStreak = libraryDayStreak(activity, "toeflReviews");
-    const businessStreak = libraryDayStreak(activity, "businessReviews");
-    const generalStreak = libraryDayStreak(activity, "generalReviews");
+    const libraryStats = {};
+    for (const lib of LIBRARIES) {
+      const practiced = ratedProgress.filter((p) => p.library === lib.id).length;
+      const reviewsKey = libraryReviewsField(lib.id);
+      const todayCount = today?.[reviewsKey] || 0;
+      libraryStats[`${lib.id}Practiced`] = practiced;
+      libraryStats[`${lib.id}Total`] = totals[`${lib.id}Total`] || 0;
+      libraryStats[`${lib.id}Today`] = todayCount;
+      libraryStats[`${lib.id}Streak`] = libraryDayStreak(activity, reviewsKey);
+      libraryStats[`${lib.id}GoalDone`] = todayCount >= LIBRARY_DAILY_GOAL;
+    }
 
+    const businessProgress = ratedProgress.filter((p) => p.library === "business");
     const { unlocked, newly } = await unlockBusinessMilestones(businessProgress.length);
     const previousToast = (await getMeta("businessMilestoneToastIds", [])) || [];
     const pendingToasts = newly.filter((m) => !previousToast.includes(m));
@@ -77,32 +79,17 @@ export function useLearningStats() {
       progress,
       bookmarks,
       activity,
-      toeflTotal: totals.toeflTotal,
-      businessTotal: totals.businessTotal,
-      generalTotal: totals.generalTotal,
-      // Lifetime "touched" = progress rows (any SRS history), not retention
-      toeflPracticed: toeflProgress.length,
-      businessPracticed: businessProgress.length,
-      generalPracticed: generalProgress.length,
+      ...libraryStats,
       dueCount: due.length,
       businessDueCount: businessDue.length,
-      difficultCount: difficult.length,
+      difficultCount: learning.length,
+      learningCount: learning.length,
       masteredCount: stable.length,
       stableCount: stable.length,
       leechCount: leeches.length,
-      // Honest today: rating events only
       todayPracticed: today?.ratings || today?.reviews || 0,
-      toeflToday,
-      businessToday,
-      generalToday,
       libraryGoal: LIBRARY_DAILY_GOAL,
       businessGoal: LIBRARY_DAILY_GOAL,
-      toeflGoalDone: toeflToday >= LIBRARY_DAILY_GOAL,
-      businessGoalDone: businessToday >= LIBRARY_DAILY_GOAL,
-      generalGoalDone: generalToday >= LIBRARY_DAILY_GOAL,
-      toeflStreak,
-      businessStreak,
-      generalStreak,
       businessMilestones: unlocked,
       businessMilestoneToasts: pendingToasts,
       streak,

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/i18n";
+import { getLibraryMeta } from "@/lib/libraries";
 
 export default function PracticeSessionLayout({
   title,
@@ -15,6 +16,7 @@ export default function PracticeSessionLayout({
 }) {
   const { t } = useI18n();
   const progress = total ? ((index + 1) / total) * 100 : 0;
+  const meta = library ? getLibraryMeta(library) : null;
 
   return (
     <div className="mx-auto max-w-2xl space-y-4">
@@ -22,18 +24,8 @@ export default function PracticeSessionLayout({
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
             <h1 className="text-section">{title}</h1>
-            {library && (
-              <Badge
-                variant={
-                  library === "toefl" ? "toefl" : library === "business" ? "business" : "general"
-                }
-              >
-                {library === "toefl"
-                  ? t("vocab.libraryToefl")
-                  : library === "business"
-                    ? t("vocab.libraryBusiness")
-                    : t("vocab.libraryGeneral")}
-              </Badge>
+            {meta && (
+              <Badge variant={meta.badgeVariant}>{t(meta.labelKey)}</Badge>
             )}
           </div>
           <p className="text-sm text-muted-foreground">

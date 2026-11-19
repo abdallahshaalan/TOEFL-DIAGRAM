@@ -1,11 +1,12 @@
 import { getStudyCaps, getMeta, getAllProgress, getIncludeDrafts, localDateKey } from "@/lib/db";
+import { emptyIntroducedByLibrary, isValidLibrary, LIBRARY_IDS } from "@/lib/libraries";
 import { isBuriedOrSuspended, isDue, isEligibleAsNewCard, isNewProgress } from "@/lib/srs";
 import { getLibraryWordsSync } from "@/lib/vocabCatalog";
 
 /**
  * Build a review queue: due cards first (capped), then new cards up to daily new cap.
  * Does NOT burn newCardsIntroduced — that happens on first rateWord of a new card.
- * @param {"all"|"toefl"|"business"|"general"} filter
+ * @param {"all"|string} filter
  * @param {{ includeDrafts?: boolean }} [opts]
  */
 export async function buildReviewQueue(filter = "all", opts = {}) {
@@ -16,8 +17,8 @@ export async function buildReviewQueue(filter = "all", opts = {}) {
   const introMeta = (await getMeta("newCardsIntroduced", {})) || {};
   const introducedToday =
     introMeta.date === today
-      ? introMeta.byLibrary || { toefl: 0, business: 0, general: 0 }
-      : { toefl: 0, business: 0, general: 0 };
+      ? { ...emptyIntroducedByLibrary(), ...(introMeta.byLibrary || {}) }
+      : emptyIntroducedByLibrary();
 
   const allProgress = await getAllProgress();
   const progressById = new Map(allProgress.map((p) => [`${p.library}::${p.wordId}`, p]));
@@ -39,7 +40,7 @@ export async function buildReviewQueue(filter = "all", opts = {}) {
     .slice(0, caps.reviewsPerDay);
 
   const libraries =
-    filter && filter !== "all" ? [filter] : ["toefl", "business", "general"];
+    filter && filter !== "all" && isValidLibrary(filter) ? [filter] : [...LIBRARY_IDS];
 
   const news = [];
   const selectionIntroduced = { ...introducedToday };

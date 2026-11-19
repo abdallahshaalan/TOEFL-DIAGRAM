@@ -29,7 +29,7 @@ describe("practiceUrl", () => {
   });
 
   it("builds coach CTAs for every library", () => {
-    for (const library of ["toefl", "business", "general"]) {
+    for (const library of ["toefl", "business", "everyday", "general"]) {
       const url = buildPracticeUrl({
         library,
         mode: "flashcards",
@@ -57,9 +57,11 @@ describe("practiceUrl", () => {
 describe("examPacks", () => {
   it("resolves packs across libraries", () => {
     expect(getExamPacks("toefl").length).toBeGreaterThan(0);
+    expect(getExamPacks("everyday").length).toBeGreaterThan(0);
     expect(getExamPacks("general").length).toBeGreaterThan(0);
     expect(findExamPack("reading-vocab")?.library).toBe("toefl");
     expect(findExamPack("accounting-101")?.library).toBe("business");
+    expect(findExamPack("travel-basics")?.library).toBe("everyday");
     expect(findExamPack("topics-core")?.library).toBe("general");
   });
 });

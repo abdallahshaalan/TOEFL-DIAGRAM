@@ -49,6 +49,7 @@ describe("buildReviewQueue new-card accounting", () => {
     expect(await getNewCardsIntroducedToday()).toEqual({
       toefl: 0,
       business: 0,
+      everyday: 0,
       general: 0,
     });
   });

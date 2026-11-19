@@ -10,7 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { BookOpen, Briefcase, ChevronRight, Clock, Flame, GraduationCap } from "lucide-react";
+import { ChevronRight, Clock, Flame } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { useLearningStats } from "@/hooks/useLearningStats";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,6 +19,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Progress } from "@/components/ui/progress";
 import PageHeader from "@/components/shared/PageHeader";
 import IconTile from "@/components/shared/IconTile";
+import { LIBRARIES } from "@/lib/libraries";
 import { TOOLS_CATALOG } from "@/lib/toolsCatalog";
 import { CHART_COLORS, formatChartDate } from "@/lib/charts";
 import { getMeta, setMeta } from "@/lib/db";
@@ -56,12 +57,12 @@ export default function DashboardPage() {
   const weekly = stats.activity.slice(-7).map((a) => ({
     date: a.date,
     label: formatChartDate(a.date, lang),
-    activity: (a.practiced || 0) + (a.reviews || 0) + (a.quizzes || 0),
+    activity: (a.ratings || a.reviews || 0) + (a.quizzes || 0),
   }));
   const hasActivity = weekly.some((a) => a.activity > 0);
   const recentDays = [...stats.activity]
     .reverse()
-    .filter((a) => (a.practiced || 0) + (a.reviews || 0) + (a.quizzes || 0) > 0)
+    .filter((a) => (a.ratings || a.reviews || 0) + (a.quizzes || 0) > 0)
     .slice(0, 5);
 
   return (
@@ -89,47 +90,34 @@ export default function DashboardPage() {
               <Link to="/practice">{t("dashboard.startPractice")}</Link>
             </Button>
           )}
-          <Button asChild variant="outline" className="min-h-11">
-            <Link to="/vocab/toefl">{t("dashboard.startToefl")}</Link>
-          </Button>
-          <Button asChild variant="outline" className="min-h-11">
-            <Link to="/vocab/business">{t("dashboard.startBusiness")}</Link>
-          </Button>
-          <Button asChild variant="outline" className="min-h-11">
-            <Link to="/vocab/general">{t("dashboard.startGeneral")}</Link>
-          </Button>
+          {LIBRARIES.map((lib) => (
+            <Button key={lib.id} asChild variant="outline" className="min-h-11">
+              <Link to={lib.route}>{t(lib.id === "toefl" ? "dashboard.startToefl" : lib.id === "business" ? "dashboard.startBusiness" : lib.id === "everyday" ? "dashboard.startEveryday" : "dashboard.startGeneral")}</Link>
+            </Button>
+          ))}
         </CardContent>
       </Card>
 
       <p className="text-xs text-muted-foreground">{t("dashboard.metricsHint")}</p>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-        <MetricCard
-          label={t("dashboard.toeflLearned")}
-          value={`${stats.toeflPracticed}/${stats.toeflTotal}`}
-          icon={GraduationCap}
-          progress={stats.toeflTotal ? (stats.toeflPracticed / stats.toeflTotal) * 100 : 0}
-          showProgress
-          hint={`${t("dashboard.toeflToday")}: ${stats.toeflToday}/${stats.libraryGoal} · ${t("dashboard.toeflStreak")}: ${stats.toeflStreak}`}
-        />
-        <MetricCard
-          label={t("dashboard.businessLearned")}
-          value={`${stats.businessPracticed}/${stats.businessTotal}`}
-          icon={Briefcase}
-          progress={
-            stats.businessTotal ? (stats.businessPracticed / stats.businessTotal) * 100 : 0
-          }
-          showProgress
-          hint={`${t("dashboard.businessToday")}: ${stats.businessToday}/${stats.businessGoal} · ${t("dashboard.businessStreak")}: ${stats.businessStreak}`}
-        />
-        <MetricCard
-          label={t("dashboard.generalLearned")}
-          value={`${stats.generalPracticed}/${stats.generalTotal}`}
-          icon={BookOpen}
-          progress={stats.generalTotal ? (stats.generalPracticed / stats.generalTotal) * 100 : 0}
-          showProgress
-          hint={`${t("dashboard.generalToday")}: ${stats.generalToday}/${stats.libraryGoal} · ${t("dashboard.generalStreak")}: ${stats.generalStreak}`}
-        />
+        {LIBRARIES.map((lib) => {
+          const practiced = stats[`${lib.id}Practiced`] || 0;
+          const total = stats[`${lib.id}Total`] || 0;
+          const today = stats[`${lib.id}Today`] || 0;
+          const streak = stats[`${lib.id}Streak`] || 0;
+          return (
+            <MetricCard
+              key={lib.id}
+              label={t(lib.learnedKey)}
+              value={`${practiced}/${total}`}
+              icon={lib.navIcon}
+              progress={total ? (practiced / total) * 100 : 0}
+              showProgress
+              hint={`${t(lib.todayKey)}: ${today}/${stats.libraryGoal} · ${t(lib.streakKey)}: ${streak}`}
+            />
+          );
+        })}
         <MetricCard label={t("dashboard.dueReviews")} value={stats.dueCount} icon={Clock} />
         <MetricCard label={t("dashboard.streak")} value={stats.streak} icon={Flame} />
       </div>
@@ -223,7 +211,7 @@ export default function DashboardPage() {
                 >
                   <span>{formatChartDate(day.date, lang)}</span>
                   <span className="font-medium tabular-nums">
-                    {(day.practiced || 0) + (day.reviews || 0) + (day.quizzes || 0)}
+                    {(day.ratings || day.reviews || 0) + (day.quizzes || 0)}
                   </span>
                 </div>
               ))

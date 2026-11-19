@@ -37,6 +37,7 @@ import {
 } from "@/lib/vocabCatalog";
 import { getLibraryMeta } from "@/lib/libraries";
 import { buildCategoryStats, summarizeLibraryProgress } from "@/lib/categoryStats";
+import { isStable } from "@/lib/srs";
 
 const PAGE_SIZE = 30;
 
@@ -268,7 +269,7 @@ export default function VocabLibraryPage({ library }) {
             <Badge variant="secondary">
               {t("vocab.showing")} {filtered.length} / {words.length} {t("common.words")}
             </Badge>
-            {(library === "toefl" || library === "business") && (
+            {(library === "toefl" || library === "business" || library === "everyday") && (
               <Badge variant="outline">
                 {words.filter((w) => w.quality === "ok").length} {t("common.okQuality")} ·{" "}
                 {words.filter((w) => w.quality === "draft").length} {t("common.draft")}
@@ -376,6 +377,7 @@ export default function VocabLibraryPage({ library }) {
                 key={word.id}
                 word={word}
                 mastery={progress?.mastery || 0}
+                stable={isStable(progress)}
                 bookmarked={bookmarkSet.has(word.id)}
                 onSelect={() => setSelected(word)}
                 onToggleBookmark={async () => {

@@ -42,6 +42,17 @@ describe("vocabQuality", () => {
     expect(arabicChoiceRtl(w)).toBe(false);
   });
 
+  it("marks everyday generator templates as draft", () => {
+    expect(
+      assessWordQuality({
+        translationAr: "جواز سفر",
+        definitionEn: "A passport is something people often mention when discussing travel and getting around.",
+        explanationEn: 'Notice how "passport" shows up in relaxed travel chats, not only in grammar drills.',
+        exampleEn: 'Our group chose "passport" for a role-play about travel.',
+      })
+    ).toBe("draft");
+  });
+
   it("marks AWL boilerplate and def=example clones as draft", () => {
     expect(
       assessWordQuality({

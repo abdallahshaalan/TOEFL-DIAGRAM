@@ -1,6 +1,6 @@
 /** Build / parse Practice page deep-link query params. */
+import { isValidLibrary } from "./libraries";
 
-const VALID_LIBRARIES = new Set(["toefl", "business", "general"]);
 const VALID_MODES = new Set([
   "flashcards",
   "quiz",
@@ -18,7 +18,7 @@ const VALID_FOCUS = new Set(["", "struggling", "due", "bookmarked"]);
  */
 export function buildPracticeUrl(opts = {}) {
   const params = new URLSearchParams();
-  if (opts.library && VALID_LIBRARIES.has(opts.library)) {
+  if (opts.library && isValidLibrary(opts.library)) {
     params.set("library", opts.library);
   }
   if (opts.mode && VALID_MODES.has(opts.mode)) params.set("mode", opts.mode);
@@ -48,7 +48,7 @@ export function parsePracticeSearch(search) {
   const countNum = countRaw ? Number(countRaw) : NaN;
 
   return {
-    library: VALID_LIBRARIES.has(libraryRaw) ? libraryRaw : null,
+    library: isValidLibrary(libraryRaw) ? libraryRaw : null,
     mode: VALID_MODES.has(modeRaw) ? modeRaw : null,
     category: params.get("category") || "",
     count: Number.isFinite(countNum) && countNum >= 5 && countNum <= 50 ? String(countNum) : null,
@@ -63,7 +63,7 @@ export function parsePracticeSearch(search) {
 }
 
 export function buildReviewUrl({ library } = {}) {
-  if (library && VALID_LIBRARIES.has(library)) {
+  if (library && isValidLibrary(library)) {
     return `/review?library=${encodeURIComponent(library)}`;
   }
   return "/review";

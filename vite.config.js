@@ -27,7 +27,7 @@ export default defineConfig({
       },
       workbox: {
         // Prefer runtime caching for huge vocab chunks over bloating first install
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2,jpg,jpeg,webp}"],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2,jpg,jpeg,webp}", "robots.txt"],
         globIgnores: [
           "**/index.html.cra-backup",
           "**/COLOR_TOKENS.txt",
@@ -36,6 +36,7 @@ export default defineConfig({
           "**/assets/businessVocabulary-*.js",
           "**/assets/vocabAdapters-*.js",
           "**/assets/toeflVocabulary-*.js",
+          "**/assets/everydayVocabulary-*.js",
         ],
         maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
         navigateFallback: "/index.html",
@@ -43,7 +44,7 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: ({ url }) =>
-              /\/assets\/(businessVocabulary|vocabAdapters|toeflVocabulary)-.*\.js$/.test(
+              /\/assets\/(businessVocabulary|vocabAdapters|toeflVocabulary|everydayVocabulary)-.*\.js$/.test(
                 url.pathname
               ),
             handler: "CacheFirst",

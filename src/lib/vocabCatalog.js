@@ -1,13 +1,12 @@
 /**
  * Lazy vocab catalog with Map(id → word) lookups.
- * Registry supports toefl | general | business.
+ * Registry supports toefl | business | everyday | general.
  */
+import { LIBRARY_IDS } from "./libraries";
 
-const cache = {
-  toefl: { list: null, map: null, categories: null, meta: null, promise: null },
-  general: { list: null, map: null, categories: null, meta: null, promise: null },
-  business: { list: null, map: null, categories: null, meta: null, promise: null },
-};
+const cache = Object.fromEntries(
+  LIBRARY_IDS.map((id) => [id, { list: null, map: null, categories: null, meta: null, promise: null }])
+);
 
 function loadToefl() {
   const c = cache.toefl;
@@ -68,10 +67,29 @@ function loadBusiness() {
   return c.promise;
 }
 
+function loadEveryday() {
+  const c = cache.everyday;
+  if (c.list) return Promise.resolve(c.list);
+  if (!c.promise) {
+    c.promise = Promise.all([
+      import("@/data/everydayVocabulary"),
+      import("@/data/everydayCategories"),
+    ]).then(([vocabMod, catMod]) => {
+      c.list = vocabMod.default;
+      c.map = new Map(c.list.map((w) => [w.id, w]));
+      c.meta = catMod.default || [];
+      c.categories = c.meta.map((x) => x.id);
+      return c.list;
+    });
+  }
+  return c.promise;
+}
+
 const LOADERS = {
   toefl: loadToefl,
   general: loadGeneral,
   business: loadBusiness,
+  everyday: loadEveryday,
 };
 
 export async function ensureLibrary(library) {
@@ -80,7 +98,7 @@ export async function ensureLibrary(library) {
 }
 
 export async function ensureAllLibraries() {
-  await Promise.all([loadToefl(), loadGeneral(), loadBusiness()]);
+  await Promise.all(LIBRARY_IDS.map((id) => ensureLibrary(id)));
 }
 
 export function getLibraryWordsSync(library) {
@@ -116,11 +134,11 @@ export async function getLibraryWords(library) {
 
 export async function getLibraryTotals() {
   await ensureAllLibraries();
-  return {
-    toeflTotal: cache.toefl.list?.length || 0,
-    generalTotal: cache.general.list?.length || 0,
-    businessTotal: cache.business.list?.length || 0,
-  };
+  const totals = {};
+  for (const id of LIBRARY_IDS) {
+    totals[`${id}Total`] = cache[id]?.list?.length || 0;
+  }
+  return totals;
 }
 
 /** Normalized headword → business word id for progress migration */

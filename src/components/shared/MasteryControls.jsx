@@ -37,5 +37,5 @@ export function masteryStatusKey(mastery) {
   if (!mastery) return "new";
   if (mastery <= 2) return "difficult";
   if (mastery === 3) return "good";
-  return "mastered";
+  return "easy";
 }

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { useMemo, useState } from "react";
 import {
   BookOpen,
+  ChevronDown,
   Clock,
   Headphones,
   MessageCircle,
@@ -9,172 +9,104 @@ import {
   PenLine,
   Target,
 } from "lucide-react";
+import { useI18n } from "@/i18n";
+import en from "@/i18n/en";
+import ar from "@/i18n/ar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import FilterBar from "@/components/shared/FilterBar";
+import EmptyState from "@/components/shared/EmptyState";
+import { cn } from "@/lib/cn";
 
-const styles = `
-  .legacy-tool-root, .legacy-tool-root * { box-sizing: border-box; }
-  .legacy-tool-root { font-family: inherit; background: #fafafa; color: #111; }
-
-  .tg-hero { background: #fff; border-bottom: 1px solid #e4e4e7; padding: 36px 28px 28px; text-align: center; }
-  .tg-hero-badge { display: inline-flex; align-items: center; gap: 6px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; padding: 5px 16px; color: #2563eb; font-size: 12px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; margin-bottom: 18px; }
-  .tg-hero h1 { color: #111; font-size: 1.75rem; font-weight: 700; letter-spacing: -.03em; margin-bottom: 10px; }
-  .tg-hero h1 span { color: #2563eb; }
-  .tg-hero p { color: #71717a; font-size: 15px; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; }
-  .tg-search-wrap { max-width: 480px; margin: 0 auto; }
-  .tg-search { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #e4e4e7; font-size: 14px; background: #fff; color: #111; outline: none; }
-  .tg-search:focus { border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,.2); }
-
-  .tg-main { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
-  .tg-heading { font-size: 1.15rem; font-weight: 700; color: #111; margin-bottom: 6px; letter-spacing: -.02em; }
-  .tg-subheading { font-size: 14px; color: #71717a; margin-bottom: 24px; }
-
-  .tg-estimator { background: #fff; border-radius: 14px; border: 1px solid #e4e4e7; padding: 24px; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,0,0,.04); }
-  .tg-estim-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; margin-top: 20px; }
-  .tg-estim-item label { font-size: 12px; font-weight: 700; color: #2563eb; display: block; margin-bottom: 6px; }
-  .tg-estim-item input[type=range] { width: 100%; accent-color: #2563eb; }
-  .tg-estim-val { font-size: 20px; font-weight: 700; color: #111; margin-top: 4px; }
-  .tg-estim-total { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 14px; padding: 20px 24px; color: #111; display: flex; align-items: center; justify-content: space-between; margin-top: 20px; flex-wrap: wrap; gap: 12px; }
-  .tg-total-label { font-size: 14px; color: #71717a; }
-  .tg-total-score { font-size: 32px; font-weight: 800; color: #2563eb; }
-  .tg-band { font-size: 13px; background: #fff; border: 1px solid #e4e4e7; border-radius: 8px; padding: 4px 12px; font-weight: 600; color: #2563eb; }
-
-  .tg-sections-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; margin-bottom: 40px; }
-  .tg-section-card { background: #fff; border-radius: 14px; border: 1px solid #e4e4e7; box-shadow: 0 4px 10px rgba(0,0,0,.04); transition: border-color .15s, box-shadow .15s, background .15s; overflow: hidden; }
-  .tg-section-card:hover { box-shadow: 0 6px 16px rgba(37,99,235,.08); border-color: #bfdbfe; background: #fafafa; }
-  .tg-color-bar { height: 3px; width: 100%; background: #2563eb; }
-  .tg-card-inner { padding: 20px 18px 16px; }
-  .tg-card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; background: #eff6ff; color: #2563eb; }
-  .tg-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
-  .tg-meta-pill { background: #eff6ff; color: #2563eb; border-radius: 8px; padding: 3px 10px; font-size: 11px; font-weight: 700; }
-  .tg-card-title { font-size: 16px; font-weight: 700; color: #111; margin-bottom: 8px; }
-  .tg-card-desc { font-size: 13px; color: #52525b; line-height: 1.6; margin-bottom: 16px; }
-
-  .tg-bars { margin-bottom: 16px; }
-  .tg-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  .tg-bar-label { font-size: 11px; font-weight: 600; color: #52525b; width: 80px; flex-shrink: 0; }
-  .tg-bar-track { flex: 1; background: #f4f4f5; border-radius: 6px; height: 8px; overflow: hidden; }
-  .tg-bar-fill { height: 100%; border-radius: 6px; background: #2563eb; transition: width .4s ease; }
-  .tg-bar-num { font-size: 11px; font-weight: 700; color: #2563eb; width: 28px; text-align: right; flex-shrink: 0; }
-
-  .tg-toggle-btn { width: 100%; padding: 9px; border-radius: 10px; border: 1px solid #e4e4e7; background: #fff; color: #2563eb; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s, border-color .15s; text-align: center; }
-  .tg-toggle-btn:hover, .tg-toggle-btn.open { background: #eff6ff; border-color: #bfdbfe; }
-
-  .tg-q-list { margin-top: 12px; }
-  .tg-q-item { border-radius: 10px; border: 1px solid #e4e4e7; margin-bottom: 8px; overflow: hidden; background: #fafafa; }
-  .tg-q-header { padding: 10px 14px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600; color: #3f3f46; transition: background .15s; }
-  .tg-q-header:hover { background: #eff6ff; }
-  .tg-q-explain { padding: 0 14px; overflow: hidden; max-height: 0; transition: max-height .2s ease, padding .2s; }
-  .tg-q-explain.open { max-height: 120px; padding: 0 14px 10px; }
-  .tg-q-explain p { font-size: 12px; color: #52525b; line-height: 1.6; background: #eff6ff; border-radius: 8px; padding: 8px 10px; margin-top: 4px; }
-  .tg-tips { margin-top: 14px; background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 0 10px 10px 0; padding: 10px 13px; font-size: 12px; color: #2563eb; font-weight: 500; }
-  .tg-tips-label { font-weight: 700; color: #1d4ed8; margin-right: 5px; }
-
-  .tg-motiv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-bottom: 40px; }
-  .tg-motiv-card { background: #fff; border-radius: 14px; border: 1px solid #e4e4e7; padding: 22px 20px; transition: border-color .15s, box-shadow .15s; position: relative; overflow: hidden; }
-  .tg-motiv-card:hover { box-shadow: 0 6px 16px rgba(37,99,235,.08); border-color: #bfdbfe; }
-  .tg-motiv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #2563eb; }
-  .tg-motiv-quote { font-size: 14px; color: #3f3f46; line-height: 1.65; margin-bottom: 12px; font-style: italic; }
-  .tg-motiv-author { font-size: 11px; color: #2563eb; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
-
-  .tg-advice-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-bottom: 40px; }
-  .tg-advice-card { background: #fff; border: 1px solid #e4e4e7; border-radius: 14px; padding: 22px 20px; color: #111; transition: border-color .15s, box-shadow .15s; cursor: default; }
-  .tg-advice-card:hover { box-shadow: 0 6px 16px rgba(37,99,235,.08); border-color: #bfdbfe; }
-  .tg-advice-icon { margin-bottom: 10px; color: #2563eb; width: 40px; height: 40px; border-radius: 10px; background: #eff6ff; display: grid; place-items: center; }
-  .tg-advice-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #111; }
-  .tg-advice-msg { font-size: 12px; color: #71717a; line-height: 1.6; }
-
-  .tg-no-results { text-align: center; padding: 60px 20px; color: #a1a1aa; }
-
-  .tg-footer { background: #fff; border-top: 1px solid #e4e4e7; text-align: center; padding: 20px; color: #71717a; font-size: 13px; }
-  .tg-footer .brand { color: #2563eb; font-weight: 700; }
-`;
-
-const SECTIONS = [
+const SECTION_META = [
   {
-    id: "reading", icon: BookOpen, color: "#2563eb", bg: "#eff6ff",
-    time: "35 min", questions: "20 questions", title: "Reading Section",
-    desc: "2 academic passages (~700 words each). Tests comprehension, inference, vocabulary, and detail understanding.",
-    types: [
-      { name: "Vocabulary questions", exp: "Identify meanings of words or phrases in context." },
-      { name: "Inference questions", exp: "Deduce information not directly stated but implied." },
-      { name: "Main idea questions", exp: "Determine the central concept or purpose of the passage." },
-      { name: "Reference & detail questions", exp: "Locate specific information and connect it to meaning." },
+    id: "reading",
+    icon: BookOpen,
+    bars: [
+      { key: "vocab", v: 25 },
+      { key: "inference", v: 20 },
+      { key: "mainIdea", v: 30 },
+      { key: "detail", v: 25 },
     ],
-    tips: "Read for main ideas first, then scan for details. Skim the first paragraph quickly.",
-    bars: [{ label: "Vocab", v: 25 }, { label: "Inference", v: 20 }, { label: "Main idea", v: 30 }, { label: "Detail", v: 25 }],
   },
   {
-    id: "listening", icon: Headphones, color: "#2563eb", bg: "#eff6ff",
-    time: "36 min", questions: "28–39 questions", title: "Listening Section",
-    desc: "Lectures and conversations about academic topics. Tests main ideas, details, and implied meanings.",
-    types: [
-      { name: "Main idea & detail", exp: "Identify the central theme and supporting information in audio." },
-      { name: "Function & attitude", exp: "Recognize tone, intent, and the speaker's attitude or purpose." },
-      { name: "Inference questions", exp: "Understand implied meanings and logical conclusions." },
-      { name: "Organization questions", exp: "Identify how the lecture or conversation is structured logically." },
+    id: "listening",
+    icon: Headphones,
+    bars: [
+      { key: "mainIdea", v: 28 },
+      { key: "function", v: 22 },
+      { key: "inference", v: 30 },
+      { key: "organization", v: 20 },
     ],
-    tips: "Take short notes and focus on transitions. Recognize tone and speaker attitude.",
-    bars: [{ label: "Main idea", v: 28 }, { label: "Function", v: 22 }, { label: "Inference", v: 30 }, { label: "Org.", v: 20 }],
   },
   {
-    id: "speaking", icon: Mic, color: "#2563eb", bg: "#eff6ff",
-    time: "16 min", questions: "4 tasks", title: "Speaking Section",
-    desc: "Express opinions and summarize reading/listening materials. Record answers in 45–60 seconds.",
-    types: [
-      { name: "Independent speaking task", exp: "Express personal opinions on a familiar topic within 45 seconds." },
-      { name: "Integrated R+L task", exp: "Read a short passage, listen to a talk, and summarize both." },
-      { name: "Integrated L+S task", exp: "Listen to a conversation or lecture and respond orally." },
-      { name: "Campus situation task", exp: "Comment on student life or university situations in short dialogues." },
+    id: "speaking",
+    icon: Mic,
+    bars: [
+      { key: "independent", v: 25 },
+      { key: "rl", v: 28 },
+      { key: "ls", v: 28 },
+      { key: "campus", v: 19 },
     ],
-    tips: "Use template: intro → 2 supports → example → conclusion. Practice every day!",
-    bars: [{ label: "Independent", v: 25 }, { label: "R+L integ.", v: 28 }, { label: "L+S integ.", v: 28 }, { label: "Campus", v: 19 }],
   },
   {
-    id: "writing", icon: PenLine, color: "#2563eb", bg: "#eff6ff",
-    time: "29 min", questions: "2 tasks", title: "Writing Section",
-    desc: "Two essays: one summarizing reading/listening content, and one giving your personal opinion on a topic.",
-    types: [
-      { name: "Integrated writing (R+L+W)", exp: "Read and listen to materials, then summarize the relationship between them." },
-      { name: "Independent essay task", exp: "Write an essay expressing your viewpoint on a familiar issue." },
+    id: "writing",
+    icon: PenLine,
+    bars: [
+      { key: "integrated", v: 50 },
+      { key: "independent", v: 50 },
     ],
-    tips: "Plan before writing. Aim for clear structure, coherent paragraphs, and strong examples.",
-    bars: [{ label: "Integrated", v: 50 }, { label: "Independent", v: 50 }],
   },
 ];
 
-const MOTIVATIONS = [
-  { quote: "Every section you practice brings clearer academic English habits.", author: "Study tip" },
-  { quote: "Universities look at many factors — treat this companion as skill practice, not a score promise.", author: "Study tip" },
-  { quote: "Study with persistence. Real progress comes from consistency, not intensity.", author: "Study tip" },
-  { quote: "Use timers, notes, and review — small daily sessions beat cramming.", author: "Study tip" },
-];
+const ADVICE_ICONS = [Target, Clock, BookOpen, MessageCircle];
 
-const ADVICES = [
-  { icon: Target, title: "Focus on Skills, Not Tricks", msg: "Develop real academic English — reading, listening, writing. Skills outlast shortcuts every time." },
-  { icon: Clock, title: "Time Management is Key", msg: "Practice with timers. Learn to read quickly, think clearly, and speak within the limit." },
-  { icon: BookOpen, title: "Integrate Your Practice", msg: "Combine all four skills daily. TOEFL rewards the ability to connect reading, listening, and writing." },
-  { icon: MessageCircle, title: "Speak Every Day", msg: "Don't memorize — communicate naturally. Record yourself, listen back, and refine." },
-];
+function bandKey(total) {
+  if (total >= 100) return "advanced";
+  if (total >= 80) return "upperIntermediate";
+  if (total >= 60) return "intermediate";
+  return "foundation";
+}
 
 export default function TOEFLGuide() {
+  const { t, lang } = useI18n();
+  const guide = useMemo(() => (lang === "ar" ? ar.tools.guide : en.tools.guide), [lang]);
+
   const [query, setQuery] = useState("");
   const [openSection, setOpenSection] = useState(null);
   const [openQuestion, setOpenQuestion] = useState({});
   const [scores, setScores] = useState({ r: 22, l: 20, s: 18, w: 19 });
 
-  useEffect(() => {
-    const existing = document.getElementById("tg-styles");
-    if (!existing) {
-      const style = document.createElement("style");
-      style.id = "tg-styles";
-      style.innerHTML = styles;
-      document.head.appendChild(style);
-    } else {
-      existing.innerHTML = styles;
-    }
-  }, []);
-
   const total = scores.r + scores.l + scores.s + scores.w;
-  const band = total >= 100 ? "Advanced" : total >= 80 ? "Upper-Intermediate" : total >= 60 ? "Intermediate" : "Foundation";
+  const band = t(`tools.guide.bands.${bandKey(total)}`);
+
+  const sections = useMemo(
+    () =>
+      SECTION_META.map((meta) => {
+        const copy = guide.sections[meta.id] || {};
+        return {
+          ...copy,
+          id: meta.id,
+          icon: meta.icon,
+          barDefs: meta.bars,
+          barLabels: copy.bars || {},
+        };
+      }),
+    [guide]
+  );
+
+  const filteredSections = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return sections;
+    return sections.filter(
+      (s) =>
+        s.title?.toLowerCase().includes(q) ||
+        s.desc?.toLowerCase().includes(q) ||
+        s.types?.some((qt) => qt.name.toLowerCase().includes(q) || qt.exp.toLowerCase().includes(q))
+    );
+  }, [sections, query]);
 
   const toggleSection = (id) => {
     setOpenSection(openSection === id ? null : id);
@@ -188,175 +120,176 @@ export default function TOEFLGuide() {
     }));
   };
 
-  const filteredSections = SECTIONS.filter((s) => {
-    if (!query) return true;
-    const q = query.toLowerCase();
-    return s.title.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q);
-  });
-
   return (
-    <>
-      <Helmet>
-        <title>ABOOD | TOEFL Guide</title>
-        <meta name="description" content="TOEFL Mastery Guide" />
-      </Helmet>
-
-      <div className="tg-hero">
-        <div className="tg-hero-badge">Study companion overview</div>
-        <h1>TOEFL <span>Mastery Hub</span></h1>
-        <p>Section strategies and question types for practice — not an official ETS publication or score prediction.</p>
-        <div className="tg-search-wrap">
-          <input
-            className="tg-search"
-            type="text"
-            placeholder="Search sections, question types…"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </div>
+    <div className="space-y-6">
+      <div className="space-y-2 text-center">
+        <Badge variant="secondary">{t("tools.guide.heroBadge")}</Badge>
+        <p className="mx-auto max-w-xl text-sm text-muted-foreground">{t("tools.guide.disclaimer")}</p>
       </div>
 
-      <div className="tg-main">
+      <FilterBar query={query} onQueryChange={setQuery} searchPlaceholder={t("tools.guide.searchPlaceholder")} />
 
-        {/* Self-check practice estimate (not predictive ETS scoring) */}
-        <div className="tg-estimator">
-          <div className="tg-heading" style={{ fontSize: 17 }}>Self-check practice estimate</div>
-          <div className="tg-subheading" style={{ marginBottom: 0 }}>
-            Drag sliders for a personal practice target — this is not an official or predictive TOEFL score
-          </div>
-          <div className="tg-estim-grid">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base">{t("tools.guide.estimatorTitle")}</CardTitle>
+          <p className="text-sm text-muted-foreground">{t("tools.guide.estimatorSub")}</p>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { key: "r", label: "Reading (0–30)" },
-              { key: "l", label: "Listening (0–30)" },
-              { key: "s", label: "Speaking (0–30)" },
-              { key: "w", label: "Writing (0–30)" },
-            ].map(({ key, label }) => (
-              <div key={key} className="tg-estim-item">
-                <label>{label}</label>
+              { key: "r", id: "reading" },
+              { key: "l", id: "listening" },
+              { key: "s", id: "speaking" },
+              { key: "w", id: "writing" },
+            ].map(({ key, id }) => {
+              const label = guide.sections[id]?.title || id;
+              return (
+              <div key={key} className="space-y-2">
+                <Label className="text-xs text-primary">{label} (0–30)</Label>
                 <input
-                  type="range" min="0" max="30"
+                  type="range"
+                  min="0"
+                  max="30"
                   value={scores[key]}
                   onChange={(e) => setScores((prev) => ({ ...prev, [key]: +e.target.value }))}
+                  className="w-full accent-primary"
                 />
-                <div className="tg-estim-val">{scores[key]}</div>
+                <p className="text-xl font-bold">{scores[key]}</p>
               </div>
-            ))}
+              );
+            })}
           </div>
-          <div className="tg-estim-total">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border bg-primary/5 p-4">
             <div>
-              <div className="tg-total-label">Practice total (self-check)</div>
-              <div style={{ fontSize: 12, opacity: 0.7, marginTop: 2 }}>iBT scale 0–120 — for planning only</div>
+              <p className="text-sm font-medium">{t("tools.guide.totalLabel")}</p>
+              <p className="text-xs text-muted-foreground">{t("tools.guide.totalHint")}</p>
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <div className="tg-total-score">{total}</div>
-              <div className="tg-band">{band}</div>
+            <div className="flex items-center gap-3">
+              <span className="text-3xl font-extrabold text-primary">{total}</span>
+              <Badge variant="outline">{band}</Badge>
             </div>
           </div>
-        </div>
+        </CardContent>
+      </Card>
 
-        {/* Sections */}
-        <div className="tg-heading">Section Breakdown</div>
-        <div className="tg-subheading">Click any section to explore question types and expert tips</div>
+      <div>
+        <h2 className="text-section">{t("tools.guide.sectionsHeading")}</h2>
+        <p className="text-sm text-muted-foreground">{t("tools.guide.sectionsSub")}</p>
+      </div>
 
-        {filteredSections.length === 0 ? (
-          <div className="tg-no-results">No sections found. Try a different search.</div>
-        ) : (
-          <div className="tg-sections-grid">
-            {filteredSections.map((s) => {
-              const SectionIcon = s.icon;
-              return (
-              <div key={s.id} className="tg-section-card">
-                <div className="tg-color-bar" style={{ background: s.color }} />
-                <div className="tg-card-inner">
-                  <div className="tg-card-icon" style={{ background: s.bg }}>
-                    <SectionIcon size={20} strokeWidth={1.75} aria-hidden />
+      {filteredSections.length === 0 ? (
+        <EmptyState title={t("tools.guide.noSections")} />
+      ) : (
+        <div className="grid gap-4 lg:grid-cols-2">
+          {filteredSections.map((s) => {
+            const SectionIcon = s.icon;
+            return (
+              <Card key={s.id} className="overflow-hidden">
+                <div className="h-1 bg-primary" />
+                <CardHeader className="pb-2">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <SectionIcon className="h-5 w-5" aria-hidden />
                   </div>
-                  <div className="tg-meta">
-                    <span className="tg-meta-pill">{s.time}</span>
-                    <span className="tg-meta-pill">{s.questions}</span>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">{s.time}</Badge>
+                    <Badge variant="secondary">{s.questions}</Badge>
                   </div>
-                  <div className="tg-card-title">{s.title}</div>
-                  <div className="tg-card-desc">{s.desc}</div>
-                  <div className="tg-bars">
-                    {s.bars.map((b) => (
-                      <div key={b.label} className="tg-bar-row">
-                        <span className="tg-bar-label">{b.label}</span>
-                        <div className="tg-bar-track">
-                          <div className="tg-bar-fill" style={{ width: `${b.v}%` }} />
-                        </div>
-                        <span className="tg-bar-num">{b.v}%</span>
+                  <CardTitle className="text-base">{s.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground">{s.desc}</p>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {s.barDefs?.map((b) => (
+                    <div key={b.key} className="flex items-center gap-2 text-xs">
+                      <span className="w-20 shrink-0 font-medium">{s.barLabels[b.key]}</span>
+                      <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
+                        <div className="h-full rounded-full bg-primary" style={{ width: `${b.v}%` }} />
                       </div>
-                    ))}
-                  </div>
+                      <span className="w-8 text-end font-semibold text-primary">{b.v}%</span>
+                    </div>
+                  ))}
 
-                  <button
-                    className={`tg-toggle-btn${openSection === s.id ? " open" : ""}`}
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full"
                     onClick={() => toggleSection(s.id)}
                   >
-                    {openSection === s.id ? "Hide Question Types" : "Show Question Types"}
-                  </button>
+                    {openSection === s.id ? t("tools.guide.hideTypes") : t("tools.guide.showTypes")}
+                  </Button>
 
                   {openSection === s.id && (
-                    <div className="tg-q-list">
-                      {s.types.map((qt, i) => (
-                        <div key={i} className="tg-q-item">
-                          <div className="tg-q-header" onClick={() => toggleQuestion(s.id, i)}>
+                    <div className="space-y-2">
+                      {s.types?.map((qt, i) => (
+                        <div key={i} className="rounded-lg border bg-muted/30">
+                          <button
+                            type="button"
+                            className="flex w-full items-center justify-between gap-2 p-3 text-start text-sm font-medium"
+                            onClick={() => toggleQuestion(s.id, i)}
+                          >
                             <span>{qt.name}</span>
-                            <span>{openQuestion[s.id] === i ? "▲" : "▶"}</span>
-                          </div>
-                          <div className={`tg-q-explain${openQuestion[s.id] === i ? " open" : ""}`}>
-                            <p>{qt.exp}</p>
-                          </div>
+                            <ChevronDown
+                              className={cn(
+                                "h-4 w-4 shrink-0 transition-transform",
+                                openQuestion[s.id] === i && "rotate-180"
+                              )}
+                              aria-hidden
+                            />
+                          </button>
+                          {openQuestion[s.id] === i && (
+                            <p className="border-t px-3 pb-3 pt-2 text-xs leading-relaxed text-muted-foreground">
+                              {qt.exp}
+                            </p>
+                          )}
                         </div>
                       ))}
                     </div>
                   )}
 
-                  <div className="tg-tips">
-                    <span className="tg-tips-label">Tip:</span> {s.tips}
-                  </div>
-                </div>
-              </div>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Motivation */}
-        <div className="tg-heading">Motivation Corner</div>
-        <div className="tg-subheading">Stay inspired throughout your TOEFL journey</div>
-        <div className="tg-motiv-grid">
-          {MOTIVATIONS.map((m, i) => (
-            <div key={i} className="tg-motiv-card">
-              <div className="tg-motiv-quote">"{m.quote}"</div>
-              <div className="tg-motiv-author">— {m.author}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Advice */}
-        <div className="tg-heading">Study advice</div>
-        <div className="tg-subheading">Practical habits for academic English practice</div>
-        <div className="tg-advice-grid">
-          {ADVICES.map((a, i) => {
-            const AdviceIcon = a.icon;
-            return (
-              <div key={i} className="tg-advice-card">
-                <div className="tg-advice-icon">
-                  <AdviceIcon size={20} strokeWidth={1.75} aria-hidden />
-                </div>
-                <div className="tg-advice-title">{a.title}</div>
-                <div className="tg-advice-msg">{a.msg}</div>
-              </div>
+                  <p className="rounded-md border-s-4 border-primary bg-primary/5 p-3 text-xs text-primary">
+                    <span className="font-bold">{t("tools.guide.tipLabel")}</span> {s.tips}
+                  </p>
+                </CardContent>
+              </Card>
             );
           })}
         </div>
+      )}
 
+      <div>
+        <h2 className="text-section">{t("tools.guide.motivationHeading")}</h2>
+        <p className="text-sm text-muted-foreground">{t("tools.guide.motivationSub")}</p>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {guide.motivations.map((m, i) => (
+          <Card key={i}>
+            <CardContent className="p-4">
+              <p className="text-sm italic leading-relaxed text-foreground">&ldquo;{m.quote}&rdquo;</p>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-primary">— {m.author}</p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
 
-      <footer className="tg-footer">
-        <p>© 2025 <span className="brand">ABOOD | JAMAL</span> — Consistency beats intensity. Study smart!</p>
-      </footer>
-    </>
+      <div>
+        <h2 className="text-section">{t("tools.guide.adviceHeading")}</h2>
+        <p className="text-sm text-muted-foreground">{t("tools.guide.adviceSub")}</p>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {guide.advices.map((a, i) => {
+          const AdviceIcon = ADVICE_ICONS[i] || Target;
+          return (
+            <Card key={i}>
+              <CardContent className="space-y-2 p-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <AdviceIcon className="h-5 w-5" aria-hidden />
+                </div>
+                <p className="font-semibold">{a.title}</p>
+                <p className="text-sm text-muted-foreground">{a.msg}</p>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
+    </div>
   );
 }

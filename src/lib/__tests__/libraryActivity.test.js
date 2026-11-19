@@ -5,6 +5,7 @@ describe("library-scoped activity helpers", () => {
   it("maps daily goal keys to reviews", () => {
     expect(libraryReviewsKey("toefl")).toBe("toeflReviews");
     expect(libraryReviewsKey("business")).toBe("businessReviews");
+    expect(libraryReviewsKey("everyday")).toBe("everydayReviews");
     expect(libraryReviewsKey("general")).toBe("generalReviews");
     // practiced key aliases to reviews for goal compatibility
     expect(libraryPracticedKey("toefl")).toBe("toeflReviews");
@@ -13,6 +14,7 @@ describe("library-scoped activity helpers", () => {
   it("rateWord-style delta only bumps reviews", () => {
     expect(libraryReviewsDelta("business", 1)).toEqual({ businessReviews: 1 });
     expect(libraryReviewsDelta("toefl", 1)).toEqual({ toeflReviews: 1 });
+    expect(libraryReviewsDelta("everyday", 1)).toEqual({ everydayReviews: 1 });
   });
 
   it("legacy practiced+reviews delta still works", () => {

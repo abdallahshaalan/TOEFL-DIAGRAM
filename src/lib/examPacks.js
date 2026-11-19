@@ -1,11 +1,13 @@
 import businessExamPacks from "@/data/businessExamPacks";
 import toeflExamPacks from "@/data/toeflExamPacks";
+import everydayExamPacks from "@/data/everydayExamPacks";
 import generalExamPacks from "@/data/generalExamPacks";
 import { isStudyQualityOk } from "@/lib/vocabQuality";
 
 const BY_LIBRARY = {
   business: businessExamPacks,
   toefl: toeflExamPacks,
+  everyday: everydayExamPacks,
   general: generalExamPacks,
 };
 

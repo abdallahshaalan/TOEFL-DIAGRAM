@@ -12,8 +12,10 @@
     "lint": "eslint .",
     "verify:business": "node scripts/verify-business-vocab.mjs",
     "verify:toefl": "node scripts/verify-toefl-vocab.mjs",
+    "verify:everyday": "node scripts/verify-everyday-vocab.mjs",
     "annotate:business": "node scripts/annotate-business-quality.mjs",
-    "annotate:toefl": "node scripts/annotate-toefl-quality.mjs"
+    "annotate:toefl": "node scripts/annotate-toefl-quality.mjs",
+    "annotate:everyday": "node scripts/annotate-everyday-quality.mjs"
   },
   "dependencies": {
     "@fontsource/noto-sans-arabic": "^5.3.0",

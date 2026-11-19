@@ -39,6 +39,7 @@ import {
   unsuspendWord,
 } from "@/lib/db";
 import { shouldRequeueInSession } from "@/lib/srs";
+import { getLibraryMeta, isValidLibrary, LIBRARIES } from "@/lib/libraries";
 import { ensureAllLibraries, findWordById } from "@/lib/vocabCatalog";
 import { buildPracticeUrl } from "@/lib/practiceUrl";
 import { buildReviewQueue } from "@/lib/reviewQueue";
@@ -62,6 +63,12 @@ const EMPTY_BY_FILTER = {
     browseHref: "/vocab/business",
     practiceHref: buildPracticeUrl({ library: "business", mode: "flashcards", count: 12 }),
   },
+  everyday: {
+    titleKey: "review.emptyEveryday",
+    browseLabelKey: "dashboard.startEveryday",
+    browseHref: "/vocab/everyday",
+    practiceHref: buildPracticeUrl({ library: "everyday", mode: "flashcards", count: 12 }),
+  },
   general: {
     titleKey: "review.emptyGeneral",
     browseLabelKey: "dashboard.startGeneral",
@@ -83,7 +90,7 @@ export default function ReviewPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialLib = searchParams.get("library") || "all";
   const [libraryFilter, setLibraryFilter] = useState(
-    ["toefl", "business", "general"].includes(initialLib) ? initialLib : "all"
+    isValidLibrary(initialLib) ? initialLib : "all"
   );
   const [queue, setQueue] = useState([]);
   const [index, setIndex] = useState(0);
@@ -93,6 +100,7 @@ export default function ReviewPage() {
   const [rated, setRated] = useState(0);
   const [canUndo, setCanUndo] = useState(false);
   const [exitOpen, setExitOpen] = useState(false);
+  const [now] = useState(() => Date.now());
 
   const load = async (filter = libraryFilter) => {
     setLoading(true);
@@ -121,6 +129,9 @@ export default function ReviewPage() {
   useEffect(() => {
     if (summary || !queue[index]) return undefined;
     const onKey = (e) => {
+      if (e.key === "Escape") {
+        setExitOpen(true);
+      }
       if (!revealed && e.code === "Space") {
         e.preventDefault();
         setRevealed(true);
@@ -254,9 +265,11 @@ export default function ReviewPage() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">{t("review.allLibraries")}</SelectItem>
-              <SelectItem value="toefl">{t("vocab.libraryToefl")}</SelectItem>
-              <SelectItem value="business">{t("vocab.libraryBusiness")}</SelectItem>
-              <SelectItem value="general">{t("vocab.libraryGeneral")}</SelectItem>
+              {LIBRARIES.map((lib) => (
+                <SelectItem key={lib.id} value={lib.id}>
+                  {t(lib.labelKey)}
+                </SelectItem>
+              ))}
             </SelectContent>
           </Select>
         </div>
@@ -288,9 +301,11 @@ export default function ReviewPage() {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">{t("review.allLibraries")}</SelectItem>
-            <SelectItem value="toefl">{t("vocab.libraryToefl")}</SelectItem>
-            <SelectItem value="business">{t("vocab.libraryBusiness")}</SelectItem>
-            <SelectItem value="general">{t("vocab.libraryGeneral")}</SelectItem>
+            {LIBRARIES.map((lib) => (
+              <SelectItem key={lib.id} value={lib.id}>
+                {t(lib.labelKey)}
+              </SelectItem>
+            ))}
           </SelectContent>
         </Select>
       </div>
@@ -303,20 +318,8 @@ export default function ReviewPage() {
         hint={`${t("review.dueCount")}: ${dueRemaining} · ${t("common.remaining")}: ${queue.length - index}`}
       >
         <div className="mb-2 flex flex-wrap gap-1.5">
-          <Badge
-            variant={
-              current.library === "toefl"
-                ? "toefl"
-                : current.library === "business"
-                  ? "business"
-                  : "general"
-            }
-          >
-            {current.library === "toefl"
-              ? t("vocab.libraryToefl")
-              : current.library === "business"
-                ? t("vocab.libraryBusiness")
-                : t("vocab.libraryGeneral")}
+          <Badge variant={getLibraryMeta(current.library)?.badgeVariant || "outline"}>
+            {t(getLibraryMeta(current.library)?.labelKey || "vocab.libraryGeneral")}
           </Badge>
           {current.isNewCard && <Badge variant="secondary">{t("common.new")}</Badge>}
         </div>
@@ -348,7 +351,7 @@ export default function ReviewPage() {
             {t("common.suspend")}
           </Button>
           {(current.suspended ||
-            (current.buriedUntil && current.buriedUntil > Date.now())) && (
+            (current.buriedUntil && current.buriedUntil > now)) && (
             <Button type="button" variant="outline" className="min-h-11" onClick={onUnsuspend}>
               {t("common.unsuspend")}
             </Button>

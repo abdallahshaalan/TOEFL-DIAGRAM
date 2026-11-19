@@ -17,6 +17,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton";
 import PageHeader from "@/components/shared/PageHeader";
 import EmptyState from "@/components/shared/EmptyState";
+import { LIBRARIES } from "@/lib/libraries";
 import { CHART_COLORS, formatChartDate } from "@/lib/charts";
 
 export default function StatsPage() {
@@ -51,6 +52,7 @@ export default function StatsPage() {
 
   const activity = stats.activity.map((a) => ({
     ...a,
+    ratings: a.ratings || a.reviews || 0,
     label: formatChartDate(a.date, lang),
   }));
 
@@ -68,23 +70,11 @@ export default function StatsPage() {
               : t("ratings.easy"),
   }));
 
-  const libraryCompare = [
-    {
-      name: t("vocab.libraryToefl"),
-      [t("stats.practiced")]: stats.toeflPracticed,
-      [t("stats.total")]: stats.toeflTotal,
-    },
-    {
-      name: t("vocab.libraryBusiness"),
-      [t("stats.practiced")]: stats.businessPracticed,
-      [t("stats.total")]: stats.businessTotal,
-    },
-    {
-      name: t("vocab.libraryGeneral"),
-      [t("stats.practiced")]: stats.generalPracticed,
-      [t("stats.total")]: stats.generalTotal,
-    },
-  ];
+  const libraryCompare = LIBRARIES.map((lib) => ({
+    name: t(lib.labelKey),
+    [t("stats.practiced")]: stats[`${lib.id}Practiced`] || 0,
+    [t("stats.total")]: stats[`${lib.id}Total`] || 0,
+  }));
 
   const tipStyle = {
     background: "hsl(var(--card))",
@@ -97,7 +87,7 @@ export default function StatsPage() {
       <PageHeader title={t("stats.title")} subtitle={t("stats.subtitle")} />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatPill label={t("common.learning")} value={stats.difficultCount} />
+        <StatPill label={t("common.learning")} value={stats.learningCount ?? stats.difficultCount} />
         <StatPill label={t("common.stable")} value={stats.stableCount ?? stats.masteredCount} />
         <StatPill label={t("common.due")} value={stats.dueCount} />
         <StatPill label={t("common.leech")} value={stats.leechCount ?? 0} />
@@ -124,9 +114,22 @@ export default function StatsPage() {
                 <YAxis allowDecimals={false} fontSize={11} tickLine={false} />
                 <Tooltip contentStyle={tipStyle} />
                 <Legend />
-                <Line type="monotone" dataKey="reviews" stroke={CHART_COLORS[1]} strokeWidth={2} dot={false} />
-                <Line type="monotone" dataKey="practiced" stroke={CHART_COLORS[2]} strokeWidth={2} dot={false} />
-                <Line type="monotone" dataKey="quizzes" stroke={CHART_COLORS[3]} strokeWidth={2} dot={false} />
+                <Line
+                  type="monotone"
+                  dataKey="ratings"
+                  name={t("dashboard.todayPracticed")}
+                  stroke={CHART_COLORS[1]}
+                  strokeWidth={2}
+                  dot={false}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="quizzes"
+                  name={t("practice.quiz")}
+                  stroke={CHART_COLORS[3]}
+                  strokeWidth={2}
+                  dot={false}
+                />
               </LineChart>
             </ResponsiveContainer>
           </CardContent>

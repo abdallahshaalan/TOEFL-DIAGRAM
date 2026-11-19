@@ -1,6 +1,13 @@
 import { openDB } from "idb";
 import { localDateKey } from "./dateKey";
 import {
+  emptyIntroducedByLibrary,
+  getLibraryMeta,
+  LIBRARY_IDS,
+  libraryPracticedField,
+  libraryReviewsField,
+} from "./libraries";
+import {
   applyRating,
   buryUntilTimestamp,
   createEmptyProgress,
@@ -100,8 +107,8 @@ export async function bumpNewCardsIntroduced(library) {
   const introMeta = (await getMeta("newCardsIntroduced", {})) || {};
   const byLibrary =
     introMeta.date === today
-      ? { ...(introMeta.byLibrary || { toefl: 0, business: 0, general: 0 }) }
-      : { toefl: 0, business: 0, general: 0 };
+      ? { ...emptyIntroducedByLibrary(), ...(introMeta.byLibrary || {}) }
+      : emptyIntroducedByLibrary();
   byLibrary[library] = (byLibrary[library] || 0) + 1;
   await setMeta("newCardsIntroduced", { date: today, byLibrary });
   return byLibrary;
@@ -111,9 +118,9 @@ export async function getNewCardsIntroducedToday() {
   const today = localDateKey();
   const introMeta = (await getMeta("newCardsIntroduced", {})) || {};
   if (introMeta.date !== today) {
-    return { toefl: 0, business: 0, general: 0 };
+    return emptyIntroducedByLibrary();
   }
-  return introMeta.byLibrary || { toefl: 0, business: 0, general: 0 };
+  return { ...emptyIntroducedByLibrary(), ...(introMeta.byLibrary || {}) };
 }
 
 /** Default: hide draft-quality words from study queues. */
@@ -153,12 +160,15 @@ export async function undoLastRating() {
   }
 
   const d = snap.activityDelta || {};
+  const reverseReviews = {};
+  for (const id of LIBRARY_IDS) {
+    const key = libraryReviewsField(id);
+    if (key) reverseReviews[key] = -(d[key] || 0);
+  }
   await bumpActivity({
     reviews: -(d.reviews || 0),
     ratings: -(d.ratings || 0),
-    toeflReviews: -(d.toeflReviews || 0),
-    businessReviews: -(d.businessReviews || 0),
-    generalReviews: -(d.generalReviews || 0),
+    ...reverseReviews,
   });
 
   if (snap.newCardBump) {
@@ -198,20 +208,16 @@ export async function unsuspendWord(library, wordId) {
 
 /** Rating-event delta for library daily goals (not unique-word practiced). */
 export function libraryReviewsDelta(library, reviews = 1) {
-  if (library === "toefl") return { toeflReviews: reviews };
-  if (library === "business") return { businessReviews: reviews };
-  if (library === "general") return { generalReviews: reviews };
-  return {};
+  const key = libraryReviewsField(library);
+  return key ? { [key]: reviews } : {};
 }
 
 /** @deprecated use libraryReviewsDelta — practiced no longer bumped on rate */
 export function libraryActivityDelta(library, practiced = 0, reviews = 0) {
   const base = libraryReviewsDelta(library, reviews);
   if (!practiced) return base;
-  if (library === "toefl") return { ...base, toeflPracticed: practiced };
-  if (library === "business") return { ...base, businessPracticed: practiced };
-  if (library === "general") return { ...base, generalPracticed: practiced };
-  return base;
+  const practicedKey = libraryPracticedField(library);
+  return practicedKey ? { ...base, [practicedKey]: practiced } : base;
 }
 
 /** @deprecated Daily goals use libraryReviewsKey */
@@ -221,10 +227,7 @@ export function libraryPracticedKey(library) {
 
 /** Daily library goal counter key (SRS rating events). */
 export function libraryReviewsKey(library) {
-  if (library === "toefl") return "toeflReviews";
-  if (library === "business") return "businessReviews";
-  if (library === "general") return "generalReviews";
-  return null;
+  return libraryReviewsField(library);
 }
 
 /** Study schedule caps (IndexedDB meta). */
@@ -284,17 +287,22 @@ export const LIBRARY_DAILY_GOAL = 15;
 export const BUSINESS_DAILY_GOAL = LIBRARY_DAILY_GOAL;
 export const BUSINESS_MILESTONES = [50, 100, 250, 500];
 
+function emptyLibraryActivityFields() {
+  const fields = {};
+  for (const id of LIBRARY_IDS) {
+    const meta = getLibraryMeta(id);
+    if (meta?.practicedKey) fields[meta.practicedKey] = 0;
+    if (meta?.reviewsKey) fields[meta.reviewsKey] = 0;
+  }
+  return fields;
+}
+
 const EMPTY_ACTIVITY = {
   reviews: 0,
   ratings: 0,
   quizzes: 0,
   practiced: 0,
-  toeflPracticed: 0,
-  toeflReviews: 0,
-  businessPracticed: 0,
-  businessReviews: 0,
-  generalPracticed: 0,
-  generalReviews: 0,
+  ...emptyLibraryActivityFields(),
 };
 
 export async function bumpActivity(delta = {}) {
@@ -307,13 +315,18 @@ export async function bumpActivity(delta = {}) {
     ratings: current.ratings + (delta.ratings || 0),
     quizzes: current.quizzes + (delta.quizzes || 0),
     practiced: current.practiced + (delta.practiced || 0),
-    toeflPracticed: (current.toeflPracticed || 0) + (delta.toeflPracticed || 0),
-    toeflReviews: (current.toeflReviews || 0) + (delta.toeflReviews || 0),
-    businessPracticed: (current.businessPracticed || 0) + (delta.businessPracticed || 0),
-    businessReviews: (current.businessReviews || 0) + (delta.businessReviews || 0),
-    generalPracticed: (current.generalPracticed || 0) + (delta.generalPracticed || 0),
-    generalReviews: (current.generalReviews || 0) + (delta.generalReviews || 0),
   };
+  for (const id of LIBRARY_IDS) {
+    const meta = getLibraryMeta(id);
+    if (meta?.practicedKey) {
+      next[meta.practicedKey] =
+        (current[meta.practicedKey] || 0) + (delta[meta.practicedKey] || 0);
+    }
+    if (meta?.reviewsKey) {
+      next[meta.reviewsKey] =
+        (current[meta.reviewsKey] || 0) + (delta[meta.reviewsKey] || 0);
+    }
+  }
   await db.put("activity", next);
   return next;
 }

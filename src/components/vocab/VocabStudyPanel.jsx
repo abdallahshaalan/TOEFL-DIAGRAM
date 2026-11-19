@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Bookmark } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -33,7 +34,10 @@ export default function VocabStudyPanel({
   className,
 }) {
   const { t, lang } = useI18n();
+  const [now] = useState(() => Date.now());
   if (!word) return null;
+
+  const buryActive = Boolean(progress?.buriedUntil && progress.buriedUntil > now);
 
   const labelCategory = (id) => {
     const meta = (categoryMeta || []).find((x) => x.id === id);
@@ -142,13 +146,13 @@ export default function VocabStudyPanel({
         <Field label={t("vocab.wordFamily")}>{word.wordFamily.join(", ")}</Field>
       )}
 
-      {(progress?.suspended || (progress?.buriedUntil && progress.buriedUntil > Date.now())) &&
+      {(progress?.suspended || buryActive) &&
         onUnsuspend && (
           <div className="flex flex-wrap gap-2">
             {progress.suspended && (
               <Badge variant="warning">{t("common.suspend")}</Badge>
             )}
-            {progress.buriedUntil && progress.buriedUntil > Date.now() && (
+            {buryActive && (
               <Badge variant="outline">{t("common.bury")}</Badge>
             )}
             <Button type="button" variant="outline" className="min-h-11" onClick={onUnsuspend}>

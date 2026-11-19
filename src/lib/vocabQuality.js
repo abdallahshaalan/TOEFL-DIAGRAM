@@ -15,6 +15,16 @@ const TEMPLATE_PHRASES = [
   "the passage will",
   "high-frequency in awl",
   "awl reading and writing tasks",
+  // Everyday generator filler (not real definitions)
+  "something people often mention when discussing",
+  "means to do something common when talking about",
+  "describes a familiar",
+  "tells how something happens in a",
+  "is a short everyday phrase linked to",
+  "links ideas in simple",
+  "shows up in relaxed",
+  "for a role-play about",
+  "in my journal after a normal",
 ];
 
 const WEAK_SYNONYM_PAIR = new Set(["apply", "use"]);
